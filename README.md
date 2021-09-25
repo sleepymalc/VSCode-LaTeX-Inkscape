@@ -29,5 +29,14 @@ A snip­pet is a short reusable piece of text that can be trig­gered by some ot
 
 ![](https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif)
 
+If you are a math guy, you may need to type some inline math like `$$`, which is kind of painful. But with snippet, you can have 
 
+![](https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif)
 
+See? you just type `fm`, and then your snippet not only automatically type `$$`for you, it also send your cursor between `$$`!
+
+As you can imagine, this can be quite complex. For example, you can even have something like this:
+
+![](https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif)
+
+To fast to keep track of? I type `pmat` for matrix, and then type `2 4` to indicate that I want a 2 by 4 matrix, then boom! my snippets do that for me in an instant!
