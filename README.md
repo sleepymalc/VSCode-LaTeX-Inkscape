@@ -148,6 +148,7 @@ Here is a quick demo for how it works when typing:
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/spell.gif" width="500"/>
 </p>
+
 Now, the first part is over. Let's go to the next truely breautiful, elegant and exciting world, drawing with [Inkscape](https://inkscape.org/zh-hant/).
 
 ## Drawing Like a Pro
