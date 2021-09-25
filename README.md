@@ -284,9 +284,48 @@ to find out where the `inkscape-figures` is installed. In my environment, I use 
 
 Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
 
-Ok, I know you probably don't have that much patient now, so I have a modified version available [here]()
+Ok, I know you probably don't have that much patient now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py). If you don't want to know the detail, you can just copy this `main.py` and replace the current one. If you're interesting, let's me explain it for you.
 
+##### Detail Explanation
 
+In Gilles Castel's approach, he use the shortcut `ctrl-f` to trigger this script, which will copy the whole line's content depending on cursor's position, and the script will send the snippets by the function
+
+```python
+def latex_template(name, title):
+    return '\n'.join((r"\begin{figure}[ht]",
+                      r"    This is a custom LaTeX template!",
+                      r"    \centering",
+                      rf"    \incfig[1]{{{name}}}",
+                      rf"    \caption{{{title}}}",
+                      rf"    \label{{fig:{name}}}",
+                      r"\end{figure}"))
+```
+
+ to `stdout`, and then create a figure by the `name`, which is the content ot the line.
+
+But this in VSCode is impossible, hence we don't need this, we'll use another approach, namely we'll accomplish the task by command line. And if we leave this function as it was, then it will literally send all these snippets into our terminal, which is quite annoying. So the modified version just remove this snippets completely.
+
+Ok, the detailed explanation is over, let's move on.
+
+### Command Runner
+
+The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send command into terminal with shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`. Then, the only thing left is with that missing snippet part. Before we set it up, we look at the demonstration.
+
+### Demo
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="500"/>
+</p>
+
+Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in Vscode Vim and type my new figure's name `test-figure`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automitically create an Inkscape figure named `test-figure` for me and open it. 
+
+Feel exciting? Let's set it up!
+
+### Set up Inkscape figure manager
+
+The only thing you need to do is to copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json` and then you're done. But let me explain it to you, in case that you want to modify it to meet your need later on.
+
+### Explanation
 
 
 
