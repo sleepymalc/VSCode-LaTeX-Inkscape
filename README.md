@@ -279,7 +279,6 @@ Firstly, please type the following command in your terminal
 ```bash
 where inkscape-figures 
 ```
-
 to find out where the `inkscape-figures` is installed. In my environment, I use Anaconda quite a lot, so mine is `/Users/pbb/opt/anaconda3/bin/inkscape-figures`. 
 
 Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
@@ -331,7 +330,151 @@ There are three different command in Inkscape figure manager. We break it down o
 
 #### 1. Watch
 
+Since Inkscape in dafault does not save the file in `pdf+latex`, hence we need Inkscape figure manager to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
+
+To open the file watcher, you can type `inkscape-figures watch` in the terminal. In my case, I set up a shortly for this. In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
+
+```json
+{
+    "key": "ctrl+f",
+    "command": "command-runner.run",
+    "args": {
+        "command": "inkscapeStart",
+        "terminal": {
+            "name": "runCommand",
+            "shellArgs": [],
+            "autoClear": true,
+            "autoFocus": false
+        }
+    },
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Visual'"
+}
+```
+
+for starting the Inkscape figure manager. And the command is defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json):
+
+```json
+"command-runner.commands": {
+    "inkscapeStart": "inkscape-figures watch"
+}
+```
+
+In detailed, we just use `command runner` to run the command we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), in this case, I explicitly says that the keybinding `ctrl+f` will trigger `inkscapeStart` when I'm in `Visual` mode in Vim, which is just `inkscape-figures watcher` as defined above.
+
+Notice that we set the `autoFocus=false` for the terminal `command runner` use since we don't want a pop-up terminal to distract us. If you want to see whether the command is triggered correctly every time, you can set it to `true`.
+
 #### 2. Create
 
+Same as above, we also use `ctrl+f` to trigger `inkscape-figures create` command. But in this case, we do a little bit more than that. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+
+```json
+{
+	"key": "ctrl+f",
+	"command": "extension.multiCommand.execute",
+	"args": {
+		"sequence": [
+			"editor.action.clipboardCopyAction",
+			"editor.action.insertLineAfter",
+			"cursorUp",
+			"editor.action.deleteLines",
+			{
+			"command": "editor.action.insertSnippet",
+			"args": {
+				"name": "incfig"
+				}
+			},
+			{
+				"command": "command-runner.run",
+				"args": {
+					"command": "inkscapeCreate",
+				},
+				"terminal": {
+					"name": "runCommand",
+					"shellArgs": [],
+					"autoClear": true,
+					"autoFocus": false
+				}
+			},
+		]
+	},
+	"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Insert'"
+},
+```
+
+and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json):
+
+```json
+"command-runner.commands": {
+    "inkscapeCreate": "inkscape-figures create ${selectedText} ${workspaceFolder}/Figures/"
+}
+```
+
+We break it down what `ctrl+f` do in `Insert` mode exactly step by step. We see that when we press `ctrl+f` in `Insert` mode, we trigger `multiCommand.execute` to execute a sequence of instructions, which are
+
+1. Copy the content into your clipboard of the line your cursor at
+2. We insert a bland line after since we need to insert snippet, and that's will delete a additional line. You can try to delete this and the next instruction, and see what happens.
+3. After insert a new line, we move back our cursor.
+4. We delete that copied content by removing this line.
+5. We insert an snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the defualt snippet functionality built-in VSCode, not what we have use above**. I'll explain where to copy this file in a minute.
+6. Lastly, we send a command in terminal by `command runner`, with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Then we're done!
+
+In the fifth instruction, we need to use the snippet like 
+
+```json
+{
+	"incfig": {
+		"prefix": "incfig",
+		"body": [
+			"\\begin{figure}[H]",
+			"\t\\centering",
+			"\t\\incfig{${1:$CLIPBOARD}}",
+			"\t\\caption{${2:title}}",
+			"\t\\label{fig:${1:$CLIPBOARD}}",
+			"\\end{figure}",
+		],
+		"description": "Inserts mathematical diagram"
+	}
+}
+```
+
+which is just the snippet we remove from inkscape figure manager's source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
+
+1. Press `shift+cmd+p` to open the VSCode command 
+2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
+3. Choose `New Global Snippets file...`
+4. Enter `latex` to create a new file.
+5. Paste the above snippets in to that file.
+
+Now, let's see the last thing I have to share with you.
+
 #### 3. Edit
+
+Again, we also use `ctrl+f` to trigger `inkscape-figures edit` command. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+
+```json
+{
+	"key": "ctrl+f",
+	"command": "command-runner.run",
+	"args": {
+		"command": "inkscapeEdit",
+		"terminal": {
+			"name": "runCommand",
+			"shellArgs": [],
+			"autoClear": true,
+			"autoFocus": false
+		}
+	},
+	"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Normal'"
+},
+```
+
+and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json):
+
+```json
+"command-runner.commands": {
+    "inkscapeEdit": "inkscape-figures edit ${workspaceFolder}/Figures/"
+}
+```
+
+This is what's you should expect when you want to edit a particular figure:
 
