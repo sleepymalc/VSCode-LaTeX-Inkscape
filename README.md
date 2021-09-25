@@ -42,13 +42,29 @@ See? you just type `fm`, and then your snippet not only automatically type `$$`f
 As you can imagine, this can be quite complex. For example, you can even have something like this:
 
 <p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/table2_5.gif" width="500" height="362"/>
+</p>
+
+or this:
+
+<p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif" width="500" height="155"/>
 </p>
 
-To fast to keep track of? I type `pmat` for matrix, and then type `2 4` to indicate that I want a 2 by 4 matrix, then boom! my snippets do that for me in an instant!
+To fast to keep track of? For the first snippet, I type `table2 5`, and then it generate a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 4` to indicate that I want a 2 by 4 matrix, then boom! my snippets do that for me in an instant!
 
 Feeling it? Let try to set up this step by step. And maybe you can create your own snippets also!
 
 #### HyperSnips for Math
 
-If you look around in Vscode extionsion marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, put [latex.hsnips]()
+If you look around in Vscode extionsion marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/Vscode-LaTeX-Inkscape/blob/main/HyperSnips/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/` and you're good to go!
+
+To modify this file, you can either go to this file in your finder or use Vscode build-in command function. For command function, 
+
+1. Press `shift+cmd+space` to type in some command to Vscode.
+2. Type `>HyperSnips: Open Snippet File`
+3. Choose `latex.hsnips`
+
+Now, let move on. Oh wait, I need to explain to you why I want to use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). This is because this version support *math mode*. Namely, you can specify a particular snippet will **only** be triggered in math mode. This is particularly useful when you need to switch beck and forth between text environment and math environment. 
+
+For further and detaield explanation for snippets, please go to check out the original blog post! 
