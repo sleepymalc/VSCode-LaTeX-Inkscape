@@ -9,9 +9,9 @@ I took quite a few math courses, hence after find out this incredible workflow, 
 
 ## Disclaimer
 
-Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, I'm only a copy-cat who want to mimic his workflow, but with a little bit patient to set-up whole thing in my environment. Definitely show the respect to the original author!
+Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, I'm only a copy-cat who want to mimic his workflow, but with a little bit patient to set up whole thing in my environment. Definitely show the respect to the original author!
 
-## Setup For Typeing Blasting Fast
+## Setup For Typing Blasting Fast
 
 First thing first, please set up your Vscode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorial online, just check them out and set them up properly.
 
@@ -37,7 +37,7 @@ If you are a math guy, you may need to type some inline math like `$$`, which is
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="500"/>
 </p>
 
-See? you just type `fm`, and then your snippet not only automatically type `$$`for you, it also send your cursor between `$$`!
+See? ou just type `fm`, and then your snippet not only automatically type `$$`for you, it also sends your cursor between `$$`!
 
 As you can imagine, this can be quite complex. For example, you can even have something like this:
 
@@ -57,9 +57,9 @@ Feeling it? Let try to set up this step by step. And maybe you can create your o
 
 ### HyperSnips for Math
 
-If you look around in Vscode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/Vscode-LaTeX-Inkscape/blob/main/HyperSnips/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/` and you're good to go!
+If you look around in Vscode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/Vscode-LaTeX-Inkscape/blob/main/HyperSnips/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
-To modify this file, you can either go to this file in your finder or use Vscode build-in command function. For command function, 
+To modify this file, you can either go to this file in your finder or use Vscode built-in command function. For command function, 
 
 1. Press `shift+cmd+space` to type in some command to Vscode.
 2. Type `>HyperSnips: Open Snippet File`
@@ -71,13 +71,13 @@ For further and detailed explanation for snippets, please go to check out the or
 
 ### Sympy and Mathematica
 
-Unlike Gilles Castel's approach, there is a available extension out there for you to simplify your math calculation already! Please go to checkout [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
+Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral.gif" width="500"/>
 </p>
 
-Magic right? Let's set it up! First, please look at the Install document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation is done, you can then set up the keybinding for calculating the math expression. Personally, I use `shift+e`, where `e` stands for evaluate, to calculate in the way that  it will append an equal sign and the answer right after your formula, just like above. And if you don't want to show the intermediate steps of your calculation, you can use `shift+r`, where `r` stands for replace, to directly replace the whole formula and give me the answer only. See the demo below:
+Magic right? Let's set it up! First, please look at the installation document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation is done, you can then set up the keybinding for calculating the math expression. Personally, I use `shift+e`, where `e` stands for evaluate, to calculate in the way that it will append an equal sign and the answer right after your formula, just like above. And if you don't want to show the intermediate steps of your calculation, you can use `shift+r`, where `r` stands for replace, to directly replace the whole formula and give me the answer only. See the demo below:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral2.gif" width="500"/>
@@ -87,7 +87,7 @@ You can find my key-binding set up in this repo. But stay tune, there is more to
 
 ### Correcting spelling mistakes on the fly
 
-Although my typing speed is quite high, but I have typo all the times. So this is a must for me, actually. And suprisingly, this is the hardest thing until now for me to set it up right. Let's see how we can configure this functionality in Vscode!
+Although my typing speed is quite high, but I have typo all the times. So this is a must for me, actually. And surprisingly, this is the hardest thing until now for me to set it up right. Let's see how we can configure this functionality in Vscode!
 
 #### multi-command
 
