@@ -103,19 +103,15 @@ If you are bad in grammar like me, you definitely want to install [LTeX](https:/
 
 Now, it's time to configureation all these. Open your Keyboard Shortcuts page in Vscode, which is in the bottom left
 
-```html
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard.png" alt="drawing" width="200"/>  
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard.png" alt="drawing" width="400"/>  
 </p>
-```
 
 And then go into it's `JSON` file, which is at the upper right:
 
-```html
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard2.png" alt="drawing" width="50"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard2.png" alt="drawing" width="200"/>
 </p>
-```
 
 Now, paste the following code in `keybindings.json`:
 
