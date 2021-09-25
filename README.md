@@ -9,7 +9,7 @@ I took quite a few math courses, hence after find out this incredible workflow, 
 
 ## Disclaimer
 
-Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, I'm only a copy-cat who want to mimic his workflow, but with a little bit patient to set up whole thing in my environment. Definitely show the respect to the original author!
+Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, I'm only a copy-cat who want to mimic his workflow, but with a little patient to set up whole thing in my environment. Definitely show the respect to the original author!
 
 ## Setup For Typing Blasting Fast
 
@@ -37,7 +37,7 @@ If you are a math guy, you may need to type some inline math like `$$`, which is
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="500"/>
 </p>
 
-See? ou just type `fm`, and then your snippet not only automatically type `$$`for you, it also sends your cursor between `$$`!
+See? You just type `fm`, and then your snippet not only automatically type `$$`for you, it also sends your cursor between `$$`!
 
 As you can imagine, this can be quite complex. For example, you can even have something like this:
 
