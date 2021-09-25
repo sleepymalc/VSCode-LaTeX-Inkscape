@@ -5,11 +5,11 @@ A way to integrate LaTeX, Vscode, and Inkscape in macOS
 
 I use LaTeX heavily in past two years for both academic work and professional work, and I think I'm quite proficient in terms of type thing out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I finally realize that I'm still too naive. 
 
-I took quite a few math courses, hence after find out this incredible workflow, I decide to copy the whole setup from Linux-Vim to macOS-Vscode. So, if you're interested in this and in the same situation as me, don't want to jump into Linux and Vim, follow me!
+I took quite a few math courses, hence after find out this incredible workflow, I decide to adapt the whole setup from Linux-Vim to macOS-Vscode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
 
 ## Disclaimer
 
-Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, I'm only a copy-cat who want to mimic his workflow, but with a little patient to set up whole thing in my environment. Definitely show the respect to the original author!
+Please look through the two blog posts above from Gilles Castel! They are incredible, and worth spending your time to really understand how all things works, and what's the motivation behind all these. I'm only a copy-cat who want to mimic his workflow, but with a little patient to set up whole thing in my environment. Definitely show the respect to the original author!
 
 ## Setup For Typing Blasting Fast
 
@@ -65,7 +65,7 @@ To modify this file, you can either go to this file in your finder or use Vscode
 2. Type `>HyperSnips: Open Snippet File`
 3. Choose `latex.hsnips`
 
-Now, let move on. Oh wait, I need to explain to you why I want to use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). This is because this version support *math mode*. Namely, you can specify a particular snippet will **only** be triggered in math mode. This is particularly useful when you need to switch beck and forth between text environment and math environment. 
+Now, let move on. Oh wait, I need to explain to you why I want to use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). This is because this version support *math mode*. Namely, you can specify a particular snippet will **only** be triggered in math environment. This is particularly useful when you need to switch beck and forth between text environment and math environment. When you use snippets after a while, you'll see why this is important!
 
 For further and detailed explanation for snippets, please go to check out the original blog post! 
 
