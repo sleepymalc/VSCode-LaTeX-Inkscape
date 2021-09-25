@@ -316,7 +316,7 @@ The last thing you need to install is [Command Runner](https://marketplace.visua
 </p>
 
 
-Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `test-figure`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `test-figure` for me and open it. 
+Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `figure-test`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `figure-test` for me and open it. 
 
 Feel exciting? Let's set it up!
 
@@ -330,7 +330,7 @@ There are three different command in Inkscape figure manager. We break it down o
 
 #### 1. Watch
 
-Since Inkscape in dafault does not save the file in `pdf+latex`, hence we need Inkscape figure manager to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
+Since Inkscape in default does not save the file in `pdf+latex`, hence we need Inkscape figure manager to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
 To open the file watcher, you can type `inkscape-figures watch` in the terminal. In my case, I set up a shortly for this. In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
 
@@ -437,7 +437,7 @@ In the fifth instruction, we need to use the snippet like
 }
 ```
 
-which is just the snippet we remove from inkscape figure manager's source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
+which is just the snippet we remove from Inkscape figure manager's source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
 
 1. Press `shift+cmd+p` to open the VSCode command 
 2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
