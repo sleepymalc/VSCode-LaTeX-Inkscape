@@ -23,3 +23,9 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 
 ### Snippets
 
+#### What’s a snippet?
+
+A snip­pet is a short reusable piece of text that can be trig­gered by some other text. For ex­am­ple, when I type `dm` and press Tab, the word `dm` will be ex­pand­ed to a math environment:
+
+<video src="/Users/pbb/Desktop/ScreenShot 2021-09-25 at 2.01.52 AM.mov"></video>
+
