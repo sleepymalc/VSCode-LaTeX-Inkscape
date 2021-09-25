@@ -28,7 +28,7 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 A snip­pet is a short reusable piece of text that can be trig­gered by some other text. For ex­am­ple, when I type `dm` and press Tab, the word `dm` will be ex­pand­ed to a math environment:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="250" height="250"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="800" height="247.942"/>
 </p>
 
 If you are a math guy, you may need to type some inline math like `$$`, which is kind of painful. But with snippet, you can have 
