@@ -71,7 +71,7 @@ For further and detailed explanation for snippets, please go to check out the or
 
 ### Sympy and Mathematica
 
-Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
+Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex SYMPA Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral.gif" width="500"/>
@@ -91,7 +91,7 @@ Although my typing speed is quite high, but I have typo all the times. So this i
 
 #### multi-command
 
-Firstly, you need to download [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) to perform this. And this is a very powerful extension, which allow you to do a sequence of action in one short-key. We will use this later on also, and that's the place it shines.
+Firstly, you need to download [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) to perform this. And this is a very powerful extension, which allow you to do a sequence of action in one shortcut. We will use this later on also, and that's the place it shines.
 
 #### Code Spell Checker
 
@@ -121,17 +121,17 @@ Now, paste the following code in `keybindings.json`:
         "command": "extension.multiCommand.execute",
         "args": {
 		"sequence": [
-        	        "cSpell.goToPreviousSpellingIssue",
-	                {
-                	    "command": "editor.action.codeAction",
-        	            "args": {
-	                        "kind": "quickfix",
-                        	"apply": "first"
-                    	}
-                },
-                "cursorUndo",
-        	]
-        }
+        	"cSpell.goToPreviousSpellingIssue",
+	        {
+                "command": "editor.action.codeAction",
+        	    "args": {
+	                "kind": "quickfix",
+                    "apply": "first"
+                }
+            },
+            "cursorUndo",
+        ]
+    }
 },
 ```
 
@@ -148,6 +148,27 @@ Here is a quick demo for how it works when typing:
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/spell.gif" width="500"/>
 </p>
+
+Additionally, if you also want to correct your grammar error, I use the shortcut `cmd+k` to trigger a quick-fix for a general error. The setting looks like this:
+```json
+{
+    "key": "cmd+k",
+    "command": "extension.multiCommand.execute",
+    "args": {
+        "sequence": [
+            "editor.action.marker.prev",
+            {
+                "command": "editor.action.codeAction",
+                "args": {
+                    "kind": "quickfix",
+                    "apply": "first"
+                }
+            },
+            "cursorUndo",
+        ]
+    }
+ },
+```
 
 Now, the first part is over. Let's go to the next truly beautiful, elegant and exciting world, drawing with [Inkscape](https://inkscape.org/zh-hant/).
 
