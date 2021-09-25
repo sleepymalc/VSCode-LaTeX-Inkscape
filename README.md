@@ -179,5 +179,72 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example.png" width="500"/>
 </p>
+This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for this, that's what we called mind-blowing. One last thing I want to make it clear before we start this part. I'll assume that you have already install [VSCode Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, but if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
-This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for this, that's what we called mind-blowing. 
+### Inkscape
+
+A big question is, why Inkscape? In Gilles Castel's blog, he had already explained it. One reason is that although TikZ can do the job for drawing vector figures in LaTeX with original support, it's too slow to set all diagram right. This is so true, since my experience with TikZ is *nice looking, intuitive* but also *slow, bulky*. For example, in one of my assignment for graph theory, I have to do graph partition by running a BFS(bread-first search). This is what's the source code looks like:
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/source-code.png" width="200"/>
+</p>
+
+You think this is it? No, this is not even half of them. And yes, I admit that the result is not bad
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/tikz.png" width="500"/>
+</p>
+
+but to let VSCode to compile this, this is not fun at all. This large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost five seconds, and then compile them by *pdfLaTeX* takes about 5 more seconds. That's not efficient at all, escepically you want some instant feedback for some small changes. Instead, by using Inkscape, you only need to type(Ok, not quite, you don't need to type them out actually, you'll see) the following:
+
+```latex
+\begin{figure}[H]
+	\centering
+	\incfig{figure's name}
+	\caption{Your caption}
+	\label{fig:label}
+\end{figure}
+```
+
+And then you're done! And also, the compile time for this is shorter than you can ever expect. Let's get started then!
+
+### Set up the Environment in LaTeX
+
+First thing first, include the following in your header
+
+```latex
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Figures/}{#1.pdf_tex}
+}
+```
+
+This assume that your LaTeX project's home directory looks like this:
+
+```bash
+LaTeX_project
+    │
+    ├── LaTex.tex
+    │
+    ├── Figures
+    │    │
+    │    ├── fig1
+    │    ├── fig2
+    │    .
+    |
+    ├── 
+    │
+    ├── LaTex.pdf
+    │
+    .
+    .
+```
+
+Now, let's get into the fun part. Let's set up the short-cut for this.
+
+### 
