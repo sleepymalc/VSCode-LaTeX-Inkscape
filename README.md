@@ -28,13 +28,13 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 A snip­pet is a short reusable piece of text that can be trig­gered by some other text. For ex­am­ple, when I type `dm` and press Tab, the word `dm` will be ex­pand­ed to a math environment:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="800" height="155"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="500" height="155"/>
 </p>
 
 If you are a math guy, you may need to type some inline math like `$$`, which is kind of painful. But with snippet, you can have 
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="800" height="155"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="500" height="155"/>
 </p>
 
 See? you just type `fm`, and then your snippet not only automatically type `$$`for you, it also send your cursor between `$$`!
@@ -42,7 +42,7 @@ See? you just type `fm`, and then your snippet not only automatically type `$$`f
 As you can imagine, this can be quite complex. For example, you can even have something like this:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif" width="800" height="155"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif" width="500" height="155"/>
 </p>
 
 To fast to keep track of? I type `pmat` for matrix, and then type `2 4` to indicate that I want a 2 by 4 matrix, then boom! my snippets do that for me in an instant!
