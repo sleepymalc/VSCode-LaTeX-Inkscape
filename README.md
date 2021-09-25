@@ -71,7 +71,7 @@ For further and detailed explanation for snippets, please go to check out the or
 
 ### Sympy and Mathematica
 
-Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex SYMPA Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
+Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex SYMPY Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral.gif" width="500"/>
@@ -195,7 +195,7 @@ You think this is it? No, this is not even half of them. And yes, I admit that t
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/tikz.png" width="500"/>
 </p>
 
-but to let VSCode to compile this, this is not fun at all. This large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost five seconds, and then compile them by *pdfLaTeX* takes about 5 more seconds. That's not efficient at all, escepically when you want some instant feedback for some small changes. 
+but to let VSCode to compile this, this is not fun at all. This large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost five seconds, and then compile them by *pdfLaTeX* takes about 5 more seconds. That's not efficient at all, especially when you want some instant feedback for some small changes. 
 
 However, by using Inkscape, you only need to type(Ok, not quite, you don't need to type them out actually, you'll see) the following:
 
@@ -208,7 +208,7 @@ However, by using Inkscape, you only need to type(Ok, not quite, you don't need 
 \end{figure}
 ```
 
-And then you're done! And also, the compile time for this is shorter than you can ever expect. Let's get started then!
+And then you're done! And also, the compilation time for this is shorter than you can ever expect. Let's get started then!
 
 ### Set up the Environment in LaTeX
 
@@ -226,7 +226,7 @@ First thing first, include the following in your header
 }
 ```
 
-This assume that your LaTeX project's home directory looks like this:
+This assumes that your LaTeX project's home directory looks like this:
 
 ```bash
 LaTeX_project
@@ -251,7 +251,7 @@ Now, let's get into the fun part. Let's set up the short-cut for this.
 
 ### Inkscape
 
-Appartently, you need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommand you to install this in terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
+Apparently, you need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend you to install this in terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
 
 ```bash
 brew install --cask inkscape
@@ -259,7 +259,7 @@ brew install --cask inkscape
 
 ### Inkscape figure manager
 
-This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommand you to follow the installation instruction there. Here is just some guideline for you
+This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you to follow the installation instruction there. Here is just some guideline for you
 
 1. You need to download [choose](https://github.com/chipsenkbeil/choose) first, for later usages.
 
@@ -284,11 +284,11 @@ to find out where the `inkscape-figures` is installed. In my environment, I use 
 
 Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
 
-Ok, I know you probably don't have that much patient now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py). If you don't want to know the detail, you can just copy this `main.py` and replace the current one. If you're interesting, let's me explain it for you.
+Ok, I know you probably don't have that much patient now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py). If you don't want to know the detail, you can just copy this `main.py` and replace the current one. If you're interesting, lets me explain it for you.
 
 ##### Detail Explanation
 
-In Gilles Castel's approach, he use the shortcut `ctrl-f` to trigger this script, which will copy the whole line's content depending on cursor's position, and the script will send the snippets by the function
+In Gilles Castel's approach, he uses the shortcut `ctrl-f` to trigger this script, which will copy the whole line's content depending on cursor's position, and the script will send the snippets by the function
 
 ```python
 def latex_template(name, title):
@@ -300,10 +300,9 @@ def latex_template(name, title):
                       rf"    \label{{fig:{name}}}",
                       r"\end{figure}"))
 ```
+to `stdout`, and then create a figure by the `name`, which is the content of the line.
 
- to `stdout`, and then create a figure by the `name`, which is the content ot the line.
-
-But this in VSCode is impossible, hence we don't need this, we'll use another approach, namely we'll accomplish the task by command line. And if we leave this function as it was, then it will literally send all these snippets into our terminal, which is quite annoying. So the modified version just remove this snippets completely.
+But this in VSCode is impossible, hence we don't need this, we'll use another approach, namely we'll accomplish the task by command line. And if we leave this function as it was, then it will literally send all these snippets into our terminal, which is quite annoying. So the modified version just remove this snippet completely.
 
 Ok, the detailed explanation is over, let's move on.
 
@@ -317,7 +316,7 @@ The last thing you need to install is [Command Runner](https://marketplace.visua
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="500"/>
 </p>
 
-Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in Vscode Vim and type my new figure's name `test-figure`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automitically create an Inkscape figure named `test-figure` for me and open it. 
+Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `test-figure`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `test-figure` for me and open it. 
 
 Feel exciting? Let's set it up!
 
@@ -327,5 +326,11 @@ The only thing you need to do is to copy the [keybindings.json](https://github.c
 
 ### Explanation
 
+There are three different command in Inkscape figure manager. We break it down one by one.
 
+#### 1. Watch
+
+#### 2. Create
+
+#### 3. Edit
 
