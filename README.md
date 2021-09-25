@@ -103,11 +103,15 @@ If you are bad in grammar like me, you definitely want to install [LTeX](https:/
 
 Now, it's time to configureation all these. Open your Keyboard Shortcuts page in Vscode, which is in the bottom left
 
-![image-20210925034035631](/Users/pbb/Library/Application Support/typora-user-images/image-20210925034035631.png)
+```html
+<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard.png" alt="drawing" width="200"/>
+```
 
 And then go into it's `JSON` file, which is at the upper right:
 
-![image-20210925034129166](/Users/pbb/Library/Application Support/typora-user-images/image-20210925034129166.png)
+```html
+<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard2.png" alt="drawing" width="50"/>
+```
 
 Now, paste the following code in `keybindings.json`:
 
@@ -144,4 +148,3 @@ Here is a quick demo for how it works when typing:
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/spell.gif" width="500" height="109"/>
 </p>
-
