@@ -189,13 +189,15 @@ A big question is, why Inkscape? In Gilles Castel's blog, he had already explain
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/source-code.png" width="200"/>
 </p>
 
-You think this is it? No, this is not even half of them. And yes, I admit that the result is not bad
+You think this is it? No, this is not even half of them. And yes, I admit that the result is not bad, the initial graph looks like this:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/tikz.png" width="500"/>
 </p>
 
-but to let VSCode to compile this, this is not fun at all. This large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost five seconds, and then compile them by *pdfLaTeX* takes about 5 more seconds. That's not efficient at all, escepically you want some instant feedback for some small changes. Instead, by using Inkscape, you only need to type(Ok, not quite, you don't need to type them out actually, you'll see) the following:
+but to let VSCode to compile this, this is not fun at all. This large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost five seconds, and then compile them by *pdfLaTeX* takes about 5 more seconds. That's not efficient at all, escepically when you want some instant feedback for some small changes. 
+
+However, by using Inkscape, you only need to type(Ok, not quite, you don't need to type them out actually, you'll see) the following:
 
 ```latex
 \begin{figure}[H]
@@ -247,4 +249,44 @@ LaTeX_project
 
 Now, let's get into the fun part. Let's set up the short-cut for this.
 
-### 
+### Inkscape
+
+Appartently, you need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommand you to install this in terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
+
+```bash
+brew install --cask inkscape
+```
+
+### Inkscape figure manager
+
+This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommand you to follow the installation instruction there. Here is just some guideline for you
+
+1. You need to download [choose](https://github.com/chipsenkbeil/choose) first, for later usages.
+
+2. Type this in your terminal
+   ```bash
+   pip3 install inkscape-figures
+   ```
+
+3. type `inkscape-figure` in your terminal to make sure you have corrected install it.
+
+If you're using Linux and Vim, then you are done already. But since you're using macOS and VSCode, please follow me, there is some more thing for you to configure.
+
+#### Modify
+
+Firstly, please type the following command in your terminal
+
+```bash
+where inkscape-figures 
+```
+
+to find out where the `inkscape-figures` is installed. In my environment, I use Anaconda quite a lot, so mine is `/Users/pbb/opt/anaconda3/bin/inkscape-figures`. 
+
+Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
+
+Ok, I know you probably don't have that much patient now, so I have a modified version available [here]()
+
+
+
+
+
