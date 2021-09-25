@@ -1,11 +1,11 @@
-# Vscode-LaTeX-inkscape
-A way to integrate LaTeX, Vscode, and Inkscape in macOS
+# VSCode-LaTeX-Inkscape
+A way to integrate LaTeX, VSCode, and Inkscape in macOS
 
 ## Abstract
 
 I use LaTeX heavily in past two years for both academic work and professional work, and I think I'm quite proficient in terms of type thing out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I finally realize that I'm still too naive. 
 
-I took quite a few math courses, hence after find out this incredible workflow, I decide to adapt the whole setup from Linux-Vim to macOS-Vscode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
+I took quite a few math courses, hence after find out this incredible workflow, I decide to adapt the whole setup from Linux-Vim to macOS-VSCode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
 
 ## Disclaimer
 
@@ -13,13 +13,13 @@ Please look through the two blog posts above from Gilles Castel! They are incred
 
 ## Setup For Typing Blasting Fast
 
-First thing first, please set up your Vscode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorial online, just check them out and set them up properly.
+First thing first, please set up your VSCode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorial online, just check them out and set them up properly.
 
 Now, we go through thing one by one follow Gilles Castel's blog post.
 
 ### Tex Conceal
 
-This is probably the only thing I don't like that much in Gilles Castel's set up. I'm quite comfortable looking at LaTeX source code for formula, and I don't think they look that nice. But if you want to set them up in Vscode, there are an extension [here](https://github.com/Pancaek/vsc-conceal), I personally have no experience with this particular setup, feel free to try them out though.
+This is probably the only thing I don't like that much in Gilles Castel's set up. I'm quite comfortable looking at LaTeX source code for formula, and I don't think they look that nice. But if you want to set them up in VSCode, there are an extension [here](https://github.com/Pancaek/vsc-conceal), I personally have no experience with this particular setup, feel free to try them out though.
 
 ### Snippets
 
@@ -57,11 +57,11 @@ Feeling it? Let try to set up this step by step. And maybe you can create your o
 
 ### HyperSnips for Math
 
-If you look around in Vscode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/Vscode-LaTeX-Inkscape/blob/main/HyperSnips/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/HyperSnips/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
-To modify this file, you can either go to this file in your finder or use Vscode built-in command function. For command function, 
+To modify this file, you can either go to this file in your finder or use VSCode built-in command function. For command function, 
 
-1. Press `shift+cmd+space` to type in some command to Vscode.
+1. Press `shift+cmd+space` to type in some command to VSCode.
 2. Type `>HyperSnips: Open Snippet File`
 3. Choose `latex.hsnips`
 
@@ -87,7 +87,7 @@ You can find my key-binding set up in this repo. But stay tune, there is more to
 
 ### Correcting spelling mistakes on the fly
 
-Although my typing speed is quite high, but I have typo all the times. So this is a must for me, actually. And surprisingly, this is the hardest thing until now for me to set it up right. Let's see how we can configure this functionality in Vscode!
+Although my typing speed is quite high, but I have typo all the times. So this is a must for me, actually. And surprisingly, this is the hardest thing until now for me to set it up right. Let's see how we can configure this functionality in VSCode!
 
 #### multi-command
 
@@ -99,9 +99,9 @@ And then, after searching for some times, I find out that there is a popular spe
 
 #### LTeX(Not required)
 
-If you are bad in grammar like me, you definitely want to install [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, but it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
+If you are bad in grammar like me, you definitely want to install [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex) to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, but it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
 
-Now, it's time to configure all these. Open your Keyboard Shortcuts page in Vscode, which is in the bottom left
+Now, it's time to configure all these. Open your Keyboard Shortcuts page in VSCode, which is in the bottom left
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/keyboard.png" alt="drawing" width="400"/>  
@@ -135,7 +135,7 @@ Now, paste the following code in `keybindings.json`:
 },
 ```
 
-Make sure that the curly braces above have a tailing comma, otherwise Vscode will complain about it.
+Make sure that the curly braces above have a tailing comma, otherwise VSCode will complain about it.
 
 Now, as long as you see there is a spelling error, you just type `cmd+l`, the keybinding will do the following things:
 
@@ -179,3 +179,5 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example.png" width="500"/>
 </p>
+
+This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for this, that's what we called mind-blowing. 
