@@ -316,6 +316,7 @@ The last thing you need to install is [Command Runner](https://marketplace.visua
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="900"/>
 </p>
 
+
 Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `test-figure`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `test-figure` for me and open it. 
 
 Feel exciting? Let's set it up!
