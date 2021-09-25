@@ -1,5 +1,5 @@
 # Vscode-LaTeX-inkscape
-A way to integrate LaTeX, Vscode and Inkscape in macOS
+A way to integrate LaTeX, Vscode, and Inkscape in macOS
 
 ## Abstract
 
