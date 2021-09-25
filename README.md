@@ -173,3 +173,9 @@ Additionally, if you also want to correct your grammar error, I use the shortcut
 Now, the first part is over. Let's go to the next truly beautiful, elegant and exciting world, drawing with [Inkscape](https://inkscape.org/zh-hant/).
 
 ## Drawing Like a Pro
+
+Before we go to any setup detail, let's first look at some figures I draw right after I have set this up:
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example.png" width="500"/>
+</p>
