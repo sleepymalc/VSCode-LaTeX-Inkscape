@@ -112,23 +112,23 @@ And then go into it's `JSON` file, which is at the upper right:
 Now, paste the following code in `keybindings.json`:
 
 ```json
-	{
-        "key": "cmd+l",
+{
+	"key": "cmd+l",
         "command": "extension.multiCommand.execute",
         "args": {
-            "sequence": [
-                "cSpell.goToPreviousSpellingIssue",
-                {
-                    "command": "editor.action.codeAction",
-                    "args": {
-                        "kind": "quickfix",
-                        "apply": "first"
-                    }
+		"sequence": [
+        	        "cSpell.goToPreviousSpellingIssue",
+	                {
+                	    "command": "editor.action.codeAction",
+        	            "args": {
+	                        "kind": "quickfix",
+                        	"apply": "first"
+                    	}
                 },
                 "cursorUndo",
-            ]
+        	]
         }
-	},
+},
 ```
 
 make sure that the curly braces above have a tailing comma, otherwise Vscode will complain about it.
