@@ -28,13 +28,13 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 A snip­pet is a short reusable piece of text that can be trig­gered by some other text. For ex­am­ple, when I type `dm` and press Tab, the word `dm` will be ex­pand­ed to a math environment:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="500" height="155"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="500"/>
 </p>
 
 If you are a math guy, you may need to type some inline math like `$$`, which is kind of painful. But with snippet, you can have 
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="500" height="143"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/inline.gif" width="500"/>
 </p>
 
 See? you just type `fm`, and then your snippet not only automatically type `$$`for you, it also send your cursor between `$$`!
@@ -42,13 +42,13 @@ See? you just type `fm`, and then your snippet not only automatically type `$$`f
 As you can imagine, this can be quite complex. For example, you can even have something like this:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/table2_5.gif" width="500" height="362"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/table2_5.gif" width="500"/>
 </p>
 
 or this:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif" width="500" height="155"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/pmatrix.gif" width="500"/>
 </p>
 
 To fast to keep track of? For the first snippet, I type `table2 5`, and then it generate a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 4` to indicate that I want a 2 by 4 matrix, then boom! my snippets do that for me in an instant!
@@ -74,13 +74,13 @@ For further and detaield explanation for snippets, please go to check out the or
 Unlike Gilles Castel's approach, there is a available extension out there for you to simplify your math calculation already! Please go to checkout [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral.gif" width="500" height="171"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral.gif" width="500"/>
 </p>
 
 Magic right? Let's set it up! First, please look at the Install document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation is done, you can then set up the keybinding for calculating the math expression. Personally, I use `shift+e`, where `e` stands for evaluate, to calculate in the way that  it will append an equal sign and the answer right after your formula, just like above. And if you don't want to show the intermediate steps of your calculation, you can use `shift+r`, where `r` stands for replace, to directly replace the whole formula and give me the answer only. See the demo below:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral2.gif" width="500" height="160"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/integral2.gif" width="500"/>
 </p>
 
 You can find my key-binding set up in this repo. But stay tune, there is more to come! Let's go to the last thing covered in Gilles Castel's post, correcting spelling mistakes.
@@ -146,5 +146,5 @@ Now, as long as you see there is an spelling error, you just type `cmd+l`, the k
 Here is a quick demo for how it works when typing:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/spell.gif" width="500" height="109"/>
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/spell.gif" width="500"/>
 </p>
