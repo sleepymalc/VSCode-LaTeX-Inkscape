@@ -1,0 +1,13 @@
+{
+    // Auto Correction setup
+    "cSpell.diagnosticLevel": "Warning",
+    // Inkscape setup
+    "command-runner.terminal.name": "runCommand",
+    "command-runner.terminal.autoClear": true,
+    "command-runner.terminal.autoFocus": false,
+    "command-runner.commands": {
+        "inkscapeCreate": "inkscape-figures create ${selectedText} ${workspaceFolder}/Figures/",
+        "inkscapeEdit": "inkscape-figures edit ${workspaceFolder}/Figures/",
+        "inkscapeStart": "inkscape-figures watch"
+    }
+}
