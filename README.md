@@ -503,3 +503,6 @@ Again, thanks to Gilles Castel, this workflow really fit my style. Although it o
 If you read through Gilles Castel's posts, you'll find out that I don't have any solution for [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager), this is because it depends on a particular library called `Xlib`, which is only for Linux. 
 
 Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
+
+## Related Project
+[Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
