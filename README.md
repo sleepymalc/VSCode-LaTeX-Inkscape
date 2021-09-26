@@ -489,4 +489,17 @@ Notice that there is one more thing for you to modify in the source code in `mai
 
 This is the whole set up I have, and let's wrap this up, since I know this may be quite overwhelming.
 
-1. 
+1. Before you start your project, please go to `Visual` mode by entering `v` in `Normal` mode. And then press `ctrl+f`. This will set up the file watcher.
+2. When you want to create a new figure, go into a new line, type the name of your figure in `Insert` mode, then press `ctrl+f`. This will create a new figure with the name you typed, and open it in Inkscape for you.
+3. When you have done drawing your figure, as long as you press `cmd+s`, it will automatically save the figure in `pdf+latex` for you, then you can close Inkscape.
+4. When you want to edit one of your figure, you press `ctrl+f` in `Normal` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3. 
+
+## Credits
+
+Again, thanks to Gilles Castel, this workflow really fit my style. Although it originally works in Linux+Vim only, but the idea is the most important thing. Without his wonder post, I can't even imagine this is possible. But now it is! Definitely go to his original post to show him some love.
+
+## TODO
+
+If you read through Gilles Castel's posts, you'll find out that I don't have any solution for [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager), this is because it depends on a particular library called `Xlib`, which is only for Linux. 
+
+Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
