@@ -505,4 +505,7 @@ If you read through Gilles Castel's posts, you'll find out that I don't have any
 Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
 
 ## Related Project
-[Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
+1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
+2. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
+3. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
+4. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
