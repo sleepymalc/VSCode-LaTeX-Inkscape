@@ -240,7 +240,7 @@ LaTeX_project
     │    ├── fig1
     │    ├── fig2
     │    .
-    │
+    │	 .
     .
     .
 ```
