@@ -233,15 +233,13 @@ LaTeX_project
     │
     ├── LaTex.tex
     │
+    ├── LaTex.pdf
+    │
     ├── Figures
     │    │
     │    ├── fig1
     │    ├── fig2
     │    .
-    |
-    ├── 
-    │
-    ├── LaTex.pdf
     │
     .
     .
