@@ -359,7 +359,7 @@ for starting the Inkscape figure manager. And the command is defined in [setting
 }
 ```
 
-In detailed, we just use `command runner` to run the command we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), in this case, I explicitly says that the keybinding `ctrl+f` will trigger `inkscapeStart` when I'm in `Visual` mode in Vim, which is just `inkscape-figures watcher` as defined above.
+In detailed, we just use `command runner` to run the command we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), in this case, I explicitly tell the keybinding `ctrl+f` will trigger `inkscapeStart` when I'm in `Visual` mode in Vim, which is just `inkscape-figures watcher` as defined above.
 
 Notice that we set the `autoFocus=false` for the terminal `command runner` use since we don't want a pop-up terminal to distract us. If you want to see whether the command is triggered correctly every time, you can set it to `true`.
 
@@ -477,4 +477,16 @@ and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/
 ```
 
 This is what's you should expect when you want to edit a particular figure:
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-edit-inkscape.gif" width="900"/>
+</p>
 
+This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. When you press `ctrl+f` in `Normal` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose. After you press `enter`, it will open that file for you to edit. In my demo, I create another figure named `figure-test2`, and then modify it a little, and compile it again.
+
+Notice that there is one more thing for you to modify in the source code in `main.py` in inkscape figure manager. Since Gilles Castel originally use `figures/` as his subfolder name to store figures, so you need to change every `figures/` in the source code into `Figures/` if you're modifying the source-code by your own rather than copy mine.
+
+### Overall Workflow to Create a New Figure in VSCode with Inkscape
+
+This is the whole set up I have, and let's wrap this up, since I know this may be quite overwhelming.
+
+1. 
