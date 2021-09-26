@@ -179,7 +179,7 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example.png" width="500"/>
 </p>
-This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for this, that's what we called mind-blowing. One last thing I want to make it clear before we start this part is that you have already install [VSCode Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, but if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
+This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for this, that's what we called mind-blowing. One last thing I want to make it clear before we start this part is that you have already install. While this is not required, but if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
 ### Inkscape
 
