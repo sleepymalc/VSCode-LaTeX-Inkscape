@@ -504,6 +504,10 @@ If you read through Gilles Castel's posts, you'll find out that I don't have any
 
 Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
 
+### Updates(9.27.21)
+
+After some reseraching, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) running correctly, but since it depends on `xlib`, which is no longer used by macOS for almost every application(including inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
+
 ## Related Project
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
 2. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
