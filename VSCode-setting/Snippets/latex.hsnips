@@ -62,7 +62,7 @@ snippet `table([1-9]{1})\ ([1-9]{1})` "Table environment" bA
 \end{table}
 endsnippet
 
-priority 200
+priority 20000
 snippet `(b|p)mat([1-9]{1})\ ([1-9]{1})` "matrix" iwAm
 \begin{``rv = m[1]``matrix}``
 	rv = gen_matrix(m[2],m[3]);
@@ -148,7 +148,7 @@ snippet `(\\?[a-zA-Z]\w*)(bar|BAR)` "Bar" iAm
 \overline{``rv = m[1]``}
 endsnippet
 
-snippet `(\\?[a-zA-Z]\w*)(td|TD)` "tilde" iAm
+snippet `(\\?[a-zA-Z]\w*)(td|TD)` "tilde" iwAm
 \widetilde{``rv = m[1]``}
 endsnippet
 
@@ -168,6 +168,11 @@ snippet `(\\?\w+)(,\.|\.,)` "Vector postfix" iAm
 \vec{``rv = m[1]``}
 endsnippet
 
+priority 200
+snippet `(\\?\w+)(;\'|\;')` "Tilde postfix" iAm
+\tilde{``rv = m[1]``}
+endsnippet
+
 snippet fig "Figure environment" b
 \begin{figure}[${1:htpb}]
 	\centering
@@ -179,7 +184,7 @@ endsnippet
 
 priority 100
 snippet ... "dots" iA
-\dots 
+\cdots 
 endsnippet
 
 snippet => "implies" Aim
@@ -195,7 +200,7 @@ snippet iff "if and only if" wAm
 endsnippet
 
 snippet fm "inline Math" wA
-$${1}$``
+\(${1}\)``
 let str = t[0];
 let test = t[1][0];
 if (test != ',' &&  test != '.' &&  test != '-' && test !='?' && test !=' '){
@@ -263,11 +268,11 @@ snippet lr< "leftangle rightangle" iAm
 endsnippet
 
 snippet sum "sum" wAm
-\sum_{${1:i}=${2:1}}^{${3:\infty}} $0
+\sum\limits_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
 snippet taylor "taylor" wAm
-\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
+\sum\limits_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
 endsnippet
 
 snippet lim "limit" wm
@@ -311,7 +316,7 @@ snippet bmat "bmat" wm
 endsnippet
 
 snippet oo "\infty" wAm
-\infty
+\infty 
 endsnippet
 
 snippet EE "exist" iAm
@@ -409,8 +414,8 @@ snippet ttt "text tt" iA
 endsnippet
 
 priority 100
-snippet tbf "text bf" iA
-\textbf{$1}$0
+snippet bm "bold" iA
+\bm{$1}$0
 endsnippet
 
 snippet `(\\\\)([a-zA-Z])` iAm
@@ -434,8 +439,8 @@ snippet invs "inverse" iAm
 endsnippet
 
 priority 200
-snippet tr "transpose" iAm
-^{T}
+snippet tr "transpose" iAwm
+^{T}$0
 endsnippet
 
 snippet cp "complement" iAm
@@ -477,7 +482,7 @@ endsnippet
 
 priority 200
 snippet `(?<![\\a-zA-Z])(mu|alpha|sigma|rho|beta|gamma|delta|zeta|eta|varepsilon|theta|iota|kappa|vartheta|lambda|nu|pi|rho|tau|upsilon|phi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega)` "greek" wAm
-\\``rv = m[1]``
+\\``rv = m[1]``$0
 endsnippet
 
 priority 100
@@ -574,8 +579,16 @@ snippet bino "binomial coefficient" iAm
 \binom{$1}{$2}$0
 endsnippet
 
-snippet beg "begin env" wA
-\begin{${1:align*}}
+snippet varn "empty set" wiAm
+\varnothing $0
+endsnippet
+
+snippet emph "emph" wiA
+\emph{$1}$0
+endsnippet
+
+snippet begg "begin custom env" wiA
+\begin{${1:eg}}
 	$0
-\end{${1:align*}}
+\end{${1:eg}}
 endsnippet
