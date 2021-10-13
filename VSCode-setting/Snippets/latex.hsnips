@@ -168,11 +168,6 @@ snippet `(\\?\w+)(,\.|\.,)` "Vector postfix" iAm
 \vec{``rv = m[1]``}
 endsnippet
 
-priority 200
-snippet `(\\?\w+)(;\'|\;')` "Tilde postfix" iAm
-\tilde{``rv = m[1]``}
-endsnippet
-
 snippet fig "Figure environment" b
 \begin{figure}[${1:htpb}]
 	\centering
@@ -184,7 +179,7 @@ endsnippet
 
 priority 100
 snippet ... "dots" iA
-\cdots 
+\ldots 
 endsnippet
 
 snippet => "implies" Aim
@@ -256,7 +251,7 @@ snippet lr| "left| right|" iAm
 endsnippet
 
 snippet lr{ "left\{ right\}" iAm
-\left\\{ ${1} \right\\} $0
+\left{ ${1} \right} $0
 endsnippet
 
 snippet lr[ "left[ right]" iAm
@@ -355,10 +350,10 @@ snippet xx "times" iAm
 \times 
 endsnippet
 
-snippet case "cases" w
-\begin{cases}
+snippet case "cases" iwAm
+\begin{dcases}
 	$1
-\end{cases}
+\end{dcases}
 endsnippet
 
 snippet bigfunc "Big function" wA
@@ -370,7 +365,7 @@ snippet bigfunc "Big function" wA
 \end{equation*$6}$0
 endsnippet
 
-snippet bigmin "Optimization problem" wA
+snippet opmin "Optimization problem" wA
 \begin{align*}
   \min~ & ${1:c^Tx}    \\\\
         & ${2:Ax = b}  \\\\
@@ -379,7 +374,7 @@ snippet bigmin "Optimization problem" wA
 $0
 endsnippet
 
-snippet bigmax "Optimization problem" wA
+snippet opmax "Optimization problem" wA
 \begin{align*}
   \max~ & ${1:c^Tx}    \\\\
         & ${2:Ax = b}  \\\\
@@ -411,6 +406,14 @@ endsnippet
 priority 100
 snippet ttt "text tt" iA
 \texttt{$1}$0
+endsnippet
+
+snippet mtt "math tt" iAm
+\mathtt{$1}$0
+endsnippet
+
+snippet sc "text sc" iAm
+\textsc{$1}$0
 endsnippet
 
 priority 100
@@ -462,7 +465,7 @@ snippet cvec "column vector" iAm
 endsnippet
 
 snippet rvec "row vector" iAm
-\begin{pmatrix} ${1:x}_${2:1}, \cdots ,$1_${3:n} \end{pmatrix}$0
+\begin{pmatrix} ${1:x}_${2:1}, \ldots ,$1_${3:n} \end{pmatrix}$0
 endsnippet
 
 priority 200
@@ -553,8 +556,8 @@ snippet conv "convex composition" iAm
 ${1:\lambda} ${2:x} + (1 - $1) ${3:y}
 endsnippet
 
-snippet range "i = 1, \cdots, n" wm
-${1:i} = ${2:1}, \cdots, ${3:n}$0
+snippet range "i = 1, \ldots, n" wm
+${1:i} = ${2:1}, \ldots, ${3:n}$0
 endsnippet
 
 snippet eps "epsilon" iAm
