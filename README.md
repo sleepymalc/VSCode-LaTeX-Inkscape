@@ -177,9 +177,6 @@ Now, the first part is over. Let's go to the next truly beautiful, elegant and e
 Before we go to any setup detail, let's first look at some figures I draw right after I have set this up:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example.png" width="500"/>
-</p>
-<p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example1.png" width="500"/>
 </p>
 
@@ -187,7 +184,11 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example2.png" width="500"/>
 </p>
 
-This is quite eye-pleasing, right? But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for the original blog. 
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example3.png" width="500"/>
+</p>
+
+This is quite eye-pleasing, right? Those are some drawing I made when taking Linear programming lectures. But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for the original blog. 
 
 One last thing is that I'll assume you have already install [VSCode Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, but if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
