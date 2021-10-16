@@ -251,7 +251,7 @@ snippet lr| "left| right|" iAm
 endsnippet
 
 snippet lr{ "left\{ right\}" iAm
-\left{ ${1} \right} $0
+\left\{ ${1} \right\} $0
 endsnippet
 
 snippet lr[ "left[ right]" iAm
@@ -383,6 +383,16 @@ snippet opmax "Optimization problem" wA
 $0
 endsnippet
 
+snippet opPD "Optimization problem with primal & dual" wA
+\[
+	\begin{alignedat}{5}
+		\min~&c^{T}x\qquad\qquad &&\max ~ &&y^{T}b\\\\
+		&Ax = b && &&y^{T}A\leq c^{T}\\\\
+		(P)\quad&x\geq  0 &&(D)\quad&&
+	\end{alignedat}.
+\]$0
+endsnippet
+
 snippet deff "Definition of function" wAm
 $1\colon ${2:\\mathbb{R\}} \to ${3:\\mathbb{R\}}, ${4:x} \mapsto $0
 endsnippet
@@ -414,11 +424,6 @@ endsnippet
 
 snippet sc "text sc" iAm
 \textsc{$1}$0
-endsnippet
-
-priority 100
-snippet bm "bold" iA
-\bm{$1}$0
 endsnippet
 
 snippet `(\\\\)([a-zA-Z])` iAm
