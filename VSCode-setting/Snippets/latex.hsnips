@@ -95,7 +95,7 @@ snippet >= "greater or equal to" iAm
 endsnippet
 
 snippet <= "less or equal to" iAm
-\leq$0
+\leq $0
 endsnippet
 
 snippet != "not equal" iAm
@@ -298,18 +298,6 @@ snippet sq "\sqrt{}" iAm
 \sqrt{${1}} $0
 endsnippet
 
-snippet pmat "pmat" wm
-\begin{pmatrix} 
-    ${1: } 
-\end{pmatrix} $0
-endsnippet
-
-snippet bmat "bmat" wm
-\begin{bmatrix} 
-    $1 
-\end{bmatrix} $0
-endsnippet
-
 snippet oo "\infty" wAm
 \infty 
 endsnippet
@@ -386,9 +374,9 @@ endsnippet
 snippet opPD "Optimization problem with primal & dual" wA
 \[
 	\begin{alignedat}{5}
-		\min~&c^{T}x\qquad\qquad &&\max ~ &&y^{T}b\\\\
-		&Ax = b && &&y^{T}A\leq c^{T}\\\\
-		(P)\quad&x\geq  0 &&(D)\quad&&
+		\min~&c^{T}x\qquad\qquad&&\max ~&&y^{T}b\\\\
+		&Ax = b 				&&		&&y^{T}A\leq c^{T}\\\\
+		(P)\quad	&x\geq  0 	&&(D)\quad&&
 	\end{alignedat}.
 \]$0
 endsnippet
@@ -577,12 +565,6 @@ snippet letw "let omega" iA
 Let $\Omega \subset C$ be open.
 endsnippet
 
-snippet box "Box" A
-``rv = '┌' + '─'.repeat(t[0].length + 2) + '┐'``
-│ $1 │
-``rv = '└' + '─'.repeat(t[0].length + 2) + '┘'``
-endsnippet
-
 snippet bino "binomial coefficient" iAm
 \binom{$1}{$2}$0
 endsnippet
@@ -599,4 +581,12 @@ snippet begg "begin custom env" wiA
 \begin{${1:eg}}
 	$0
 \end{${1:eg}}
+endsnippet
+
+snippet \coloneqq "definition in math" iAm
+\coloneqq $0
+endsnippet
+
+snippet bf "textbf" wA
+\textbf{$1} $0
 endsnippet
