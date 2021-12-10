@@ -519,6 +519,7 @@ After some reseraching, although there is a way to let the original script in [i
 
 ## Related Project
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
-2. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
-3. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
-4. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
+2. [Notes](https://github.com/sleepymalc/Notes)(All notes taken in this setup)
+3. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
+4. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
+5. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
