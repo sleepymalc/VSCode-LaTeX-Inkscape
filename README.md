@@ -1,11 +1,13 @@
 # VSCode-LaTeX-Inkscape
-A way to integrate LaTeX, VSCode, and Inkscape in macOS
+***A way to integrate LaTeX, VSCode, and Inkscape in macOS***
 
 ## Abstract
 
 I use LaTeX heavily in past two years for both academic work and professional work, and I think I'm quite proficient in terms of type thing out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive. 
 
 I took quite a few math courses, hence after find out this workflow, I decide to adapt the whole setup from Linux-Vim to macOS-VSCode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
+
+If you still don't konw what to expect, please go to [Notes](https://github.com/sleepymalc/Notes) check out my notes taken in this setup. Decide to adapt this workflow probably is the best choice I did throughout my education!
 
 ## Disclaimer
 
