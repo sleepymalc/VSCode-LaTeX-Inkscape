@@ -433,7 +433,7 @@ endsnippet
 
 priority 200
 snippet `(DINT|dint)` "integral" wAm
-\int_{${1:-\infty}}^{${2:\infty}} ${3} \\, d${4:x} $0
+\int_{${1:-\infty}}^{${2:\infty}} ${3} \\,\mathrm{d}${4:x} $0
 endsnippet
 
 priority 200
@@ -529,15 +529,15 @@ snippet indicator "indicator function" iAm
 endsnippet
 
 snippet mean "Expectation" iAm
-\expectation{$1} $0
+\expectation{$1}{$2} $0
 endsnippet
 
 snippet var "Variation" iAm
-\variance{$1} $0
+\variance{$1}{$2} $0
 endsnippet
 
 snippet prob "Probability" iAm
-\probability{$1} $0
+\probability{$1}{$2} $0
 endsnippet
 
 snippet cov "Covariance" iAm
