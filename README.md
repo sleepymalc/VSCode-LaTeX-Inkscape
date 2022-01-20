@@ -178,6 +178,8 @@ Now, the first part is over. Let's go to the next truly beautiful, elegant and e
 
 Before we go to any setup detail, let's first look at some figures I draw right after I have set this up:
 
+
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example1.png" width="500"/>
 </p>
@@ -189,6 +191,18 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example3.png" width="500"/>
 </p>
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
+</p>
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
+</p>
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example6.png" width="500"/>
+</p>
+
 
 This is quite eye-pleasing, right? Those are some drawing I made when taking Linear programming lectures. But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Definitely check it out for the original blog. Or for more figures I draw, you can check out [Note](https://github.com/sleepymalc/Notes).
 
