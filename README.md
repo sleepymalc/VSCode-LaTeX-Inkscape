@@ -7,7 +7,7 @@ I use LaTeX heavily in past two years for both academic work and professional wo
 
 I took quite a few math courses, hence after find out this workflow, I decide to adapt the whole setup from Linux-Vim to macOS-VSCode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
 
-If you still don't konw what to expect, please go to [Notes](https://github.com/sleepymalc/Notes) check out my notes taken in this setup. Decide to adapt this workflow probably is the best choice I did throughout my education!
+If you still don't konw what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Decide to adapt this workflow probably is the best choice I did throughout my education!
 
 ## Disclaimer
 
