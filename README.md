@@ -1,6 +1,14 @@
 # VSCode-LaTeX-Inkscape
 ***A way to integrate LaTeX, VSCode, and Inkscape in macOS***
 
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
+</p>
+
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
+</p>
+
 ## Abstract
 
 I use LaTeX heavily in past two years for both academic work and professional work, and I think I'm quite proficient in terms of type thing out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive. 
@@ -187,17 +195,10 @@ Before we go to any setup detail, let's first look at some figures I draw right 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example2.png" width="500"/>
 </p>
-
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example3.png" width="500"/>
 </p>
-<p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
-</p>
 
-<p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
-</p>
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example6.png" width="500"/>
