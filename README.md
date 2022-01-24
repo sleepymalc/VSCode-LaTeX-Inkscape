@@ -557,7 +557,7 @@ I have been working on Category Theory for a while, and I find out that [quiver]
 and also, define the command `quiver` as 
 ```json
     "command-runner.commands": {
-        "quiver": "open <path-to-quiver-folder>/index.html
+        "quiver": "open <path-to-quiver-folder>/index.html"
     },
 ```
 Notice that you'll need to build it first! Please follow the tutorial [here](https://github.com/varkor/quiver).
