@@ -534,6 +534,34 @@ Currently, there is a repo called [python-xlib](https://github.com/python-xlib/p
 
 After some reseraching, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) running correctly, but since it depends on `xlib`, which is no longer used by macOS for almost every application(including inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
 
+
+### Updates (01.24.22)
+
+I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hot key to use it **locally**. Specifically, I add the following code into my `keybindings.json`:
+```json
+    {
+        "key": "ctrl+c",
+        "command": "command-runner.run",
+        "args": {
+            "command": "quiver",
+            "terminal": {
+                "name": "runCommand",
+                "shellArgs": [],
+                "autoClear": true,
+                "autoFocus": false
+            }
+        },
+        "when": "editorTextFocus"
+    },
+```
+and also, define the command `quiver` as 
+```json
+    "command-runner.commands": {
+        "quiver": "open <path-to-quiver-folder>/index.html
+    },
+```
+Notice that you'll need to build it first! Please follow the tutorial [here](https://github.com/varkor/quiver).
+
 ## Related Project
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
 2. [Notes](https://github.com/sleepymalc/Notes)(All notes taken in this setup)
