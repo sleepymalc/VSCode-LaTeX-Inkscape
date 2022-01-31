@@ -557,10 +557,10 @@ I have been working on Category Theory for a while, and I find out that [quiver]
 and also, define the command `quiver` as 
 ```json
     "command-runner.commands": {
-        "quiver": "open <path-to-quiver-folder>/index.html"
+	"quiver": "open -na 'Google Chrome' --args --new-window <path-to-quiver>/quiver/src/index.html"
     },
 ```
-Notice that you'll need to build it first! Please follow the tutorial [here](https://github.com/varkor/quiver).
+Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
 
 ## Related Project
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
