@@ -31,10 +31,29 @@ function gen_table(nrow, ncol) {
 		results += "			";
 	}
 	for(var j = 0;j <ncol-1;j++){
-			results += "$" +(order+3).toString() + " & ";
+		results += "$" +(order+3).toString() + " & ";
+		order ++;
+	}
+	results += " $"+(order+3).toString() +" \\\\"+ "\\";
+	return results;
+}
+
+function gen_array(nrow, ncol) {
+	let results = "";
+	let order = 1;
+	for (var i=0; i<nrow-1; i++){
+		for(var j = 0;j <ncol-1;j++){
+			results += "$" +(order).toString() + " & ";
 			order ++;
 		}
-		results += " $"+(order+3).toString() +" \\\\"+ "\\";
+		results += " $"+(order).toString() +" \\\\"+ "\\"+ "\n" + "	";
+		order ++;
+	}
+	for(var j = 0;j <ncol-1;j++){
+		results += "$" +(order).toString() + " & ";
+		order ++;
+	}
+	results += " $"+(order).toString() +" \\\\"+ "\\";
 	return results;
 }
 endglobal
@@ -62,60 +81,189 @@ snippet `table([1-9]{1})\ ([1-9]{1})` "Table environment" bA
 \end{table}
 endsnippet
 
-priority 20000
+priority 2000
 snippet `(b|p)mat([1-9]{1})\ ([1-9]{1})` "matrix" iwAm
 \begin{``rv = m[1]``matrix}``
 	rv = gen_matrix(m[2],m[3]);
 	``\end{``rv = m[1]``matrix}$0
 endsnippet
 
-snippet pseudocode "pseudo-code" iwA
-\begin{minipage}{\linewidth}
-	\begin{algorithm}[H]
-		\begin{algorithmic}[1]
-			\Function{${1:Function}}{$${2:input}$}
-			\If{$ $}\Comment{this is an comment}
-			\EndIf
-			\\
-			\For{$ $}
-			\EndFor
-			\State{\Return{$ $}}
-			\EndFunction
-		\end{algorithmic}
-	\end{algorithm}
-\end{minipage}
+snippet cvec "column vector" iAm
+\begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots \\\\ $1_${3:n} \end{pmatrix}$0
+endsnippet
+
+snippet rvec "row vector" iAm
+\begin{pmatrix} ${1:x}_${2:1}, \ldots ,$1_${3:n} \end{pmatrix}$0
+endsnippet
+
+snippet `ary([1-9]{1})\ ([1-9]{1})` "Array environment" ibAm
+\begin{array}{``
+	let len = m[2];
+	let results = "";
+	for(var i=0; i<len; i++){
+		results += "c"
+	}
+	rv = results;
+	``}
+	``
+	rv = gen_array(m[1], m[2])
+	``
+\end{array}
+endsnippet
+
+snippet %-- "------" wA
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+$0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);m` "\mu" wAm
+\mu $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);a` "\alpha" wAm
+\alpha $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);s` "\sigma" wAm
+\sigma $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);S` "\Sigma" wAm
+\Sigma $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);r` "\rho" wAm
+\rho $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);b` "\beta" wAm
+\beta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);g` "\gamma" wAm
+\gamma $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);G` "\Gamma" wAm
+\Gamma $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);d` "\delta" wAm
+\delta $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);D` "\Delta" wAm
+\Delta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);z` "\zeta" wAm
+\zeta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);e` "\eta" wAm
+\eta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);t` "\theta" wAm
+\theta $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);vt` "\vartheta" wAm
+\vartheta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);T` "\Theta" wAm
+\Theta $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);i` "\iota" wAm
+\iota $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);k` "\kappa" wAm
+\kappa $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);l` "\lambda" wAm
+\lambda $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);L` "\Lambda" wAm
+\Lambda $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);n` "\nu" wAm
+\nu $0
+endsnippet
+
+priority 200
+snippet `(?<![\\a-zA-Z]);;n` "\nabla" iAm
+\nabla $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);p` "\pi" wAm
+\pi $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);P` "\Pi" wAm
+\Pi $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);r` "\rho" wAm
+\rho $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);t` "\tau" wAm
+\tau $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);u` "\upsilon" wAm
+\upsilon $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);U` "\Upsilon" wAm
+\Upsilon $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);p` "\phi" wAm
+\phi $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);P` "\Phi" wAm
+\Phi $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);vp` "\varphi" wAm
+\varphi $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);c` "\chi" wAm
+\chi $0
+endsnippet
+
+priority 200
+snippet `(?<![\\a-zA-Z]);;p` "\psi" wAm
+\psi $0
+endsnippet
+priority 200
+snippet `(?<![\\a-zA-Z]);;P` "\Psi" wAm
+\Psi $0
+endsnippet
+
+snippet `(?<![\\a-zA-Z]);o` "\omega" wAm
+\omega $0
+endsnippet
+snippet `(?<![\\a-zA-Z]);O` "\Omega" wAm
+\Omega $0
+endsnippet
+
+snippet eps "\epsilon" iAm
+\epsilon $0
+endsnippet
+snippet veps "\vepsilon" iAm
+\varepsilon $0
+endsnippet
+
+priority 100
+snippet `(?<![\\a-zA-Z])ell` "\ell" iAwm
+\\ell $0
 endsnippet
 
 snippet // "Fraction" iAm
 \\frac{$1}{$2}$0
-endsnippet
-
-snippet `(>=|(?<!\\)geq)` "greater or equal to" iAm
-\geq $0
-endsnippet
-
-snippet `(<=|(?<!\\)leq)` "less or equal to" iAm
-\leq $0
-endsnippet
-
-snippet `(!=|(?<!\\)neq)` "not equal" iAm
-\neq $0
-endsnippet
-
-snippet == "constan equal" iAm
-\equiv $0
-endsnippet
-
-snippet ~~ "approx. equal" iAm
-\thickapprox $0
-endsnippet
-
-snippet ~= "approx. equal(2)" iAm
-\cong $0
-endsnippet
-
-snippet || "mid" iAm
- \mid $0
 endsnippet
 
 snippet `((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/` "Fraction no ()" Am
@@ -142,6 +290,42 @@ snippet `^.*\)/` "Fraction with ()" Am
     results += "{$1}$0";
     rv = results;
     ``
+endsnippet
+
+snippet `(>=|(?<!\\)geq)` "greater or equal to" iAm
+\geq $0
+endsnippet
+
+snippet `(<=|(?<!\\)leq)` "less or equal to" iAm
+\leq $0
+endsnippet
+
+snippet `(!=|(?<!\\)neq)` "not equal" iAm
+\neq $0
+endsnippet
+
+snippet == "constan equal" iAm
+\equiv $0
+endsnippet
+
+snippet ~~ "approx. equal" iAm
+\thickapprox $0
+endsnippet
+
+snippet ~= "approx. equal(2)" iAm
+\cong $0
+endsnippet
+
+snippet ~- "approx. equal(3)" iAm
+\simeq $0
+endsnippet
+
+snippet @> "inclusion" iAm
+\hookrightarrow $0
+endsnippet
+
+snippet || "mid" iAm
+ \mid $0
 endsnippet
 
 snippet `([a-zA-Z])\1` "subscript" iAm
@@ -182,7 +366,7 @@ snippet `(\\?\w+)(,\.|\.,)` "Vector postfix" iAm
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
+\begin{figure}[${1:H}]
 	\centering
 	${2:\includegraphics[width=0.8\textwidth]{$3}}
 	\caption{${4:$3}}
@@ -203,6 +387,7 @@ snippet =< "implied by" Aim
 \impliedby $0
 endsnippet
 
+priority 200
 snippet iff "if and only if" wAm
 \iff $0
 endsnippet
@@ -219,14 +404,14 @@ else{
 }``$2
 endsnippet
 
-snippet %-- "---haha---" wA
-``rv = '%'+'─'.repeat(148)``
-endsnippet
-
 snippet dm "display Math" wA
 \[
-	${1}.
+	${1}
 \]$0
+endsnippet
+
+snippet lr< "<>" iAm
+\left< $1 \right> $0
 endsnippet
 
 snippet ceil "ceil" iAm
@@ -249,11 +434,19 @@ snippet sum "sum" wAm
 \sum\limits_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
-snippet Cup "union" wAm
+snippet `(?<!\\)cup` "union" wAm 
+\cup $0
+endsnippet
+
+snippet Cup "Union" wAm
 \bigcup\limits_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
-snippet Cap "intersection" wAm
+snippet `(?<!\\)cap` "intersection" wAm 
+\cap $0
+endsnippet
+
+snippet Cap "Intersection" wAm
 \bigcap\limits_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
@@ -265,11 +458,13 @@ snippet lim "limit" wAm
 \lim\limits_{${1:n} \to ${2:\infty}} 
 endsnippet
 
-snippet lims "limsup" wm
+priority 200
+snippet lsup "limsup" wm
 \limsup_{${1:n} \to ${2:\infty}} 
 endsnippet
 
-snippet limi "limsup" wm
+priority 200
+snippet linf "liminf" wm
 \liminf_{${1:n} \to ${2:\infty}} 
 endsnippet
 
@@ -277,11 +472,12 @@ snippet prod "product" wAm
 \prod\limits_{${1:n=${2:1}}}^{${3:\infty}} $0
 endsnippet
 
-snippet part "d/dx" wAm
+snippet pd "d/dx" wAm
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
 
-snippet diff "d/dx" wAm
+priority 200
+snippet dif "d/dx" wAm
 \frac{\mathrm{d}${1:y}}{\mathrm{d}${2:x}} $0
 endsnippet
 
@@ -289,14 +485,22 @@ snippet sq "\sqrt{}" iAm
 \sqrt{${1}} $0
 endsnippet
 
+priority 200
 snippet oo "\infty" wAm
 \infty 
 endsnippet
 
+priority 500
+snippet `\^oo` "supscript ^\infty" iAm
+^\infty $0
+endsnippet
+
+priority 200
 snippet EE "exist" iAm
 \exists 
 endsnippet
 
+priority 200
 snippet AA "forall" iAm
 \forall 
 endsnippet
@@ -311,50 +515,28 @@ endsnippet
 
 snippet case "cases" iwAm
 \begin{dcases}
-	$1, &\text{ if } $3\\\\
-	$2, &\text{ if }$4 \\\\
+	$1, &\text{ if } $3 ;\\\\
+	$2, &\text{ if } $4 .
 \end{dcases}$0
 endsnippet
 
-snippet bigfunc "Big function" wA
-\begin{equation*$6}
-\begin{aligned}
-  $1\colon $2 & \longrightarrow $3      \\\\
-  $4          & \longmapsto $1($4) = $5
-\end{aligned}
-\end{equation*$6}$0
-endsnippet
-
-snippet opmin "Optimization problem" wA
-\begin{align*}
-  \min~ & ${1:c^Tx}    \\\\
-        & ${2:Ax = b}  \\\\
-        & ${3:x\geq 0}
-\end{align*}
-$0
-endsnippet
-
-snippet opmax "Optimization problem" wA
-\begin{align*}
-  \max~ & ${1:c^Tx}    \\\\
-        & ${2:Ax = b}  \\\\
-        & ${3:x\geq 0}
-\end{align*}
-$0
-endsnippet
-
-snippet opPD "Optimization problem with primal & dual" wA
+priority 200
+snippet DEFF "Big function" iwA
 \[
-	\begin{alignedat}{5}
-		\min~&c^{T}x\qquad\qquad&&\max ~&&y^{T}b\\\\
-		&Ax = b 				&&		&&y^{T}A\leq c^{T}\\\\
-		(P)\quad	&x\geq  0 	&&(D)\quad&&
-	\end{alignedat}.
-\]$0
+	\begin{aligned}
+	  	$1\colon $2 & \longrightarrow $3      \\\\
+  		$4          & \longmapsto $1($4) = $5
+	\end{aligned}
+\]
+$0
 endsnippet
 
-snippet deff "Definition of function" wAm
-$1\colon ${2:\\mathbb{R\}} \to ${3:\\mathbb{R\}}, ${4:x} \mapsto $0
+priority 200
+snippet deff "Definition of function" iwA
+\[
+	$1\colon ${2:\\mathbb{R\}} \to ${3:\\mathbb{R\}}, ${4:x} \mapsto
+\]
+$0
 endsnippet
 
 snippet iid "independent and identical distribution" iAm
@@ -394,14 +576,6 @@ snippet nin wAm
 \notin $0
 endsnippet
 
-snippet buu "bigcup" wAm
-\bigcup_{${1:i \in ${2: I}}} $0
-endsnippet
-
-snippet bnn "bigcap" wAm
-\bigcap_{${1:i \in ${2: I}}} $0
-endsnippet
-
 snippet invs "inverse" iAm
 ^{-1} $0
 endsnippet
@@ -415,6 +589,10 @@ snippet cp "complement" iAm
 ^{c} $0
 endsnippet
 
+snippet qs "square" iAm
+^{2} $0
+endsnippet
+
 snippet -> "to" iAm
 \to $0
 endsnippet
@@ -423,35 +601,14 @@ snippet !> "mapsto" iAm
 \mapsto $0
 endsnippet
 
-snippet cvec "column vector" iAm
-\begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots \\\\ $1_${3:n} \end{pmatrix}$0
-endsnippet
-
-snippet rvec "row vector" iAm
-\begin{pmatrix} ${1:x}_${2:1}, \ldots ,$1_${3:n} \end{pmatrix}$0
-endsnippet
-
 priority 200
-snippet `(DINT|dint)` "integral" wAm
+snippet `dint` "integral" wAm
 \int_{${1:-\infty}}^{${2:\infty}} ${3} \\,\mathrm{d}${4:x} $0
 endsnippet
 
 priority 200
-snippet `(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|sin|cos|cot|csc|ln|log|exp|star|perp)` "general" wAm
+snippet `(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|sin|cos|cot|csc|ln|log|exp|star|perp|inf|sup)` "general" wAm
 \\``rv = m[1]`` $0
-endsnippet
-
-priority 200
-snippet `(?<![\\a-zA-Z])(mu|alpha|sigma|rho|beta|gamma|delta|zeta|eta|varepsilon|theta|iota|kappa|vartheta|lambda|nu|pi|rho|tau|upsilon|phi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Pi|Sigma|Upsilon|Phi|Psi|Omega)` "greek" wAm
-\\``rv = m[1]``$0
-endsnippet
-
-snippet gama "gamma" wAm
-\\gamma$0
-endsnippet
-
-snippet Gama "Gamma" wAm
-\\Gamma$0
 endsnippet
 
 priority 100
@@ -461,7 +618,7 @@ endsnippet
 
 priority 300
 snippet `(?<![\\a-zA-Z])arg(max|min)` "arg min/max" wAm
-\mathop{\arg\\ \\``rv = m[1]``} $0
+\underset{$1}{\mathop{\arg\\ \\``rv = m[1]``}} $0
 endsnippet
 
 priority 200
@@ -469,7 +626,7 @@ snippet `(?<!\\)(min|max)` "general" wAm
 \mathop{\\``rv = m[1]``} $0
 endsnippet
 
-snippet ' "prime" iAm
+snippet ' "prime" wAm
 ^\prime $0
 endsnippet
 
@@ -477,30 +634,22 @@ snippet -- "setminus" iAm
 \setminus $0
 endsnippet
 
-snippet lll "l" iAm
-\ell $0
-endsnippet
-
-snippet nabla "nabla" iAm
-\nabla $0
-endsnippet
-
-snippet `(?<!\\)nabla` "nabla" iAm
-\nabla $0
-endsnippet
-
-priority 100
-snippet mcal "mathcal" im
-\mathcal{$1}$0
-endsnippet
-
+priority 200
 snippet mbb "mathbb" im
 \mathbb{$1}$0
 endsnippet
 
-priority 1000
-snippet `([a-zA-Z])mcal` "mathcal" iAm
+priority 200
+snippet `([a-zA-Z])cal` "mathcal" iAwm
 \mathcal{\\MakeUppercase{``rv = m[1]``}} $0
+endsnippet
+
+snippet `([a-zA-Z])rm` "mathrm" iAwm
+\mathrm{``rv = m[1]``} $0
+endsnippet
+
+snippet `([a-zA-Z])bf` "textbf" wA
+\textbf{``rv = m[1]``} $0
 endsnippet
 
 priority 100
@@ -516,23 +665,15 @@ snippet << "<<" iAm
 \ll $0
 endsnippet
 
-snippet cal "mathcal{}" iAm
-\mathcal{$1} $0
-endsnippet
-
-snippet mrm "mathrm{}" iAm
-\mathrm{$1} $0
-endsnippet
-
-snippet indicator "indicator function" iAm
-\mathbbm{1}_{\{ $1 \\}} $0
+snippet ind "indicator function" iAm
+\mathbbm{1}_{$1} $0
 endsnippet
 
 snippet mean "Expectation" iAm
 \expectation{$1}{$2} $0
 endsnippet
 
-snippet var "Variation" iAm
+snippet vari "Variation" iAm
 \variance{$1}{$2} $0
 endsnippet
 
@@ -544,24 +685,8 @@ snippet cov "Covariance" iAm
 \mathrm{Cov}\left[ $1 \right] $0 
 endsnippet
 
-snippet conv "convex composition" iAm
-${1:\lambda} ${2:x} + (1 - $1) ${3:y}
-endsnippet
-
 snippet range "i = 1, \ldots, n" wm
 ${1:i} = ${2:1}, \ldots, ${3:n}$0
-endsnippet
-
-snippet eps "epsilon" iAm
-\epsilon $0
-endsnippet
-
-snippet lye "lyapunov equation" wA
-PA + A^{T}P = ${1:-Q} $0
-endsnippet
-
-snippet letw "let omega" iA
-Let $\Omega \subset C$ be open.
 endsnippet
 
 snippet bino "binomial coefficient" iAm
@@ -590,6 +715,88 @@ snippet =: "definition in math" iAm
 \eqqcolon $0
 endsnippet
 
-snippet bf "textbf" wA
-\textbf{$1} $0
+snippet opmin "Optimization problem" wA
+\begin{align*}
+  \min~ & ${1:c^Tx}    \\\\
+        & ${2:Ax = b}  \\\\
+        & ${3:x\geq 0}
+\end{align*}
+$0
+endsnippet
+
+snippet opmax "Optimization problem" wA
+\begin{align*}
+  \max~ & ${1:c^Tx}    \\\\
+        & ${2:Ax = b}  \\\\
+        & ${3:x\geq 0}
+\end{align*}
+$0
+endsnippet
+
+snippet opPD "Optimization problem with primal & dual" wA
+\[
+	\begin{alignedat}{5}
+		\min~&c^{T}x\qquad\qquad&&\max ~&&y^{T}b\\\\
+		&Ax = b 				&&		&&y^{T}A\leq c^{T}\\\\
+		(P)\quad	&x\geq  0 	&&(D)\quad&&
+	\end{alignedat}.
+\]$0
+endsnippet
+
+snippet salg "sigma-algebra" iwA
+\(\sigma\)-algebra $0
+endsnippet
+
+priority 200
+snippet idd "identity" iwAm
+\identity_{$1} $0
+endsnippet
+
+snippet cmp "\circ" iAwm
+\circ $0
+endsnippet
+
+snippet quo "\quotient" iAm 
+\quotient{$1}{$2} $0
+endsnippet
+
+snippet `\|\_` "\at" iAm 
+\at{$1}{$2}{$3} $0
+endsnippet
+
+snippet hpr "\hyperref[]{}" iA
+\hyperref[$1]{$2} $0
+endsnippet
+
+snippet vph "same level of underbrace" iAwm
+\vphantom{$1} $0
+endsnippet
+
+snippet hom "homorphism" iAwm
+\Homomorphism $0
+endsnippet
+
+snippet obj "object" iAwm
+\Object $0
+endsnippet
+
+snippet mor "morphism" iAwm
+\Morphism $0
+endsnippet
+
+snippet cr "mathscr" iAwm
+\mathscr{$1} $0
+endsnippet
+
+snippet __ "\underline{}" iAw
+\underline{$1} $0
+endsnippet
+
+snippet fk "\footnotemark" iAwm
+\footnotemark $0
+endsnippet
+
+snippet qed "\qed" iAw
+\qed 
+
 endsnippet

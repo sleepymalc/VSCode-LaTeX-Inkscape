@@ -8,6 +8,7 @@
     "command-runner.commands": {
         "inkscapeCreate": "inkscape-figures create ${selectedText} ${workspaceFolder}/Figures/",
         "inkscapeEdit": "inkscape-figures edit ${workspaceFolder}/Figures/",
-        "inkscapeStart": "inkscape-figures watch"
+        "inkscapeStart": "inkscape-figures watch",
+        "quiver": "open -na 'Google Chrome' --args --new-window <path-to-quiver>/quiver/src/index.html"
     }
 }

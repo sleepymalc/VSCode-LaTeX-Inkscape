@@ -115,5 +115,19 @@
             }
         },
         "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Visual'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "command-runner.run",
+        "args": {
+            "command": "quiver",
+            "terminal": {
+                "name": "runCommand",
+                "shellArgs": [],
+                "autoClear": true,
+                "autoFocus": false
+            }
+        },
+        "when": "editorTextFocus"
     }
 ]
