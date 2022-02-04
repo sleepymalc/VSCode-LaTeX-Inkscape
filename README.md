@@ -25,7 +25,7 @@ Please look through the two blog posts above by Gilles Castel! They are incredib
 
 First thing first, please set up your VSCode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorial online, just check them out and set them up properly.
 
-Now, we go through thing one by one follow Gilles Castel's blog post.
+Now, we go through things one by one follow Gilles Castel's blog post.
 
 ### Tex Conceal
 
@@ -35,7 +35,7 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 
 #### What’s a snippet?
 
-A snip­pet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm` and press Tab, the word `dm` will be expanded to a math environment:
+A snip­pet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm`, the word `dm` will be expanded to a math environment:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="500"/>
