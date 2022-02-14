@@ -568,3 +568,4 @@ Notice that you'll need to build it first if you want to use it offline! Please 
 3. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
 4. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
 5. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
+6. [varkor/quiver](https://github.com/varkor/quiver)
