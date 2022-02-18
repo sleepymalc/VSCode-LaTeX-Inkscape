@@ -65,17 +65,15 @@ Too fast to keep track of? For the first snippet, I type `table2 5`, and then it
 
 Feeling it? Let try to set up this step by step. And maybe you can create your own snippets also!
 
-### HyperSnips for Math
+### HyperSnips
 
-If you look around in VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set up _ properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). But hold on, don't download this too quickly! We will use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips) instead, and I'll explain why in a moment. Before then, please first download [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
 To modify this file, you can either go to this file in your finder or use VSCode built-in command function. For command function, 
 
 1. Press `shift+cmd+space` to type in some command to VSCode.
 2. Type `>HyperSnips: Open Snippet File`
 3. Choose `latex.hsnips`
-
-Now, let move on. Oh wait, I need to explain to you why I want to use [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips). This is because this version support *math mode*. Namely, you can specify a particular snippet will **only** be triggered in math environment. This is particularly useful when you need to switch beck and forth between text environment and math environment. When you use snippets after a while, you'll see why this is important!
 
 For further and detailed explanation for snippets, please go to check out the original blog post! 
 
@@ -561,6 +559,10 @@ and also, define the command `quiver` as
     },
 ```
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
+
+### Updates (02.28.22)
+
+Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special key word called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
 ## Related Project
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
