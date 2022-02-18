@@ -565,8 +565,8 @@ Notice that you'll need to build it first if you want to use it offline! Please 
 Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special key word called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
 ## Related Project
-1. [Academic_Template](https://github.com/sleepymalc/Academic_Template)(A general LaTeX template for making PPT by beamer and Academic Report)
-2. [Notes](https://github.com/sleepymalc/Notes)(All notes taken in this setup)
+1. [Academic_Template](https://github.com/sleepymalc/Academic_Template) (A general LaTeX template for making PPT by beamer and Academic Report)
+2. [Notes](https://github.com/sleepymalc/Notes) (All notes taken in this setup)
 3. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
 4. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
 5. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
