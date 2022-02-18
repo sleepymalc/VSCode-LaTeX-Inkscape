@@ -1,66 +1,6 @@
 global
 function math(context) {
-    return context.scopes.some(s => s.startsWith("meta.math"));
-}
-endglobal
-
-global
-// JavaScript code
-function gen_matrix(nrow, ncol) {
-	let results = "\n";
-	let order = 1;
-	for (var i=0; i<nrow; i++){
-		results += '	';
-		for(var j = 0;j <ncol-1;j++){
-			results += "$" +(order ).toString() + " & ";
-			order ++;
-		}
-		results += " $"+(order).toString() +" \\\\"+ "\\"+ "\n";
-		order ++;
-	}
-	return results;
-}
-
-function gen_table(nrow, ncol) {
-	let results = "";
-	let order = 1;
-	for (var i=0; i<nrow-1; i++){
-		for(var j = 0;j <ncol-1;j++){
-			results += "$" +(order+3).toString() + " & ";
-			order ++;
-		}
-		results += " $"+(order+3).toString() +" \\\\"+ "\\"+ "\n";
-		order ++;
-		if(i == 0){
-			results += "		\\midrule" + "\n";
-		}
-		results += "			";
-	}
-	for(var j = 0;j <ncol-1;j++){
-		results += "$" +(order+3).toString() + " & ";
-		order ++;
-	}
-	results += " $"+(order+3).toString() +" \\\\"+ "\\";
-	return results;
-}
-
-function gen_array(nrow, ncol) {
-	let results = "";
-	let order = 1;
-	for (var i=0; i<nrow-1; i++){
-		for(var j = 0;j <ncol-1;j++){
-			results += "$" +(order).toString() + " & ";
-			order ++;
-		}
-		results += " $"+(order).toString() +" \\\\"+ "\\"+ "\n" + "	";
-		order ++;
-	}
-	for(var j = 0;j <ncol-1;j++){
-		results += "$" +(order).toString() + " & ";
-		order ++;
-	}
-	results += " $"+(order).toString() +" \\\\"+ "\\";
-	return results;
+    return context.scopes.some(s => s.startsWith("meta.math")) && !context.scopes.some(s => s.startsWith("comment") || s.startsWith("meta.text.normal.tex"));
 }
 endglobal
 
@@ -78,31 +18,32 @@ snippet `table([1-9]{1})\ ([1-9]{1})` "Table environment" bA
 	``}
 	    \toprule
 			``
-			rv = gen_table(m[1], m[2])
+			let order = 1;
+			nrow = m[1];
+			ncol = m[2];
+			for (var i=0; i<nrow-1; i++){
+				for(var j = 0;j <ncol-1;j++){
+					rv += `${snip.tabstop(order+3)} & `;
+					order ++;
+				}	
+				rv += ` ${snip.tabstop(order+3)} \\\\`+ `\\`+ `\n`;
+				order ++;
+				if(i == 0){
+					rv += `		\\midrule` + `\n`;
+				}
+				rv += `			`;
+			}	
+			for(var j = 0;j <ncol-1;j++){
+				rv += `${snip.tabstop(order+3)} & `;
+				order ++;
+			}
+			rv += ` ${snip.tabstop(order+3)} \\\\` + `\\`;
 			``
     	\bottomrule
 	\end{tabular}
 	\caption{${2:caption}}
 	\label{tab:${3:label}}
 \end{table}
-endsnippet
-
-priority 2000
-context math(context)
-snippet `(b|p)mat([1-9]{1})\ ([1-9]{1})` "matrix" iwA
-\begin{``rv = m[1]``matrix}``
-	rv = gen_matrix(m[2],m[3]);
-	``\end{``rv = m[1]``matrix}$0
-endsnippet
-
-context math(context)
-snippet cvec "column vector" iA
-\begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots \\\\ $1_${3:n} \end{pmatrix}$0
-endsnippet
-
-context math(context)
-snippet rvec "row vector" iA
-\begin{pmatrix} ${1:x}_${2:1}, \ldots ,$1_${3:n} \end{pmatrix}$0
 endsnippet
 
 context math(context)
@@ -116,9 +57,54 @@ snippet `ary([1-9]{1})\ ([1-9]{1})` "Array environment" ibA
 	rv = results;
 	``}
 	``
-	rv = gen_array(m[1], m[2])
+	let order = 1;
+	let nrow = m[1];
+	let ncol = m[2];
+	for (var i=0; i<nrow-1; i++){
+		for(var j = 0;j <ncol-1;j++){
+			rv += `${snip.tabstop(order)} & `;
+			order ++;
+		}
+		rv += ` ${snip.tabstop(order)} \\\\`+ `\\`+ `\n` + `	`;
+		order ++;
+	}
+	for(var j = 0;j <ncol-1;j++){
+		rv += `${snip.tabstop(order)} & `;
+		order ++;
+	}
+	rv += ` ${snip.tabstop(order)} \\\\`+ `\\`;
 	``
 \end{array}
+endsnippet
+
+priority 2000
+context math(context)
+snippet `(b|p)mat([1-9]{1})\ ([1-9]{1})` "matrix" iwA
+\begin{``rv = m[1]``matrix}``
+	let order = 1;
+	let nrow = m[2];
+	let ncol = m[3];
+	rv = `\n`;
+	for (var i=0; i<nrow; i++){
+		rv += '	';
+		for(var j = 0;j <ncol-1;j++){
+			rv += `${snip.tabstop(order)} & `;
+			order ++;
+		}
+		rv += ` ${snip.tabstop(order)} \\\\`+ `\\`+ `\n`;
+		order ++;
+	}
+	``\end{``rv = m[1]``matrix}$0
+endsnippet
+
+context math(context)
+snippet cvec "column vector" iA
+\begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots \\\\ $1_${3:n} \end{pmatrix}$0
+endsnippet
+
+context math(context)
+snippet rvec "row vector" iA
+\begin{pmatrix} ${1:x}_${2:1}, \ldots ,$1_${3:n} \end{pmatrix}$0
 endsnippet
 
 snippet %-- "------" wA
