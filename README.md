@@ -1,4 +1,4 @@
-# VSCode-LaTeX-Inkscape
+# ***VSCode-LaTeX-Inkscape***
 ***A way to integrate LaTeX, VSCode, and Inkscape in macOS***
 
 <p align="center">
