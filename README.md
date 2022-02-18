@@ -35,7 +35,7 @@ This is probably the only thing I don't like that much in Gilles Castel's set up
 
 #### What’s a snippet?
 
-A snip­pet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm`, the word `dm` will be expanded to a math environment:
+A snippet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm`, the word `dm` will be expanded to a math environment:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/dm.gif" width="500"/>
@@ -65,7 +65,7 @@ Too fast to keep track of? For the first snippet, I type `table2 5`, and then it
 
 Feeling it? Let try to set up this step by step. And maybe you can create your own snippets also!
 
-### HyperSnips
+### HyperSnips ([Updates](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))
 
 If you look around in VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
