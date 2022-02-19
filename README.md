@@ -16,12 +16,12 @@
     + [Tex Conceal](#tex-conceal)
     + [Snippets](#snippets)
       - [What’s a snippet?](#what-s-a-snippet-)
-    + [HyperSnips ([Updates](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))](#hypersnips---updates--https---githubcom-sleepymalc-vscode-latex-inkscape-updates-022822--)
+    + [HyperSnips](#hypersnips) ([Updates!! Migrating back to HyperSnips!!](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))
     + [Sympy and Mathematica](#sympy-and-mathematica)
     + [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
       - [multi-command](#multi-command)
       - [Code Spell Checker](#code-spell-checker)
-      - [LTeX(Not required)](#ltex-not-required-)
+      - [LTeX](#ltex)
   * [Drawing Like a Pro](#drawing-like-a-pro)
     + [Inkscape](#inkscape)
     + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
@@ -43,8 +43,6 @@
     + [Updates (01.24.22)](#updates--012422-)
     + [Updates (02.28.22)](#updates--022822-)
   * [Related Project](#related-project)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Abstract
 
@@ -102,7 +100,7 @@ Too fast to keep track of? For the first snippet, I type `table2 5`, and then it
 
 Feeling it? Let try to set up this step by step. And maybe you can create your own snippets also!
 
-### HyperSnips ([Updates](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))
+### HyperSnips
 
 If you look around in VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
@@ -142,7 +140,7 @@ Firstly, you need to download [multi-command](https://marketplace.visualstudio.c
 
 And then, after searching for some times, I find out that there is a popular spelling checker out there which meets our needs, [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). Just download it, it's useful.
 
-#### LTeX(Not required)
+#### LTeX
 
 If you are bad in grammar like me, you definitely want to install [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex) to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, but it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
 
