@@ -16,7 +16,7 @@
     + [Tex Conceal](#tex-conceal)
     + [Snippets](#snippets)
       - [What’s a snippet?](#what-s-a-snippet-)
-    + [HyperSnips](#hypersnips) ([Updates!! Migrating back to HyperSnips!!](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))
+    + [HyperSnips](#hypersnips) ([Updates!!](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822) Migrate back to HyperSnips!!)
     + [Sympy and Mathematica](#sympy-and-mathematica)
     + [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
       - [multi-command](#multi-command)
