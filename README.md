@@ -39,9 +39,9 @@
     + [Overall Workflow to Create a New Figure in VSCode with Inkscape](#overall-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   * [Credits](#credits)
   * [TODO](#todo)
-    + [Updates(9.27.21)](#updates-92721-)
-    + [Updates (01.24.22)](#updates--012422-)
-    + [Updates (02.28.22)](#updates--022822-)
+    + [Updates (9.27.21) About Inkscape Shortcut Manager](#updates--92721--about-inkscape-shortcut-manager)
+    + [Updates (01.24.22) Quiver - For commutative diagram.](#updates--012422--quiver---for-commutative-diagram)
+    + [Updates (02.18.22) Migrate to HyperSnips](#updates--021822--migrate-to-hypersnips)
   * [Related Project](#related-project)
 
 ## Abstract
@@ -563,12 +563,12 @@ If you read through Gilles Castel's posts, you'll find out that I don't have any
 
 Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
 
-### Updates(9.27.21)
+### Updates (9.27.21) About Inkscape Shortcut Manager
 
 After some reseraching, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) running correctly, but since it depends on `xlib`, which is no longer used by macOS for almost every application(including inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
 
 
-### Updates (01.24.22)
+### Updates (01.24.22) Quiver - For commutative diagram.
 
 I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hot key to use it **locally**. Specifically, I add the following code into my `keybindings.json`:
 ```json
@@ -595,7 +595,7 @@ and also, define the command `quiver` as
 ```
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
 
-### Updates (02.28.22)
+### Updates (02.18.22) Migrate to HyperSnips
 
 Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special key word called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
