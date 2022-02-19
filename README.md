@@ -39,7 +39,7 @@
     + [Overall Workflow to Create a New Figure in VSCode with Inkscape](#overall-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   * [Credits](#credits)
   * [TODO](#todo)
-    + [Updates (9.27.21) About Inkscape Shortcut Manager](#updates--92721--about-inkscape-shortcut-manager)
+    + [Updates (09.27.21) About Inkscape Shortcut Manager](#updates--092721--about-inkscape-shortcut-manager)
     + [Updates (01.24.22) Quiver - For commutative diagram.](#updates--012422--quiver---for-commutative-diagram)
     + [Updates (02.18.22) Migrate to HyperSnips](#updates--021822--migrate-to-hypersnips)
   * [Related Project](#related-project)
@@ -563,7 +563,7 @@ If you read through Gilles Castel's posts, you'll find out that I don't have any
 
 Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, but there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
 
-### Updates (9.27.21) About Inkscape Shortcut Manager
+### Updates (09.27.21) About Inkscape Shortcut Manager
 
 After some reseraching, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) running correctly, but since it depends on `xlib`, which is no longer used by macOS for almost every application(including inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
 
