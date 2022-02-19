@@ -8,6 +8,42 @@
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
 </p>
+- [***VSCode-LaTeX-Inkscape***](#---vscode-latex-inkscape---)
+  * [Abstract](#abstract)
+  * [Disclaimer](#disclaimer)
+  * [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
+    + [Tex Conceal](#tex-conceal)
+    + [Snippets](#snippets)
+      - [What’s a snippet?](#what-s-a-snippet-)
+    + [HyperSnips ([Updates](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822))](#hypersnips---updates--https---githubcom-sleepymalc-vscode-latex-inkscape-updates-022822--)
+    + [Sympy and Mathematica](#sympy-and-mathematica)
+    + [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
+      - [multi-command](#multi-command)
+      - [Code Spell Checker](#code-spell-checker)
+      - [LTeX(Not required)](#ltex-not-required-)
+  * [Drawing Like a Pro](#drawing-like-a-pro)
+    + [Inkscape](#inkscape)
+    + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
+    + [Inkscape](#inkscape-1)
+    + [Inkscape figure manager](#inkscape-figure-manager)
+      - [Modify](#modify)
+        * [Detail Explanation](#detail-explanation)
+    + [Command Runner](#command-runner)
+    + [Demo](#demo)
+    + [Set up Inkscape figure manager](#set-up-inkscape-figure-manager)
+    + [Explanation](#explanation)
+      - [1. Watch](#1-watch)
+      - [2. Create](#2-create)
+      - [3. Edit](#3-edit)
+    + [Overall Workflow to Create a New Figure in VSCode with Inkscape](#overall-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
+  * [Credits](#credits)
+  * [TODO](#todo)
+    + [Updates(9.27.21)](#updates-92721-)
+    + [Updates (01.24.22)](#updates--012422-)
+    + [Updates (02.28.22)](#updates--022822-)
+  * [Related Project](#related-project)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Abstract
 
