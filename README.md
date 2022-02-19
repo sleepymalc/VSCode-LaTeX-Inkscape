@@ -8,6 +8,7 @@
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
 </p>
+
 - [***VSCode-LaTeX-Inkscape***](#---vscode-latex-inkscape---)
   * [Abstract](#abstract)
   * [Disclaimer](#disclaimer)
