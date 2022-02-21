@@ -17,27 +17,19 @@
   * [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
     * [Tex Conceal](#tex-conceal)
     * [Snippets](#snippets)
-      + [What’s a snippet?](#what-s-a-snippet-)
     * [HyperSnips](#hypersnips) ([Updates!!](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822) Migrate back to HyperSnips!!)
     * [Sympy and Mathematica](#sympy-and-mathematica)
     * [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
-      + [multi-command](#multi-command)
-      + [Code Spell Checker](#code-spell-checker)
-      + [LTeX](#ltex)
   * [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
     * [Inkscape](#inkscape)
       + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
       + [Download Inkscape](#download-inkscape)
     * [Inkscape figure manager](#inkscape-figure-manager)
       + [Modify](#modify)
-        - [Detail Explanation](#detail-explanation)
-      + [Command Runner](#command-runner)
-      + [Demo](#demo)
       + [Set up Inkscape figure manager](#set-up-inkscape-figure-manager)
-        - [Explanation](#explanation)
-          * [1. Watch](#1-watch)
-          * [2. Create](#2-create)
-          * [3. Edit](#3-edit)
+      + [1. Watch](#1-watch)
+      + [2. Create](#2-create)
+      + [3. Edit](#3-edit)
     * [Overall Workflow to Create a New Figure in VSCode with Inkscape](#overall-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   
   - [Credits](#credits)
@@ -367,29 +359,17 @@ But this in VSCode is impossible, hence we don't need this, we'll use another ap
 
 Ok, the detailed explanation is over, let's move on.
 
+### Set up Inkscape Figure Manager
+
+The only thing you need to do is to copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json` and then you're done. But let me explain it to you, in case that you want to modify it to meet your need later on. First thing first, we see that in the given code in [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), we're using [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner), so let me tell you how to set this up first.
+
 #### Command Runner
 
-The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send command into terminal with shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`. Then, the only thing left is with that missing snippet part. Before we set it up, we look at the demonstration.
+The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send command into terminal with shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`.
 
-### Demo
+We're now prepared to see detailed explanation about commands provided in Inkscape figure ManagerThere are three different command in Inkscape figure manager. We break it down one by one.
 
-<p align="center">
-	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="900"/>
-</p>
-
-
-
-Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `figure-test`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `figure-test` for me and open it. 
-
-#### Set up Inkscape figure manager
-
-The only thing you need to do is to copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json` and then you're done. But let me explain it to you, in case that you want to modify it to meet your need later on.
-
-##### Explanation
-
-There are three different command in Inkscape figure manager. We break it down one by one.
-
-###### 1. Watch
+#### 1. Watch
 
 Since Inkscape in default does not save the file in `pdf+latex`, hence we need Inkscape figure manager to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
@@ -424,7 +404,7 @@ In detailed, we just use `command runner` to run the command we defined in [sett
 
 Notice that we set the `autoFocus=false` for the terminal `command runner` use since we don't want a pop-up terminal to distract us. If you want to see whether the command is triggered correctly every time, you can set it to `true`.
 
-###### 2. Create
+#### 2. Create
 
 Same as above, we also use `ctrl+f` to trigger `inkscape-figures create` command. But in this case, we do a little bit more than that. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
 
@@ -508,7 +488,15 @@ which is just the snippet we remove from Inkscape figure manager's source code! 
 
 Now, let's see the last thing I have to share with you.
 
-###### 3. Edit
+<p align="center">
+	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="900"/>
+</p>
+
+
+
+Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `figure-test`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `figure-test` for me and open it. 
+
+#### 3. Edit
 
 Again, we also use `ctrl+f` to trigger `inkscape-figures edit` command. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
 
