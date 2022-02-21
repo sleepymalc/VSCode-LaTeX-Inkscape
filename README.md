@@ -1,17 +1,11 @@
 # ***VSCode-LaTeX-Inkscape***
 
-<p style="text-align: center;">
-  
-  
-</p>
-
-<p style="text-align: center;">
-***A way to integrate LaTeX, VSCode, and Inkscape in macOS***
-<\p>
+<p align="center" style="font-weight: bold;">A way to integrate LaTeX, VSCode, and Inkscape in macOS</p>
 
 
 ## Table Of Contents
 - [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
+  
   * [Abstract](#abstract)
   - [Disclaimer](#disclaimer)
   - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
