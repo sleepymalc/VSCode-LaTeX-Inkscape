@@ -9,7 +9,6 @@
 ## Table Of Contents
 - [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
   - [Abstract](#abstract)
-  - [TODO](#todo)
   - [Disclaimer](#disclaimer)
   - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
     * [Tex Conceal](#tex-conceal)
