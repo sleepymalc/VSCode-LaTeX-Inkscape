@@ -16,7 +16,7 @@
   * [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
     * [Tex Conceal](#tex-conceal)
     * [Snippets](#snippets)
-    * [HyperSnips](#hypersnips) ([Updates!!](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape#updates-022822) Migrate back to HyperSnips!!)
+    * [HyperSnips](#hypersnips)
     * [Sympy and Mathematica](#sympy-and-mathematica)
     * [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
   * [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
@@ -25,18 +25,19 @@
       + [Download Inkscape](#download-inkscape)
     * [Inkscape figure manager](#inkscape-figure-manager)
       + [Modify](#modify)
-      + [Set up Inkscape figure manager](#set-up-inkscape-figure-manager)
+    * [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
+      + [Command Runner](#command-runner)
       + [1. Watch](#1-watch)
       + [2. Create](#2-create)
       + [3. Edit](#3-edit)
-    * [Overall Workflow to Create a New Figure in VSCode with Inkscape](#overall-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
-  
-  - [Credits](#credits)
-  - [TODO](#todo)
+    * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary--workflow-to-create-a-new-figure-in-vscode-with-inkscape)
+  * [TODO](#todo)
     * [Updates (09.27.21) About Inkscape Shortcut Manager](#updates--092721--about-inkscape-shortcut-manager)
     * [Updates (01.24.22) Quiver - For commutative diagram.](#updates--012422--quiver---for-commutative-diagram)
     * [Updates (02.18.22) Migrate to HyperSnips](#updates--021822--migrate-to-hypersnips)
-  - [Related Project](#related-project)
+  * [Credits](#credits)
+  * [Related Project](#related-project)
+  
 
 ## Abstract
 
@@ -485,15 +486,14 @@ which is just the snippet we remove from Inkscape figure manager's source code! 
 4. Enter `latex` to create a new file.
 5. Paste the above snippets in to that file.
 
-Now, let's see the last thing I have to share with you.
-
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/gif/demo-inkscape.gif" width="900"/>
 </p>
 
 
-
 Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `figure-test`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `figure-test` for me and open it. 
+
+Now, let's see the last thing I have to share with you.
 
 #### 3. Edit
 
@@ -533,18 +533,14 @@ This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. 
 
 Notice that there is one more thing for you to modify in the source code in `main.py` in inkscape figure manager. Since Gilles Castel originally use `figures/` as his subfolder name to store figures, so you need to change every `figures/` in the source code into `Figures/` if you're modifying the source-code by your own rather than copy mine.
 
-### Overall Workflow to Create a New Figure in VSCode with Inkscape
+### Summary: Workflow to Create a New Figure in VSCode with Inkscape
 
 This is the whole set up I have, and let's wrap this up, since I know this may be quite overwhelming.
 
 1. Before you start your project, please go to `Visual` mode by entering `v` in `Normal` mode. And then press `ctrl+f`. This will set up the file watcher.
 2. When you want to create a new figure, go into a new line, type the name of your figure in `Insert` mode, then press `ctrl+f`. This will create a new figure with the name you typed, and open it in Inkscape for you.
 3. When you have done drawing your figure, as long as you press `cmd+s`, it will automatically save the figure in `pdf+latex` for you, then you can close Inkscape.
-4. When you want to edit one of your figure, you press `ctrl+f` in `Normal` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3. 
-
-## Credits
-
-Again, thanks to Gilles Castel, this workflow really fit my style. Although it originally works in Linux+Vim only, but the idea is the most important thing. Without his wonder post, I can't even imagine this is possible. But now it is! Definitely go to his original post to show him some love.
+4. When you want to edit one of your figure, you press `ctrl+f` in `Normal` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3.
 
 ## TODO
 
@@ -588,7 +584,12 @@ Notice that you'll need to build it first if you want to use it offline! Please 
 
 Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special key word called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
+## Credits
+
+Again, thanks to Gilles Castel, this workflow really fit my style. Although it originally works in Linux+Vim only, but the idea is the most important thing. Without his wonder post, I can't even imagine this is possible. But now it is! Definitely go to his original post to show him some love.
+
 ## Related Project
+
 1. [Academic_Template](https://github.com/sleepymalc/Academic_Template) (A general LaTeX template for making PPT by beamer and Academic Report)
 2. [Notes](https://github.com/sleepymalc/Notes) (All notes taken in this setup)
 3. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
