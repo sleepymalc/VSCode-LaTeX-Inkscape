@@ -1,6 +1,8 @@
 # ***VSCode-LaTeX-Inkscape***
 
-<p align="center" style="font-weight: bold;">A way to integrate LaTeX, VSCode, and Inkscape in macOS</p>
+<p align="center"><b><i>
+	A way to integrate LaTeX, VSCode, and Inkscape in macOS
+</i></b></p>
 
 ## TODO
 
