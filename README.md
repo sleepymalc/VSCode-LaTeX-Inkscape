@@ -2,6 +2,9 @@
 
 <p align="center" style="font-weight: bold;">A way to integrate LaTeX, VSCode, and Inkscape in macOS</p>
 
+## TODO
+
+- [ ] Document inkscape shortcut manager implemented in #1
 
 ## Table Of Contents
 - [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
@@ -549,18 +552,13 @@ This is the whole setup I have, and let's wrap this up since I know this may be 
 3. When you have drawn your figure, as long as you press `cmd+s`, it will automatically save the figure in `pdf+latex` for you, then you can close Inkscape.
 4. When you want to edit one of your figures, you press `ctrl+f` in `Normal` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3.
 
-## TODO
-
-If you read through Gilles Castel's posts, you'll find out that I don't have any solution for [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager), this is because it depends on a particular library called `Xlib`, which is only for Linux. 
-
-Currently, there is a repo called [python-xlib](https://github.com/python-xlib/python-xlib) for macOS, but it's still underdeveloped. And although they claim that the most functionality is done, there is still some bug when I want to use [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager). Hence, let's see what can we do for this part. I currently just use the default shortcut, and this works quite well for me. If there is any alternative, definitely let me know!
-
-### Updates (09.27.21) About Inkscape Shortcut Manager
+## Updates
+### About Inkscape Shortcut Manager (09.27.21)
 
 After some research, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) run correctly since it depends on `xlib`, which is no longer used by macOS for almost every application(including Inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
 
 
-### Updates (01.24.22) Quiver - For commutative diagram.
+### Quiver - For commutative diagram (01.24.22)
 
 I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my `keybindings.json`:
 ```json
@@ -587,7 +585,7 @@ and also, define the command `quiver` as
 ```
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
 
-### Updates (02.18.22) Migrate to HyperSnips
+### Migrate to HyperSnips (02.18.22)
 
 Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special keyword called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
