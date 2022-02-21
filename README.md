@@ -28,6 +28,7 @@
       + [1. Watch](#1-watch)
       + [2. Create](#2-create)
       + [3. Edit](#3-edit)
+    * [Inkscape shortcut manager](#inkscape-shortcut-manager)
     * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary--workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   - [TODO](#todo)
     * [Updates (09.27.21) About Inkscape Shortcut Manager](#updates--092721--about-inkscape-shortcut-manager)
@@ -337,7 +338,11 @@ to find out where the `inkscape-figures` is installed. In my environment, I use 
 
 Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
 
-Ok, I know you probably don't have that much patient now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py). If you don't want to know the detail, you can just copy this `main.py` and replace the current one. If you're interesting, lets me explain it for you.
+Ok, I know you probably don't have that much patient now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py). If you don't want to know the detail, you can just copy this [`main.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py) and replace the current one. If you're interesting, lets me explain it for you.
+
+###### Caveat
+
+Notice that there is **one thing for you *need to* modify** in the source code in [`main.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py) in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). Since Gilles Castel originally use `figures/` as his subfolder name to store figures, so you need to change every `figures/` in the source code into `Figures/` if you're modifying the source-code by your own rather than copy mine.
 
 ###### Detail Explanation
 
@@ -364,11 +369,11 @@ Now, the only thing you need to do is to copy the [keybindings.json](https://git
 
 The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send command into terminal with shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`.
 
-We're now prepared to see detailed explanation about commands provided in Inkscape figure ManagerThere are three different command in Inkscape figure manager. We break it down one by one.
+We're now prepared to see detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different command in Inkscape figure manager. We break it down one by one.
 
 #### 1. Watch
 
-Since Inkscape in default does not save the file in `pdf+latex`, hence we need Inkscape figure manager to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
+Since Inkscape in default does not save the file in `pdf+latex`, hence we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the a file watcher to *watch* the file for any changes. If there is any, then file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
 To open the file watcher, you can type `inkscape-figures watch` in the terminal. In my case, I set up a shortly for this. In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
 
@@ -389,7 +394,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 }
 ```
 
-for starting the Inkscape figure manager. And the command is defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json):
+for starting the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). And the command is defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json):
 
 ```json
 "command-runner.commands": {
@@ -475,7 +480,7 @@ In the fifth instruction, we need to use the snippet like
 }
 ```
 
-which is just the snippet we remove from Inkscape figure manager's source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
+which is just the snippet we remove from [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures)'s source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
 
 1. Press `shift+cmd+p` to open the VSCode command 
 2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
@@ -528,7 +533,9 @@ This is what's you should expect when you want to edit a particular figure:
 
 This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. When you press `ctrl+f` in `Normal` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose. After you press `enter`, it will open that file for you to edit. In my demo, I create another figure named `figure-test2`, and then modify it a little, and compile it again.
 
-Notice that there is one more thing for you to modify in the source code in `main.py` in inkscape figure manager. Since Gilles Castel originally use `figures/` as his subfolder name to store figures, so you need to change every `figures/` in the source code into `Figures/` if you're modifying the source-code by your own rather than copy mine.
+### Inkscape shortcut manager
+
+This is the most complicated part in the whold setup, I would say. Leave as a TODO.
 
 ### Summary: Workflow to Create a New Figure in VSCode with Inkscape
 
