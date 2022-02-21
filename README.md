@@ -29,8 +29,8 @@
     * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary--workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   - [Updates](#updates)
     * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
-    * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram--012422)
-    * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips--021822)
+    * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
+    * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
   - [Credits](#credits)
   - [kRelated Project](#related-project)
 
