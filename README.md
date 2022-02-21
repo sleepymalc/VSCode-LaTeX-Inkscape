@@ -32,10 +32,10 @@
   - [Credits](#credits)
   - [Related Project](#related-project)
 
-<p style="text-align: center;">
+<p align="center">
 <img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
 </p>
-<p style="text-align: center;">
+<p align="center">
 <img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
 </p>
 
@@ -219,10 +219,10 @@ Now, the first part is over. Let's go to the next truly beautiful, elegant, and 
 
 Before we go to any setup detail, let's first look at some figures I draw right after I have set this up:
 
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example1.png" width="500"/>
 </p>
-
 <p align="center">
 	<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example2.png" width="500"/>
 </p>
