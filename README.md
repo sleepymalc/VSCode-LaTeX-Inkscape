@@ -4,12 +4,12 @@
 
 ## TODO
 
-- [ ] Document inkscape shortcut manager implemented in https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1
+- [ ] Document inkscape shortcut manager implemented in #1
 
 ## Table Of Contents
 - [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
-  
-  * [Abstract](#abstract)
+  - [Abstract](#abstract)
+  - [TODO](#todo)
   - [Disclaimer](#disclaimer)
   - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
     * [Tex Conceal](#tex-conceal)
@@ -28,12 +28,12 @@
       + [3. Edit](#3-edit)
     * [Inkscape shortcut manager](#inkscape-shortcut-manager)
     * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary--workflow-to-create-a-new-figure-in-vscode-with-inkscape)
-  - [TODO](#todo)
-    * [Updates (09.27.21) About Inkscape Shortcut Manager](#updates--092721--about-inkscape-shortcut-manager)
-    * [Updates (01.24.22) Quiver - For commutative diagram.](#updates--012422--quiver---for-commutative-diagram)
-    * [Updates (02.18.22) Migrate to HyperSnips](#updates--021822--migrate-to-hypersnips)
+  - [Updates](#updates)
+    * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager--updates--092721)
+    * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram--updates--012422)
+    * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips--updates--021822)
   - [Credits](#credits)
-  - [Related Project](#related-project)
+  - [kRelated Project](#related-project)
 
 <p align="center">
 <img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
