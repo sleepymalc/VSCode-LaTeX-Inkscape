@@ -4,7 +4,7 @@
 
 ## TODO
 
-- [ ] Document inkscape shortcut manager implemented in #1
+- [ ] Document inkscape shortcut manager implemented in https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1
 
 ## Table Of Contents
 - [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
