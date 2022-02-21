@@ -10,8 +10,7 @@
 </p>
 
 ## Table Of Contents
-- [***VSCode-LaTeX-Inkscape***](#---vscode-latex-inkscape---)
-  
+- [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
   * [Abstract](#abstract)
   * [Disclaimer](#disclaimer)
   * [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
