@@ -32,7 +32,7 @@
     * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
     * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
   - [Credits](#credits)
-  - [kRelated Project](#related-project)
+  - [Related Project](#related-project)
 
 <p align="center">
 <img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
