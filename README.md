@@ -603,5 +603,3 @@ Again, thanks to Gilles Castel, this workflow fits my style. Although it origina
 4. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
 5. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
 6. [varkor/quiver](https://github.com/varkor/quiver)
-
-1. https://github.com/varkor/quiver)
