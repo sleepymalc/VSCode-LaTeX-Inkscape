@@ -32,9 +32,11 @@
   - [Credits](#credits)
   - [Related Project](#related-project)
 
-<p align="middle">
-<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="49%" />
-<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="49%"/>
+<p style="text-align: center;">
+<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example5.png" width="500"/>
+</p>
+<p style="text-align: center;">
+<img src="https://github.com/sleepymalc/sleepymalc/blob/main/Vscode-LaTEx-Inkscape/jpg/inkscape_example4.png" width="500"/>
 </p>
 
 ## Abstract
