@@ -28,7 +28,7 @@
       + [2. Create](#2-create)
       + [3. Edit](#3-edit)
     * [Inkscape shortcut manager](#inkscape-shortcut-manager)
-    * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary--workflow-to-create-a-new-figure-in-vscode-with-inkscape)
+    * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
   - [Updates](#updates)
     * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
     * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
