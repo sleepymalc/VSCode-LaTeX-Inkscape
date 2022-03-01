@@ -4,6 +4,8 @@
 	A way to integrate LaTeX, VSCode, and Inkscape in macOS
 </i></b></p>
 
+> Also available: [My website](https://www.pbb.wtf/posts/LaTeX-Inkscape)
+
 ## TODO
 
 - [ ] Document Inkscape shortcut manager for macOS implemented in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1)
