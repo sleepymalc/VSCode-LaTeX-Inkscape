@@ -461,7 +461,7 @@ In the fifth instruction, we need to use the snippet like
             "\\begin{figure}[H]",
 	    "\t\\centering",
 	    "\t\\incfig{${1:$CLIPBOARD}}",
-	    "\t\\caption{${2:title}}",]
+	    "\t\\caption{${2:title}}",
 	    "\t\\label{fig:${1:$CLIPBOARD}}",
 	    "\\end{figure}",
 	],
