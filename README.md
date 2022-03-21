@@ -166,19 +166,19 @@ Now, paste the following code in `keybindings.json`:
 
 ```json
 {
-	"key": "cmd+l",
-        "command": "extension.multiCommand.execute",
-        "args": {
-		"sequence": [
-        	"cSpell.goToPreviousSpellingIssue",
-	        {
-                "command": "editor.action.codeAction",
-        	    "args": {
-	                "kind": "quickfix",
-                    "apply": "first"
+    "key": "cmd+l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+        "sequence": [
+	    "cSpell.goToPreviousSpellingIssue",
+	    {
+	        "command": "editor.action.codeAction",
+	        "args": {
+	            "kind": "quickfix",
+		    "apply": "first"
                 }
-            },
-            "cursorUndo",
+	    },
+	    "cursorUndo",
         ]
     }
 },
@@ -245,10 +245,10 @@ However, by using Inkscape, you only need to type (Ok, not quite, you don't need
 
 ```latex
 \begin{figure}[H]
-	\centering
-	\incfig{figure's name}
-	\caption{Your caption}
-	\label{fig:label}
+    \centering
+    \incfig{figure's name}
+    \caption{Your caption}
+    \label{fig:label}
 \end{figure}
 ```
 
@@ -402,35 +402,35 @@ Same as above, we also use `ctrl+f` to trigger `inkscape-figures create` command
 
 ```json
 {
-	"key": "ctrl+f",
-	"command": "extension.multiCommand.execute",
-	"args": {
-		"sequence": [
-			"editor.action.clipboardCopyAction",
-			"editor.action.insertLineAfter",
-			"cursorUp",
-			"editor.action.deleteLines",
-			{
-			"command": "editor.action.insertSnippet",
-			"args": {
-				"name": "incfig"
-				}
-			},
-			{
-				"command": "command-runner.run",
-				"args": {
-					"command": "inkscapeCreate",
-				},
-				"terminal": {
-					"name": "runCommand",
-					"shellArgs": [],
-					"autoClear": true,
-					"autoFocus": false
-				}
-			},
-		]
-	},
-	"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Insert'"
+    "key": "ctrl+f",
+    "command": "extension.multiCommand.execute",
+    "args": {
+        "sequence": [
+	    "editor.action.clipboardCopyAction",
+	    "editor.action.insertLineAfter",
+	    "cursorUp",
+	    "editor.action.deleteLines",
+	    {
+	        "command": "editor.action.insertSnippet",
+		"args": {
+		    "name": "incfig"
+		}
+            },
+            {
+	        "command": "command-runner.run",
+		"args": {
+		    "command": "inkscapeCreate",
+		},
+		"terminal": {
+		    "name": "runCommand",
+		    "shellArgs": [],
+		    "autoClear": true,
+		    "autoFocus": false
+		}
+            },
+	]
+    },
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Insert'"
 },
 ```
 
@@ -455,18 +455,18 @@ In the fifth instruction, we need to use the snippet like
 
 ```json
 {
-	"incfig": {
-		"prefix": "incfig",
-		"body": [
-			"\\begin{figure}[H]",
-			"\t\\centering",
-			"\t\\incfig{${1:$CLIPBOARD}}",
-			"\t\\caption{${2:title}}",
-			"\t\\label{fig:${1:$CLIPBOARD}}",
-			"\\end{figure}",
-		],
-		"description": "Inserts mathematical diagram"
-	}
+    "incfig": {
+        "prefix": "incfig",
+        "body": [
+            "\\begin{figure}[H]",
+	    "\t\\centering",
+	    "\t\\incfig{${1:$CLIPBOARD}}",
+	    "\t\\caption{${2:title}}",]
+	    "\t\\label{fig:${1:$CLIPBOARD}}",
+	    "\\end{figure}",
+	],
+        "description": "Inserts mathematical diagram"
+    }
 }
 ```
 
@@ -492,18 +492,18 @@ Again, we also use `ctrl+f` to trigger `inkscape-figures edit` command. We set u
 
 ```json
 {
-	"key": "ctrl+f",
-	"command": "command-runner.run",
-	"args": {
-		"command": "inkscapeEdit",
-		"terminal": {
-			"name": "runCommand",
-			"shellArgs": [],
-			"autoClear": true,
-			"autoFocus": false
-		}
-	},
-	"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Normal'"
+    "key": "ctrl+f",
+    "command": "command-runner.run",
+    "args": {
+        "command": "inkscapeEdit",
+        "terminal": {
+            "name": "runCommand",
+            "shellArgs": [],
+            "autoClear": true,
+            "autoFocus": false
+        }
+    },
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Normal'"
 },
 ```
 
@@ -549,28 +549,28 @@ After some research, although there is a way to let the original script in [inks
 I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my `keybindings.json`:
 
 ```json
-    {
-        "key": "ctrl+c",
-        "command": "command-runner.run",
-        "args": {
-            "command": "quiver",
-            "terminal": {
-                "name": "runCommand",
-                "shellArgs": [],
-                "autoClear": true,
-                "autoFocus": false
-            }
-        },
-        "when": "editorTextFocus"
+{
+    "key": "ctrl+c",
+    "command": "command-runner.run",
+    "args": {
+        "command": "quiver",
+        "terminal": {
+            "name": "runCommand",
+            "shellArgs": [],
+            "autoClear": true,
+            "autoFocus": false
+        }
     },
+    "when": "editorTextFocus"
+},
 ```
 
 and also, define the command `quiver` as 
 
 ```json
-    "command-runner.commands": {
-	"quiver": "open -na 'Google Chrome' --args --new-window <path-to-quiver>/quiver/src/index.html"
-    },
+"command-runner.commands": {
+    "quiver": "open -na 'Google Chrome' --args --new-window <path-to-quiver>/quiver/src/index.html"
+},
 ```
 
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
