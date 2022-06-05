@@ -4,7 +4,7 @@
 	A way to integrate LaTeX, VSCode, and Inkscape in macOS
 </i></b></p>
 
-> Also available: [My website](https://www.pbb.wtf/posts/LaTeX-Inkscape)
+> Also available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
 ## TODO
 
