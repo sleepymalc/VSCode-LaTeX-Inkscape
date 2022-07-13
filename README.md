@@ -555,7 +555,7 @@ Then enable in [Karabiner Elements](https://karabiner-elements.pqrs.org/) UI the
 #### Hammerspoon
 
 1. Open the [Hammerspoon](https://www.hammerspoon.org/) console and run `hs.ipc.cliInstall()` to install the cli command `hs`.
-2. Add to your [`~/.hammerspoon/init.lua`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/init.lua).
+2. Add to your [`~/.hammerspoon/init.lua`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/init.lua).
 
 #### Reference Card for Key Chords
 
