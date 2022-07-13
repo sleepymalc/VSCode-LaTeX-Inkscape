@@ -555,19 +555,7 @@ Then enable in [Karabiner Elements](https://karabiner-elements.pqrs.org/) UI the
 #### Hammerspoon
 
 1. Open the [Hammerspoon](https://www.hammerspoon.org/) console and run `hs.ipc.cliInstall()` to install the cli command `hs`.
-2. Add to your `[~/.hammerspoon/init.lua](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/init.lua)`.
-
-#### Reference Card for Key Chords
-
-As reference for the key chords I add the original picture from [the original blog](https://castel.dev/post/lecture-notes-2/) but with the key chords included in the picture.
-
-<p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/inkscape_shortcut.png"/>
-</p>
-
-#### Missing Key Chords
-
-I did not add the *ergonomic* rebinding `x`, `w`, `f`, and `shift+z`. This should be possible in Inkscape itself. This setup also misses the bindings `t`, `shift+t`, `a`, `shift+a`, `s`, and `shift+s`. Since I encountered issues I did not pursue these.
+2. Add to your [`~/.hammerspoon/init.lua`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/init.lua).
 
 #### Reference Card for Key Chords
 
