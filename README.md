@@ -107,6 +107,8 @@ snippets for you.
 
 If you look around in the VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/830e4f87b3f59f82719d298af80f43367128865e/VSCode-setting/Snippets/latex.hsnips#L1-L1002
+
 To modify this file, you can either go to this file in your finder or use VSCode built-in command function. For command function, 
 
 1. Press `shift+cmd+space` to type in some command to VSCode.
@@ -453,6 +455,9 @@ We break down what `ctrl+f` do in `Insert` mode exactly step by step. We see tha
 3. After inserting a new line, we move back our cursor.
 4. We delete that copied content by removing this line.
 5. We insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VSCode, not what we have used above**. I'll explain where to copy this file in a minute.
+
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/830e4f87b3f59f82719d298af80f43367128865e/VSCode-setting/Snippets/latex.json#L1-L14
+
 6. Lastly, we send a command in a terminal by `command runner`, with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Then we're done!
 
 In the fifth instruction, we need to use the snippet like 
