@@ -8,35 +8,34 @@
 
 ## TODO
 
-- [ ] Document Inkscape shortcut manager for macOS implemented in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1)
+- [x] Document Inkscape shortcut manager for macOS implemented in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1)
 
 ## Table Of Contents
-- [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
-  - [Abstract](#abstract)
-  - [Disclaimer](#disclaimer)
-  - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
-    * [Tex Conceal](#tex-conceal)
-    * [Snippets](#snippets)
-    * [HyperSnips](#hypersnips)
-    * [Sympy and Mathematica](#sympy-and-mathematica)
-    * [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
-  - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-Inkscape)
-    * [Inkscape](#inkscape)
-      + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
-      + [Download Inkscape](#download-inkscape)
-    * [Inkscape figure manager](#inkscape-figure-manager)
-      + [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
-      + [1. Watch](#1-watch)
-      + [2. Create](#2-create)
-      + [3. Edit](#3-edit)
-    * [Inkscape shortcut manager](#inkscape-shortcut-manager)
-    * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
-  - [Updates](#updates)
-    * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
-    * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
-    * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
-  - [Credits](#credits)
-  - [Related Project](#related-project)
+- [Abstract](#abstract)
+- [Disclaimer](#disclaimer)
+- [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
+  * [Tex Conceal](#tex-conceal)
+  * [Snippets](#snippets)
+  * [HyperSnips](#hypersnips)
+  * [Sympy and Mathematica](#sympy-and-mathematica)
+  * [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
+- [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-Inkscape)
+  * [Inkscape](#inkscape)
+    + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
+    + [Download Inkscape](#download-inkscape)
+  * [Inkscape figure manager](#inkscape-figure-manager)
+    + [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
+    + [1. Watch](#1-watch)
+    + [2. Create](#2-create)
+    + [3. Edit](#3-edit)
+  * [Inkscape shortcut manager](#inkscape-shortcut-manager)
+  * [Summary: Workflow to Create a New Figure in VSCode with Inkscape](#summary-workflow-to-create-a-new-figure-in-vscode-with-inkscape)
+- [Updates](#updates)
+  * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
+  * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
+  * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
+- [Credits](#credits)
+- [Related Project](#related-project)
 
 ## Abstract
 I use LaTeX heavily in the past two years for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive. 
@@ -526,9 +525,9 @@ This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. 
 
 ### Inkscape shortcut manager
 
-This is the most complicated part of the whole setup, I would say. Leave as a TODO.
+In this section, we'll setup a very efficient shortcut manager to help you draw any mathematical figures faster than you can ever imagine!
 
-### Summary: Workflow to Create a New Figure in VSCode with Inkscape
+### Summary
 
 This is the whole setup I have, and let's wrap this up since I know this may be quite overwhelming.
 
