@@ -45,7 +45,7 @@ I took quite a few math courses, hence after finding out this workflow, I decide
 If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Deciding to adopt this workflow probably is the best choice I did throughout my education!
 # ***VSCode-LaTeX-Inkscape***
 <p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note_preview.png"/>
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
 </p>
 
 ## Disclaimer
