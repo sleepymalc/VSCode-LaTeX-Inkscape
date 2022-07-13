@@ -29,7 +29,7 @@
     + [2. Create](#2-create)
     + [3. Edit](#3-edit)
   * [Inkscape shortcut manager](#inkscape-shortcut-manager)
-  * [Summary](#summar)
+  * [Summary](#summary)
 - [Updates](#updates)
   * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
   * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
