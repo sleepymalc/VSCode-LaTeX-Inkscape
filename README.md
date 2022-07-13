@@ -762,6 +762,8 @@ function create_svg_and_paste(keys)
 end
 ```
 
+</details>
+
 #### Reference Card for Key Chords
 
 As reference for the key chords I add the original picture from [the original blog](https://castel.dev/post/lecture-notes-2/) but with the key chords included in the picture.
