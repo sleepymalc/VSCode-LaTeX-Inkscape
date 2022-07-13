@@ -595,7 +595,7 @@ $ jsonnet karabiner-inkscape.jsonnet > ~/.config/karabiner/assets/complex_modifi
 ```
 Then enable in Karabiner Elements UI the complex modifications.
 <p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/Kabiner.png"/>
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/Karabiner.png"/>
 </p>
 
 #### Hammerspoon
