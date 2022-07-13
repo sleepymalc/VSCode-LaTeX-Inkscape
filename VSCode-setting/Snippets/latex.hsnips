@@ -309,7 +309,7 @@ endsnippet
 priority 100
 context math(context)
 snippet `(?<![\\a-zA-Z])ell` "\ell" iAw
-\\ell $0
+\ell $0
 endsnippet
 
 context math(context)
@@ -380,6 +380,11 @@ snippet ~- "approx. equal(3)" iA
 endsnippet
 
 context math(context)
+snippet cir "composition" iA
+\circ $0
+endsnippet
+
+context math(context)
 snippet @> "inclusion" iA
 \hookrightarrow $0
 endsnippet
@@ -431,7 +436,7 @@ snippet `(\\?[a-zA-Z]\w*)(bm|BM)` "bm" iwA
 endsnippet
 
 context math(context)
-snippet f(\\?\w+)(,\.|\.,)` "Vector postfix" iwA
+snippet `(\\?\w+)(,\.|\.,)` "Vector postfix" iwA
 \vec{``rv = m[1]``} $0
 endsnippet
 
@@ -511,11 +516,16 @@ endsnippet
 
 context math(context)
 snippet lmts "limit" iA
-\limits_{${1:i}=${2:1}}^{${3:\infty}}
+\limits
 endsnippet
 
 context math(context)
 snippet sum "sum" wA
+\sum_{${1:i}=${2:1}}^{${3:\infty}} $0
+endsnippet
+
+context math(context)
+snippet Sum "sum" wA
 \sum\limits_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
@@ -573,6 +583,11 @@ snippet coprd "coproduct" wA
 endsnippet
 
 context math(context)
+snippet pt "\partial" iAw
+\partial $0
+endsnippet
+
+context math(context)
 snippet pdif "d/dx" wA
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
@@ -618,8 +633,18 @@ snippet `\b([a-zA-Z])n(\d)` "?[n+?]" iA
 endsnippet
 
 context math(context)
+snippet `o\+` "oplus" iA
+\oplus $0
+endsnippet
+
+context math(context)
+snippet `o(x\.|\.x)` "otimes" iA
+\otimes $0
+endsnippet
+
+context math(context)
 snippet `(x\.|\.x)` "times" iA
-\times 
+\times $0
 endsnippet
 
 context math(context)
@@ -701,7 +726,7 @@ endsnippet
 priority 200
 context math(context)
 snippet tr "transpose" iAw
-^{T} $0
+^{\top} $0
 endsnippet
 
 context math(context)
@@ -792,7 +817,7 @@ endsnippet
 priority 100
 context math(context)
 snippet ** "star" iA
-^{*} $0
+^{\ast} $0
 endsnippet
 
 context math(context)
