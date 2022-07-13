@@ -45,7 +45,7 @@ I took quite a few math courses, hence after finding out this workflow, I decide
 If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Deciding to adopt this workflow probably is the best choice I did throughout my education!
 # ***VSCode-LaTeX-Inkscape***
 <p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note_preview.png"/>
 </p>
 
 ## Disclaimer
@@ -526,6 +526,8 @@ This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. 
 ### Inkscape shortcut manager
 
 In this section, we'll setup a very efficient shortcut manager to help you draw any mathematical figures faster than you can ever imagine!
+
+
 
 ### Summary
 
