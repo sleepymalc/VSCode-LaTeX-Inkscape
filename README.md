@@ -6,10 +6,6 @@
 
 > Also available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
-## TODO
-
-- [x] Document Inkscape shortcut manager for macOS implemented in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1)
-
 ## Table Of Contents
 - [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
