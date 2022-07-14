@@ -1,5 +1,7 @@
 # ***VSCode-LaTeX-Inkscape***
 
+<script src="https://gist.github.com/sleepymalc/1b166ae1319e5e06eeff6b8f2de3e32e.js"></script>
+
 <p align="center"><b><i>
 	A way to integrate LaTeX, VSCode, and Inkscape in macOS
 </i></b></p>
