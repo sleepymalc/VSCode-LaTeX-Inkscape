@@ -647,8 +647,8 @@ Again, thanks to Gilles Castel, this workflow fits my style. Although it origina
 
 ## Related Project
 
-1. [Academic_Template](https://github.com/sleepymalc/Academic_Template) (A general LaTeX template for making PPT by beamer and Academic Report)
-2. [Notes](https://github.com/sleepymalc/Notes) (All notes taken in this setup)
+1. [LaTeX-Template](https://github.com/sleepymalc/LaTeX-Template)
+2. [Notes](https://github.com/sleepymalc/Notes)
 3. [gillescastel/inkscape-figures](https://github.com/gillescastel/inkscape-figures)
 4. [gillescastel/inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager)
 5. [chipsenkbeil/choose](https://github.com/chipsenkbeil/choose)
