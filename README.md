@@ -458,7 +458,7 @@ We break down what `ctrl+f` do in `Insert` mode exactly step by step. We see tha
 4. We delete that copied content by removing this line.
 5. We insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VSCode, not what we have used above**. I'll explain where to copy this file in a minute.
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json#L1-L14
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
 
 6. Lastly, we send a command in a terminal by `command runner`, with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Then we're done!
 
