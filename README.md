@@ -328,7 +328,7 @@ Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anacond
 
 Ok, I know you probably don't have that much patience now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py).
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py#L1-L296
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/ddcde8d9976ed7cef5cbdae5c4ba4be291f1869e/Inkscape-setting/Inkscape-figure-manager/main.py#L1-L296
 
 If you don't want to know the detail, you can just copy this [`main.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py) and replace the current one. If you're interesting, lets me explain it to you.
 
