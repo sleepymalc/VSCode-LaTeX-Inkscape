@@ -551,7 +551,7 @@ Please downloads the above two apps.
 We'll first setup the following [complex_modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) for [Karabiner Elements](https://karabiner-elements.pqrs.org/) using a [`jsonnet`](https://jsonnet.org) file.
 The file can be found [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet),
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39
 
 and the `jsonnet` tool can be installed via `$ brew install jsonnet`.
 
