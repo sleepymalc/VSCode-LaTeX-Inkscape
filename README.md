@@ -367,7 +367,7 @@ But let me explain it to you, in case you want to modify it to meet your need la
 
 The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`.
 
-We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the[Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
+We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
 
 #### 1. Watch
 
