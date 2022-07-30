@@ -7,29 +7,35 @@
 > Also available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
 ## Table Of Contents
+- [Table Of Contents](#table-of-contents)
 - [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
-  * [Tex Conceal](#tex-conceal)
-  * [Snippets](#snippets)
-  * [HyperSnips](#hypersnips)
-  * [Sympy and Mathematica](#sympy-and-mathematica)
-  * [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
-- [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-Inkscape)
-  * [Inkscape](#inkscape)
-    + [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
-    + [Download Inkscape](#download-inkscape)
-  * [Inkscape figure manager](#inkscape-figure-manager)
-    + [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
-    + [1. Watch](#1-watch)
-    + [2. Create](#2-create)
-    + [3. Edit](#3-edit)
-  * [Inkscape shortcut manager](#inkscape-shortcut-manager)
-  * [Summary](#summary)
+  - [Tex Conceal](#tex-conceal)
+  - [HyperSnips](#hypersnips)
+    - [Snippets](#snippets)
+    - [HyperSnips](#hypersnips-1)
+  - [Sympy and Mathematica](#sympy-and-mathematica)
+  - [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
+- [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
+  - [Inkscape](#inkscape)
+    - [Download Inkscape](#download-inkscape)
+    - [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
+  - [Inkscape Figure Manager](#inkscape-figure-manager)
+    - [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
+    - [1. Watch](#1-watch)
+    - [2. Create](#2-create)
+    - [3. Edit](#3-edit)
+  - [Inkscape shortcut manager](#inkscape-shortcut-manager)
+    - [Karabiner Elements](#karabiner-elements)
+    - [Hammerspoon](#hammerspoon)
+    - [Reference Card for Key Chords](#reference-card-for-key-chords)
+    - [Missing Key Chords](#missing-key-chords)
+  - [Summary](#summary)
 - [Updates](#updates)
-  * [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
-  * [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
-  * [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
+  - [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
+  - [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
+  - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
 - [Credits](#credits)
 - [Related Project](#related-project)
 
@@ -49,6 +55,26 @@ If you still don't know what to expect, please check out my [Notes](https://gith
 
 Please look through the two blog posts above by Gilles Castel! They are incredible and worth spending your time to understand how all things work, and what's the motivation behind all these. I'm only mimicking his workflow, with a little patience to set up the whole thing in my environment. Show respect to the original author!
 
+Before we start anything serious, just copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json`. Don't worry, I'll explain what do they do later.
+
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133
+
+https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/settings.json#L1-L14
+
+And also, create a snippet file for $\LaTeX$ in the following steps:
+
+1. Press `shift+cmd+p` to open the VSCode command.
+
+2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
+
+3. Choose `New Global Snippets file...`.
+
+4. Enter `latex` to create a new file.
+
+5. Paste the  [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json)  into that file.
+
+   https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
+
 ## Setup For Typing Blasting Fast
 
 First thing first, please set up your VSCode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly.
@@ -59,47 +85,60 @@ Now, we go through things one by one following Gilles Castel's blog post.
 
 This is probably the only thing I don't like that much in Gilles Castel's setup. I'm quite comfortable looking at LaTeX source code for formula, and I don't think they look that nice. But if you want to set them up in VSCode, there is an extension [here](https://github.com/Pancaek/vsc-conceal), I have no experience with this particular setup, feel free to try them out though.
 
-### Snippets
-#### What’s a snippet?
+
+### HyperSnips
+
+#### Snippets
 
 A snippet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm`, the word `dm` will be expanded to a math environment:
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/dm.gif"/>
 </p>
 
 
+
 If you are a math guy, you may need to type some inline math like `\(\)`, which is kind of painful. But with snippet, you can have 
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/fm.gif"/>
 </p>
 
 
+
 See? You just type `fm`, and then your snippet not only automatically type `\(\)` for you, but it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/fast.gif"/>
 </p>
 
+
 Note that in the above demo, I use a very common snippet, `qs` for `^{2}`.
 
 As you can imagine, this can be quite complex. For example, you can even have something like this:
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/table.gif"/>
 </p>
 
+
 or this:
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/pmatrix.gif"/>
 </p>
+
 
 Too fast to keep track of? For the first snippet, I type `table2 5`, and then it generates a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 5` to indicate that I want a 2 by 5 matrix, then boom! My snippets do that for me in an instant!
 
 Feeling it? Let's try to set up this step by step. And maybe you can create your snippets also! Here is some useful 
 snippets for you.
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/useful.gif"/>
 </p>
 
-### HyperSnips
+#### HyperSnips
 
 If you look around in the VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
@@ -126,41 +165,35 @@ Magic right? Let's set it up! First, please look at the installation document pr
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/integral2.gif"/>
 </p>
+> This plugin is indeed more powerful than just this, see the documentation for detail.
 
-
-You can find my keybinding setup in this repo. But stay tuned, there is more to come! Let's go to the last thing covered in Gilles Castel's post, correcting spelling mistakes.
+Let's go to the last thing covered in Gilles Castel's post, correcting spelling mistakes.
 
 ### Correcting spelling mistakes on the fly
 
-Although my typing speed is quite high, I have typos all the time. So this is a must for me. And surprisingly, this is the hardest thing until now for me to set it upright. Let's see how we can configure this functionality in VSCode!
+Although my typing speed is quite high, I have typos all the time. So this is a must for me. And surprisingly, this is the hardest thing until now for me to set it upright. Let's see how we can configure this functionality in VSCode! There are three plugins we need:
 
-#### multi-command
+1. [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command): This is a very powerful extension, which allows you to do a sequence of actions in one shortcut. We will use this later on also, and that's the place it shines.
 
-Firstly, you need to download [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) to perform this. And this is a very powerful extension, which allows you to do a sequence of actions in one shortcut. We will use this later on also, and that's the place it shines.
+2. [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): This is a popular spelling checker out there which meets our needs.
 
-#### Code Spell Checker
+3. [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex): If you are bad at grammar like me, you definitely want to install to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
 
-And then, after searching for some time, I find out that there is a popular spelling checker out there which meets our needs, [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). Just download it, it's useful.
+   > There is an unofficial API for Grammarly, and the plugin can be found [here](https://marketplace.visualstudio.com/items?itemName=znck.grammarly). Though it's quite slow...
 
-#### LTeX
-
-If you are bad at grammar like me, you definitely want to install [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex) to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
-
-Now, it's time to configure all these. Open your Keyboard Shortcuts page in VSCode, which is in the bottom left
+Here is a quick demo for how it works when typing:
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/keyboard.png"/>  
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/spell.gif"/>
 </p>
 
 
-And then go into its `JSON` file, which is at the upper right:
+Additionally, if you also want to correct your grammar error, I use the shortcut `cmd`+`k` to trigger a quick-fix for a general error.
 
-<p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/keyboard2.png"/>
-</p>
+<details>
+<summary><h4>Detail Explanation</h></summary>
 
-
-Now, paste the following code in `keybindings.json`:
+You can skip this part if you don't want to know the working mechanism. But if you're interested, please follow! The following code snippet in `settings.json` is responsible for correcting your spelling mistakes by just clicking `cmd`+`l`.
 
 ```json
 {
@@ -181,21 +214,15 @@ Now, paste the following code in `keybindings.json`:
     }
 },
 ```
-Make sure that the curly braces above have a trailing comma, otherwise, VSCode will complain about it.
+> Make sure that the curly braces above have a trailing comma, otherwise, VSCode will complain about it.
 
-Now, as long as you see there is a spelling error, you just type `cmd+l`, the keybinding will do the following things:
+The working mechanism is as follows. When you press `cmd`+`l`, the [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) will do the following:
 
 1. Use one of the default function from cSpell's: `goToPreviousSpellingIssue`, which jump your cursor on that spelling error word
 2. Triggered a default editor action, with the argument being `quickfix` to open a quick fix drop-down list, and choose the `first` suggestion
 3. Move your cursor back by `cursorUndo`
 
-Here is a quick demo for how it works when typing:
-
-<p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/spell.gif"/>
-</p>
-
-Additionally, if you also want to correct your grammar error, I use the shortcut `cmd+k` to trigger a quick-fix for a general error. The setting looks like this:
+And likewise, the following code snippet is responsible for correcting grammar mistakes.
 
 ```json
 {
@@ -217,9 +244,7 @@ Additionally, if you also want to correct your grammar error, I use the shortcut
  },
 ```
 
-#### Grammarly
-
-There is an unofficial API for Grammarly, but the functionality is not that useful if one wants to use auto-correction. Hence, I'll leave it as a TODO for now.
+</details>
 
 Now, the first part is over. Let's go to the next truly beautiful, elegant, and exciting world, drawing with [Inkscape](https://inkscape.org/zh-hant/).
 
@@ -236,10 +261,34 @@ One last thing is that I'll assume you have already installed [VSCode Vim](https
 
 ### Inkscape
 
-A big question is, why Inkscape? In Gilles Castel's blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in LaTeX with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. 
-You think this is it? When you need to generate a series of figures, it'll go beyond hundreds of lines of codes easily. And up to this point, to let VSCode compile this, this is not fun at all. In this large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost tens of seconds, and then compile them by *pdfLaTeX* takes about another tens more seconds. That's not efficient at all, especially when you want some instant feedback for some small changes. 
+A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in LaTeX with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. 
+You think this is it? When you need to generate a series of figures, it'll go beyond hundreds of lines of codes easily. And up to this point, to let VSCode compile this, this is not fun at all. In this large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost tens of seconds, and then compile them by *pdfLaTeX* takes about another tens more seconds. That's not efficient at all, especially when you want some instant feedback for some small changes.
 
-However, by using Inkscape, you only need to type (Ok, not quite, you don't need to type them out manually as you'll see) the following:
+#### Download Inkscape
+
+You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend you install this in a terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
+
+```bash
+$ brew install --cask inkscape
+```
+
+#### Set up the Environment in LaTeX
+
+First thing first, include the following in your preamable
+
+```latex
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Figures/}{#1.pdf_tex}
+}
+```
+
+And to use it in your code, it's like the following:
 
 ```latex
 \begin{figure}[H]
@@ -252,93 +301,54 @@ However, by using Inkscape, you only need to type (Ok, not quite, you don't need
 
 And then you're done! And also, the compilation time for this is shorter than you can ever expect. Let's get started then!
 
-#### Set up the Environment in LaTeX
-
-First thing first, include the following in your header
-
-```latex
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
-
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/}{#1.pdf_tex}
-}
-```
-
 This assumes that your LaTeX project's home directory looks like this:
 
 ```bash
 LaTeX_project
-    │
-    ├── LaTex.tex
-    │
-    ├── LaTex.pdf
-    │
+    ├── main.tex
+    ├── main.pdf
     ├── Figures
     │    ├── fig1
     │    ├── fig2
     │    .
-    │	 .
-    .
     .
 ```
 
-Now, let's get into the fun part. Let's set up the shortcut for this.
+Now, let's get into the fun part, i.e., to set up the shortcut for this.
 
-#### Download Inkscape
-
-You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend you install this in a terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
-
-```bash
-brew install --cask inkscape
-```
-
-### Inkscape figure manager
+### Inkscape Figure Manager
 
 This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you to follow the installation instruction there. Here is just some guideline for you
 
-1. You need to download [choose](https://github.com/chipsenkbeil/choose) first, for later usage.
-
-2. Type this in your terminal
+1. Download [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
 
    ```bash
-   pip3 install inkscape-figures
+   $ brew install choose-gui
    ```
 
-3. type `inkscape-figure` in your terminal to make sure you have corrected install it.
+2. Install the Inkscape figure manager:
+
+   ```bash
+   $ pip3 install inkscape-figures
+   ```
+
+   > After installing it, type `inkscape-figure` in your terminal to make sure you have corrected install it.
 
 If you're using Linux and Vim, then you are done already. But since you're using macOS and VSCode, please follow me, there is some more thing for you to configure.
 
 #### Set up Inkscape Figure Manager
 
-##### Modify
+Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) and we'll see how it works la
 
-Firstly, please type the following command in your terminal
+Now, this is a tricky part: you need to find where the source-code of the inkscape-figures manager is. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
 
-```bash
-where inkscape-figures 
-```
+> Using global finding may be helpful...
 
-to find out where the `inkscape-figures` is installed. In my environment, I use Anaconda quite a lot, so mine is `/Users/pbb/opt/anaconda3/bin/inkscape-figures`. 
+Open this directory by VS Code, there is something for you to modify. Ok, I know you probably don't have that much patience now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/). Just replace the whole directory with mine, and you're good to go.
 
-Now, go to a **relative directory**, in my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`. Open this directory by VSCode, there is something for you to modify.
-
-Ok, I know you probably don't have that much patience now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py).
-
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/ddcde8d9976ed7cef5cbdae5c4ba4be291f1869e/Inkscape-setting/Inkscape-figure-manager/main.py#L1-L296
-
-If you don't want to know the detail, you can just copy this [`main.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py) and replace the current one. If you're interesting, lets me explain it to you.
-
-###### Caveat
-
-Notice that there is **one thing for you *need to* modify** in the source code in [`main.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/main.py) in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). Since Gilles Castel originally use `figures/` as his subfolder name to store figures, you need to change every `figures/` in the source code into `Figures/` if you're modifying the source code on your own rather than copy mine.
-
-###### Detail Explanation
-
-In Gilles Castel's approach, he uses the shortcut `ctrl-f` to trigger this script, which will copy the whole line's content depending on the cursor's position, and the script will send the snippets by the function
+<details>
+<summary><h4>Detail Explanation</h></summary>
+In Gilles Castel's approach, he uses the shortcut `ctrl`+`f` to trigger this script, which will copy the whole line's content depending on the cursor's position, and the script will send the snippets by the function
 
 ```python
 def latex_template(name, title):
@@ -353,27 +363,33 @@ def latex_template(name, title):
 
 to `stdout`, and then create a figure by the `name`, which is the content of the line.
 
-But this in VSCode is impossible, hence we don't need this, we'll use another approach, namely, we'll accomplish the task by command line. And if we leave this function as it was, then it will send all these snippets into our terminal, which is quite annoying. So the modified version just removes this snippet completely.
-
-Now, the only thing you need to do is to copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json` and then you're done. 
-
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133
-
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/settings.json#L1-L14
+But this in VS Code is impossible, hence we don't need this, we'll use command line. And if we leave this function as it was, then it will send all these snippets into our terminal, which is quite annoying. So the modified version just removes this snippet completely.
 
 But let me explain it to you, in case you want to modify it to meet your need later on. First thing first, we see that in the given code in [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), we're using [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner), so let me tell you how to set this up first.
 
-##### Command Runner
-
-The last thing you need to install is [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`setting.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Please copy the content into your own `setting.json`.
+</details>
 
 We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
 
-#### 1. Watch
+#### Watch
 
 Since Inkscape in default does not save the file in `pdf+latex`, hence we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the file watcher to *watch* the file for any changes. If there is any, then the file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
-To open the file watcher, you can type `inkscape-figures watch` in the terminal. In my case, I set up a short for this. In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
+To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just install? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybindings for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
+
+> You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show 
+>
+> ```bash
+> $ inkscape-figures watch 
+> Unable to lock on the pidfile.
+> ```
+>
+> Otherwise it'll simply show nothing. (Remember to select the terminal corresponds to `runCommand`!)
+
+<details>
+<summary><h5>Detail Explanation</h></summary>
+
+In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
 
 ```json
 {
@@ -400,13 +416,20 @@ for starting the [Inkscape figure manager](https://github.com/gillescastel/inksc
 }
 ```
 
-In detail, we just use `command runner` to run the command we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), in this case, I explicitly tell the keybinding `ctrl+f` will trigger `inkscapeStart` when I'm in `Visual` mode in Vim, which is just `inkscape-figures watcher` as defined above.
+In detail, we just use [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) to run the command we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json), in this case, I explicitly tell the keybinding `ctrl`+`f` will trigger `inkscapeStart` when I'm in `VISUAL` mode in Vim, which is just `inkscape-figures watcher` as defined above.
 
-Notice that we set the `autoFocus=false` for the terminal `command runner` use since we don't want a pop-up terminal to distract us. If you want to see whether the command is triggered correctly every time, you can set it to `true`.
+Notice that we set the `autoFocus=false` for the terminal [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) uses since we don't want a pop-up terminal to distract us. If you want to see whether the command is triggered correctly every time, you can set it to `true`.
 
-#### 2. Create
+</details>
 
-Same as above, we also use `ctrl+f` to trigger `inkscape-figures create` command. But in this case, we do a little bit more than that. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+#### Create
+
+Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` command. But in this case, we use `INSERT` for creating a new Inkscape figure. Specifically, we first type out the image's name we want our image to be called, then in this case we're already in `INSERT` mode, we just pres `ctrl`+`f` to create this image after naming.
+
+<details>
+<summary><h5>Detail Explanation</h></summary>
+
+We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
 
 ```json
 {
@@ -446,60 +469,42 @@ and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/
 
 ```json
 "command-runner.commands": {
-    "inkscapeCreate": "inkscape-figures create ${selectedText} ${workspaceFolder}/Figures/"
+    "inkscapeCreate": "inkscape-figures create ${selectedText} ${fileDirname}/Figures/"
 }
 ```
 
-We break down what `ctrl+f` do in `Insert` mode exactly step by step. We see that when we press `ctrl+f` in `Insert` mode, we trigger `multiCommand.execute` to execute a sequence of instructions, which are
+We break down what `ctrl`+`f` do in `INSERT` mode exactly step by step. We see that when we press `ctrl`+`f` in `INSERT` mode, we trigger `multiCommand.execute` to execute a sequence of instructions, which are
 
 1. Copy the content into your clipboard of the line your cursor at
-2. We insert a bland line after since we need to insert a snippet, and that's will delete an additional line. You can try to delete this and the next instruction, and see what happens.
-3. After inserting a new line, we move back our cursor.
-4. We delete that copied content by removing this line.
-5. We insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VSCode, not what we have used above**. I'll explain where to copy this file in a minute.
+2. Insert a blank line after since we need to insert a snippet, and that's will delete an additional line. You can try to delete this and the next instruction, and see what happens.
+3. Move back our cursor after inserting that new line.
+4. Delete that copied content by removing this line.
+5. Insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VSCode, not  [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) we have used before**. I'll explain where to copy this file in a minute.
+6. Lastly, we send a command in a terminal by [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner), with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json).
+
+In the fifth instruction, the snippet we used is
 
 https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
 
-6. Lastly, we send a command in a terminal by `command runner`, with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json). Then we're done!
+which is just the snippet we remove from [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures)'s source code! It's back again, in a different approach.
 
-In the fifth instruction, we need to use the snippet like 
-
-```json
-{
-    "incfig": {
-        "prefix": "incfig",
-        "body": [
-            "\\begin{figure}[H]",
-	    "\t\\centering",
-	    "\t\\incfig{${1:$CLIPBOARD}}",
-	    "\t\\caption{${2:title}}",
-	    "\t\\label{fig:${1:$CLIPBOARD}}",
-	    "\\end{figure}",
-	],
-        "description": "Inserts mathematical diagram"
-    }
-}
-```
-
-which is just the snippet we remove from [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures)'s source code! It's back again, in a different approach! You can paste this into your configuration by the following steps:
-
-1. Press `shift+cmd+p` to open the VSCode command 
-2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
-3. Choose `New Global Snippets file...`
-4. Enter `latex` to create a new file.
-5. Paste the above snippets into that file.
+</details>
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/demo-create-inkscape.gif"/>
 </p>
+Don't know what happen? Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vim and type my new figure's name `figure-test`. And then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
 
-Don't know what happen? Let me break it down for you. Firstly, I change into `insert` mode in VSCode Vim and type my new figure's name `figure-test`. And then, I press `ctrl+f` to trigger a keybinding. Then it will automatically create an Inkscape figure named `figure-test` for me and open it. 
+> The three files will be created along the way: `figure-test.pdf`, `figure-test.pdf_tex` and `figure-test.svg`. Unfortunately, to rename a file, you'll need to manually rename three of them.
 
-Now, let's see the last thing I have to share with you.
+#### Edit
 
-#### 3. Edit
+Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode.
 
-Again, we also use `ctrl+f` to trigger `inkscape-figures edit` command. We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+<details>
+<summary><h5>Detail Explanation</h></summary>
+
+The corresponding keybinding in [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) is:
 
 ```json
 {
@@ -522,20 +527,37 @@ and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/
 
 ```json
 "command-runner.commands": {
-    "inkscapeEdit": "inkscape-figures edit ${workspaceFolder}/Figures/"
+    "inkscapeEdit": "inkscape-figures edit ${fileDirname}/Figures/"
 }
 ```
 
-This is what's you should expect when you want to edit a particular figure:
+I think now it's clear enough how all these work together to trigger the corresponding command. When you press `ctrl`+`f` in `NORMAL` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose, which is the functionality provided by [choose](https://github.com/chipsenkbeil/choose).
+
+</details> 
+
+This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
+
+> You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](), we have the following:
+>
+> ```python
+> def get_picker_cmd(picker_args=None, fuzzy=True):
+>     """
+>     Create the shell command that will be run to start the picker.
+>     """
+>     if SYSTEM_NAME == "Darwin":
+>         args = ["choose"]
+>     #   args = ["choose", "-u", "-n", "15", "-c", "BB33B7", "-b", "BF44C8"]
+> ```
+>
+> We see that we don't have any additional argument for `choose`, but if you want, you can replace this line by the next line, which modify the style of `choose`. For detail information, type `choose -h` to see all the options.
+
+In the following demo, I create another figure named `figure-test2`, then modify it a little, and compile it again.
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/demo-edit-inkscape.gif"/>
 </p>
 
-
-This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. When you press `ctrl+f` in `Normal` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose. After you press `enter`, it will open that file for you to edit. In my demo, I create another figure named `figure-test2`, then modify it a little, and compile it again.
-
-### Inkscape shortcut manager
+### Inkscape Shortcut Manager
 
 In this section, we'll setup a very efficient shortcut manager to help you draw any mathematical figures faster than you can ever imagine! Notice that this setup is quite complicated, but the result is quite good. It depends on 
 

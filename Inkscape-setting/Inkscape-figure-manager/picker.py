@@ -17,7 +17,8 @@ def get_picker_cmd(picker_args=None, fuzzy=True):
     Create the shell command that will be run to start the picker.
     """
     if SYSTEM_NAME == "Darwin":
-        args = ["choose", "-u", "-n", "15", "-c", "BB33B7", "-b", "BF44C8"]
+        args = ["choose"]
+    #   args = ["choose", "-u", "-n", "15", "-c", "BB33B7", "-b", "BF44C8"]
     elif SYSTEM_NAME == "Linux":
         args = ["rofi", "-sort", "-no-levenshtein-sort"]
         if fuzzy:
