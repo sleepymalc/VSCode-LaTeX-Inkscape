@@ -180,6 +180,7 @@ Additionally, if you also want to correct your grammar error, I use the shortcut
 <details>
 <summary><h4>Detail Explanation</h></summary>
 
+
 You can skip this part if you don't want to know the working mechanism. But if you're interested, please follow! The following code snippet in `settings.json` is responsible for correcting your spelling mistakes by just clicking `cmd`+`l`.
 
 ```json
@@ -248,8 +249,7 @@ One last thing is that I'll assume you have already installed [VSCode Vim](https
 
 ### Inkscape
 
-A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in LaTeX with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. 
-You think this is it? When you need to generate a series of figures, it'll go beyond hundreds of lines of codes easily. And up to this point, to let VSCode compile this, this is not fun at all. In this large amount of nested environment, it takes *[latexindent](https://ctan.org/pkg/latexindent)* to auto-indent them for almost tens of seconds, and then compile them by *pdfLaTeX* takes about another tens more seconds. That's not efficient at all, especially when you want some instant feedback for some small changes.
+A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in LaTeX with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. Also, $\texttt{TikZ}$ code tends to be **long**. A large file will take *[latexindent](https://ctan.org/pkg/latexindent)* and *pdfLaTeX* *a minute* to compile them for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
 
 #### Download Inkscape
 
