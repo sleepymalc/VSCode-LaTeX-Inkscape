@@ -1,9 +1,10 @@
 # ***VSCode-LaTeX-Inkscape***
 
-<p align="center"><b><i>
-	A way to integrate LaTeX, VS Code, and Inkscape in macOS
-</i></b></p>
+<p align="center">
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
+</p>
 
+- [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
   - [Tex Conceal](#tex-conceal)
@@ -22,15 +23,17 @@
 - [Credits](#credits)
 - [Related Project](#related-project)
 
+<p align="center"><b><i>
+	A way to integrate LaTeX, VS Code, and Inkscape in macOS
+</i></b></p>
+
+## Abstract 
+
 I use $\LaTeX$ heavily in the past two years for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in $\LaTeX$. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using $\LaTeX$ and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive.
 
 I took quite a few math courses, hence after finding out this workflow, I decided to adapt the whole setup from Linux-Vim to macOS-VS Code. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
 
 If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Deciding to adopt this workflow probably is the best choice I did throughout my education.
-
-<p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
-</p>
 
 > Available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
