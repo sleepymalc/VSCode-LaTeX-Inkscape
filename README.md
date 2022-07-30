@@ -42,7 +42,7 @@ If you still don't know what to expect, please check out my [Notes](https://gith
 
 Please look through the two blog posts above by Gilles Castel! They are incredible and worth spending your time to understand how all things work, and what's the motivation behind all these. I'm only mimicking his workflow, with a little patience to set up the whole thing in my environment. Show respect to the original author!
 
-Before we start anything serious, just copy the [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json`. Don't worry, I'll explain what do they do later.
+Before we start anything serious, just copy the [`keybindings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [`settings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json`. Don't worry, I'll explain what do they do later.
 
 https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133
 
@@ -416,7 +416,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 <details>
 <summary><h5>Detail Explanation</h></summary>
 
-We set up our [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+We set up our ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
 
 ```json
 {
@@ -507,7 +507,7 @@ Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but th
 <details>
 <summary><h5>Detail Explanation</h></summary>
 
-The corresponding keybinding in [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) is:
+The corresponding keybinding in ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) is:
 
 ```json
 {
@@ -592,27 +592,29 @@ As reference for the key chords I add the original picture from [the original bl
 
 #### Missing Key Chords
 
-I did not add the *ergonomic* rebinding `x`, `w`, `f`, and `shift+z`. This should be possible in Inkscape itself. This setup also misses the bindings `t`, `shift+t`, `a`, `shift+a`, `s`, and `shift+s`. Since I encountered issues I did not pursue these.
+I did not add the *ergonomic* rebinding `x`, `w`, `f`, and `shift`+`z`. This should be possible in Inkscape itself. This setup also misses the bindings `t`, `shift`+`t`, `a`, `shift`+`a`, `s`, and `shift`+`s`. Since I encountered issues I did not pursue these.
 
 ### Summary
 
 This is the whole setup I have, and let's wrap this up since I know this may be quite overwhelming.
 
-1. Before you start your project, please go to `Visual` mode by entering `v` in `Normal` mode. And then press `ctrl+f`. This will set up the file watcher.
-2. When you want to create a new figure, go into a new line, type the name of your figure in `Insert` mode, then press `ctrl+f`. This will create a new figure with the name you typed, and open it in Inkscape for you.
-3. When you have drawn your figure, as long as you press `cmd+s`, it will automatically save the figure in `pdf+latex` for you, then you can close Inkscape.
-4. When you want to edit one of your figures, you press `ctrl+f` in `Normal` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3.
+1. Before you start your project, enter the `VISUAL` mode by pressing `v` in `NORMAL` mode. And then press `ctrl`+`f`. This will set up the file watcher.
+2. When you want to create a new figure, go into a new line, type the name of your figure in `INSERT` mode, then press `ctrl`+`f`. This will create a new figure with the name you typed, and open it in Inkscape for you.
+3. When you have drawn your figure, as long as you press `cmd`+`s` in Inkscape, it will automatically save the figure in `pdf+latex` for you, then you can close Inkscape.
+4. When you want to edit one of your figures, you press `ctrl`+`f` in `NORMAL` mode, it will pop out a window for you to choose the figure you want to edit. And the rest is the same as 3.
 
 ## Updates
 
-### About Inkscape Shortcut Manager (09.27.21)
+### ~~About Inkscape Shortcut Manager (09.27.21)~~
 
-After some research, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) run correctly since it depends on `xlib`, which is no longer used by macOS for almost every application(including Inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.
+~~After some research, although there is a way to let the original script in [inkscape-shortcut-manager](https://github.com/gillescastel/inkscape-shortcut-manager) run correctly since it depends on `xlib`, which is no longer used by macOS for almost every application(including Inkscape, as expected), hence the only thing I can do now is to give up. In a perceivable future, if I have time to find an alternative way to interrupt the window activity in macOS, I'll try to configure it for macOS.~~
+
+> Now the Inkscape Shortcut Manager is fully functional, see [here](#inkscape-shortcut-manager).
 
 
 ### Quiver - For commutative diagram (01.24.22)
 
-I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my `keybindings.json`:
+I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my  [`keybindings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json):
 
 ```json
 {
