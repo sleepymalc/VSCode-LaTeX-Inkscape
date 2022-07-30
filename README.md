@@ -4,6 +4,10 @@
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
 </p>
 
+<p align="center"><b><i>
+	A way to integrate LaTeX, VS Code, and Inkscape in macOS
+</i></b></p>
+
 - [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
@@ -22,10 +26,6 @@
   - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
 - [Credits](#credits)
 - [Related Project](#related-project)
-
-<p align="center"><b><i>
-	A way to integrate LaTeX, VS Code, and Inkscape in macOS
-</i></b></p>
 
 ## Abstract 
 
