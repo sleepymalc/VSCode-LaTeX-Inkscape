@@ -294,8 +294,9 @@ LaTeX_project
     ├── main.tex
     ├── main.pdf
     ├── Figures
-    │    ├── fig1
-    │    ├── fig2
+    │    ├── fig.pdf
+    │    ├── fig.pdf_tex
+    │    ├── fig.svg
     │    .
     .
 ```
