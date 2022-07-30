@@ -1,42 +1,38 @@
 # ***VSCode-LaTeX-Inkscape***
 
 <p align="center"><b><i>
-	A way to integrate LaTeX, VSCode, and Inkscape in macOS
+	A way to integrate LaTeX, VS Code, and Inkscape in macOS
 </i></b></p>
 
-> Also available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
-
-## Table Of Contents
-- [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
   - [Tex Conceal](#tex-conceal)
   - [HyperSnips](#hypersnips)
   - [Sympy and Mathematica](#sympy-and-mathematica)
-  - [Correcting spelling mistakes on the fly](#correcting-spelling-mistakes-on-the-fly)
+  - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
 - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
   - [Inkscape](#inkscape)
   - [Inkscape Figure Manager](#inkscape-figure-manager)
-  - [Inkscape shortcut manager](#inkscape-shortcut-manager)
+  - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
   - [Summary](#summary)
 - [Updates](#updates)
-  - [About Inkscape Shortcut Manager (09.27.21)](#about-inkscape-shortcut-manager-092721)
+  - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
   - [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
   - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
 - [Credits](#credits)
 - [Related Project](#related-project)
 
-## Abstract
-I use LaTeX heavily in the past two years for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in LaTeX. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive. 
+I use $\LaTeX$ heavily in the past two years for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in $\LaTeX$. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using $\LaTeX$ and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still too naive.
 
-I took quite a few math courses, hence after finding out this workflow, I decided to adapt the whole setup from Linux-Vim to macOS-VSCode. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
+I took quite a few math courses, hence after finding out this workflow, I decided to adapt the whole setup from Linux-Vim to macOS-VS Code. So, if you're interested in this and in the same situation as me, namely if you don't want to jump into Linux and Vim, follow me!
 
-If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Deciding to adopt this workflow probably is the best choice I did throughout my education!
-# ***VSCode-LaTeX-Inkscape***
+If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Deciding to adopt this workflow probably is the best choice I did throughout my education.
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/note.png"/>
 </p>
 
+> Available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
 ## Disclaimer
 
@@ -50,28 +46,34 @@ https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed95612
 
 And also, create a snippet file for $\LaTeX$ in the following steps:
 
-1. Press `shift+cmd+p` to open the VSCode command.
-
-2. Type `snippets`, and choose `Preferences: Configure User Snippets`. 
-
+1. Press `shift+cmd+p` to open the VS Code command.
+2. Type `snippets`, and choose `Preferences: Configure User Snippets`.
 3. Choose `New Global Snippets file...`.
-
 4. Enter `latex` to create a new file.
-
-5. Paste the  [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json)  into that file.
+5. Paste the [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json)  into that file.
 
    https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
 
 ## Setup For Typing Blasting Fast
 
-First thing first, please set up your VSCode with LaTeX properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly.
+First thing first, please set up your VS Code with $\LaTeX$ properly with [$\LaTeX$ Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly. Basically, it can be done in the following steps:
+
+1. Download [MacTex](https://www.tug.org/mactex/). This can be replaced by something more lightweight, but in my opinion, this doesn't really help much in terms of speed or wasting your disk. But if you want something like this, check out [TeXLive](https://www.tug.org/texlive/).
+2. Download [VSCode](https://code.visualstudio.com/).
+3. Download [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+4. Copy-pasting the following configuration file into your `settings.json`
+
+	```JSON
+	"latex-workshop.latex.autoBuild.run": "onSave"
+	```
+
+	> This will save your time by compiling your $\LaTeX$ project whenever you save your file by `cmd`+`s`.
 
 Now, we go through things one by one following Gilles Castel's blog post.
 
 ### Tex Conceal
 
-This is probably the only thing I don't like that much in Gilles Castel's setup. I'm quite comfortable looking at LaTeX source code for formula, and I don't think they look that nice. But if you want to set them up in VSCode, there is an extension [here](https://github.com/Pancaek/vsc-conceal), I have no experience with this particular setup, feel free to try them out though.
-
+This is probably the only thing I don't like that much in Gilles Castel's setup. I'm quite comfortable looking at $\LaTeX$ source code for formula, and I don't think they look that nice. But if you want to set them up in VS Code, there is an extension [here](https://github.com/Pancaek/vsc-conceal), I have no experience with this particular setup, feel free to try them out though.
 
 ### HyperSnips
 
@@ -83,22 +85,17 @@ A snippet is a short reusable piece of text that can be triggered by some other 
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/dm.gif"/>
 </p>
 
-
-
-If you are a math guy, you may need to type some inline math like `\(\)`, which is kind of painful. But with snippet, you can have 
+If you are a math guy, you may need to type some inline math like `\(\)`, which is kind of painful. But with snippet, you can have
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/fm.gif"/>
 </p>
-
-
 
 See? You just type `fm`, and then your snippet not only automatically type `\(\)` for you, but it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/fast.gif"/>
 </p>
-
 
 Note that in the above demo, I use a very common snippet, `qs` for `^{2}`.
 
@@ -108,18 +105,15 @@ As you can imagine, this can be quite complex. For example, you can even have so
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/table.gif"/>
 </p>
 
-
 or this:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/pmatrix.gif"/>
 </p>
 
+For the first snippet, I type `table2 5`, and then it generates a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 5` to indicate that I want a 2 by 5 matrix, then boom! My snippets do that for me in an instant!
 
-Too fast to keep track of? For the first snippet, I type `table2 5`, and then it generates a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 5` to indicate that I want a 2 by 5 matrix, then boom! My snippets do that for me in an instant!
-
-Feeling it? Let's try to set up this step by step. And maybe you can create your snippets also! Here is some useful 
-snippets for you.
+Let's try to set up this step by step. And maybe you can create your snippets also! Here is some useful snippets for you.
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/useful.gif"/>
@@ -127,17 +121,17 @@ snippets for you.
 
 #### HyperSnips
 
-If you look around in the VSCode extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
 https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/830e4f87b3f59f82719d298af80f43367128865e/VSCode-setting/Snippets/latex.hsnips#L1-L1002
 
-To modify this file, you can either go to this file in your finder or use VSCode built-in command function. For command function, 
+To modify this file, you can either go to this file in your finder or use VS Code built-in command function. For command function,
 
-1. Press `shift+cmd+space` to type in some command to VSCode.
+1. Press `shift+cmd+space` to type in some command to VS Code.
 2. Type `>HyperSnips: Open Snippet File`
 3. Choose `latex.hsnips`
 
-For a further and detailed explanation for snippets, please go to check out the original blog post! 
+For a further and detailed explanation for snippets, please go to check out the original blog post!
 
 ### Sympy and Mathematica
 
@@ -147,18 +141,19 @@ Unlike Gilles Castel's approach, there is an available extension out there for y
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/integral.gif"/>
 </p>
 
-Magic right? Let's set it up! First, please look at the installation document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation is done, you can then set up the keybinding for calculating the math expression. I use `shift+e`, where `e` stands for evaluating, to calculate in the way that it will append an equal sign and the answer right after your formula, just like above. And if you don't want to show the intermediate steps of your calculation, you can use `shift+r`, where `r` stands for replacing, to directly replace the whole formula and give me the answer only. See the demo below:
+Magic right? Let's set it up! First, please look at the installation document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation is done, you can then set up the keybinding for calculating the math expression. I use `shift`+`e`, where `e` stands for evaluating, to calculate in the way that it will append an equal sign and the answer right after your formula, just like above. And if you don't want to show the intermediate steps of your calculation, you can use `shift`+`r`, where `r` stands for replacing, to directly replace the whole formula and give me the answer only. See the demo below:
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/integral2.gif"/>
 </p>
+
 > This plugin is indeed more powerful than just this, see the documentation for detail.
 
 Let's go to the last thing covered in Gilles Castel's post, correcting spelling mistakes.
 
-### Correcting spelling mistakes on the fly
+### Correcting Spelling Mistakes on the Fly
 
-Although my typing speed is quite high, I have typos all the time. So this is a must for me. And surprisingly, this is the hardest thing until now for me to set it upright. Let's see how we can configure this functionality in VSCode! There are three plugins we need:
+Although my typing speed is quite high, I have typos all the time. So this is a must for me. And surprisingly, this is the hardest thing until now for me to set it upright. Let's see how we can configure this functionality in VS Code! There are three plugins we need:
 
 1. [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command): This is a very powerful extension, which allows you to do a sequence of actions in one shortcut. We will use this later on also, and that's the place it shines.
 
@@ -174,12 +169,10 @@ Here is a quick demo for how it works when typing:
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/spell.gif"/>
 </p>
 
-
 Additionally, if you also want to correct your grammar error, I use the shortcut `cmd`+`k` to trigger a quick-fix for a general error.
 
 <details>
 <summary><h4>Detail Explanation</h></summary>
-
 
 You can skip this part if you don't want to know the working mechanism. But if you're interested, please follow! The following code snippet in `settings.json` is responsible for correcting your spelling mistakes by just clicking `cmd`+`l`.
 
@@ -202,7 +195,8 @@ You can skip this part if you don't want to know the working mechanism. But if y
     }
 },
 ```
-> Make sure that the curly braces above have a trailing comma, otherwise, VSCode will complain about it.
+
+> Make sure that the curly braces above have a trailing comma, otherwise, VS Code will complain about it.
 
 The working mechanism is as follows. When you press `cmd`+`l`, the [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) will do the following:
 
@@ -244,11 +238,11 @@ Now, the first part is over. Let's go to the next truly beautiful, elegant, and 
 
 For more examples, check out the original blog. Or for more figures I draw, you can check out [Note](https://github.com/sleepymalc/Notes).
 
-One last thing is that I'll assume you have already installed [VSCode Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
+One last thing is that I'll assume you have already installed [VS Code Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
 ### Inkscape
 
-A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in LaTeX with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. Also, $\texttt{TikZ}$ code tends to be **long**. A large file will take *[latexindent](https://ctan.org/pkg/latexindent)* and *pdfLaTeX* *a minute* to compile them for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
+A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in $\LaTeX$ with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. Also, $\texttt{TikZ}$ code tends to be **long**. A large file will take [*latexindent*](https://ctan.org/pkg/latexindent) and *pdfLaTeX* **a minute** to compile them for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
 
 #### Download Inkscape
 
@@ -285,9 +279,9 @@ And to use it in your code, it's like the following:
 \end{figure}
 ```
 
-And then you're done! And also, the compilation time for this is shorter than you can ever expect. Let's get started then!
+And then you're done! Also, the compilation time for this is shorter than you can ever expect. Let's get started then!
 
-This assumes that your LaTeX project's home directory looks like this:
+This assumes that your $\LaTeX$ project's home directory looks like this:
 
 ```bash
 LaTeX_project
@@ -321,7 +315,7 @@ This is a figure manager developed by Gilles Castel, and here is the [repo](http
 
    > After installing it, type `inkscape-figure` in your terminal to make sure you have corrected install it.
 
-If you're using Linux and Vim, then you are done already. But since you're using macOS and VSCode, please follow me, there is some more thing for you to configure.
+If you're using Linux and Vim, then you are done already. But since you're using macOS and VS Code, please follow me, there is some more thing for you to configure.
 
 #### Set up Inkscape Figure Manager
 
@@ -364,7 +358,7 @@ Since Inkscape in default does not save the file in `pdf+latex`, hence we need [
 
 To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just install? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybindings for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
 
-> You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show 
+> You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show
 >
 > ```bash
 > $ inkscape-figures watch 
@@ -376,7 +370,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 <details>
 <summary><h5>Detail Explanation</h></summary>
 
-In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have 
+In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have
 
 ```json
 {
@@ -416,7 +410,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 <details>
 <summary><h5>Detail Explanation</h></summary>
 
-We set up our ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as 
+We set up our ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as
 
 ```json
 {
@@ -466,7 +460,7 @@ We break down what `ctrl`+`f` do in `INSERT` mode exactly step by step. We see t
 2. Insert a blank line after since we need to insert a snippet, and that's will delete an additional line. You can try to delete this and the next instruction, and see what happens.
 3. Move back our cursor after inserting that new line.
 4. Delete that copied content by removing this line.
-5. Insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VSCode, not  [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) we have used before**. I'll explain where to copy this file in a minute.
+5. Insert a snippet defined in [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VS Code, not [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) we have used before**. I'll explain where to copy this file in a minute.
 6. Lastly, we send a command in a terminal by [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner), with the command `inkscapeCreate` we defined in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json).
 
 In the fifth instruction, the snippet we used is
@@ -480,6 +474,7 @@ which is just the snippet we remove from [Inkscape figure manager](https://githu
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/demo-create-inkscape.gif"/>
 </p>
+
 Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vim and type my new figure's name `figure-test`. And then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
 
 > The three files will be created along the way: `figure-test.pdf`, `figure-test.pdf_tex` and `figure-test.svg`. Unfortunately, to rename a file, you'll need to manually rename three of them.
@@ -488,7 +483,7 @@ Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vi
 
 Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode. Here, [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
 
-> You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](), we have the following:
+> You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/picker.py), we have the following:
 >
 > ```python
 > def get_picker_cmd(picker_args=None, fuzzy=True):
@@ -501,8 +496,6 @@ Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but th
 > ```
 >
 > We see that we don't have any additional argument for `choose`, but if you want, you can replace this line by the next line, which modify the style of `choose`. For detail information, type `choose -h` to see all the options.
-
-
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
@@ -536,7 +529,7 @@ and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/
 
 I think now it's clear enough how all these work together to trigger the corresponding command. When you press `ctrl`+`f` in `NORMAL` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose, which is the functionality provided by [choose](https://github.com/chipsenkbeil/choose).
 
-</details> 
+</details>
 
 In the following demo, I create another figure named `figure-test2`, then modify it a little, and compile it again.
 
@@ -546,18 +539,18 @@ In the following demo, I create another figure named `figure-test2`, then modify
 
 ### Inkscape Shortcut Manager
 
-In this section, we'll setup a very efficient shortcut manager to help you draw any mathematical figures faster than you can ever imagine! Notice that this setup is quite complicated, but the result is quite good. It depends on 
+In this section, we'll set up a very efficient shortcut manager to help you draw any mathematical figures faster than you can ever imagine! Notice that this setup is quite complicated, but the result is quite good. It depends on
 
-* [Hammerspoon](https://www.hammerspoon.org/): For windows focus.
-* [Karabiner Elements](https://karabiner-elements.pqrs.org/): For capturing the overlapping key chords.
+- [Hammerspoon](https://www.hammerspoon.org/): For windows focus.
+- [Karabiner Elements](https://karabiner-elements.pqrs.org/): For capturing the overlapping key chords.
 
-Please downloads the above two apps. 
+Please download the above two apps.
 
 > This section is contributed **purely** by [@kiryph](https://github.com/kiryph) in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1).
 
 #### Karabiner Elements
 
-We'll first setup the following [complex_modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) for [Karabiner Elements](https://karabiner-elements.pqrs.org/) using a [`jsonnet`](https://jsonnet.org) file.
+We'll first setu p the following [complex_modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) for [Karabiner Elements](https://karabiner-elements.pqrs.org/) using a [`jsonnet`](https://jsonnet.org) file.
 The file can be found [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet),
 
 https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39
@@ -611,10 +604,9 @@ This is the whole setup I have, and let's wrap this up since I know this may be 
 
 > Now the Inkscape Shortcut Manager is fully functional, see [here](#inkscape-shortcut-manager).
 
-
 ### Quiver - For commutative diagram (01.24.22)
 
-I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the Vscode Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my  [`keybindings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json):
+I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the VS Code Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my [`keybindings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json):
 
 ```json
 {
@@ -633,7 +625,7 @@ I have been working on Category Theory for a while, and I find out that [quiver]
 },
 ```
 
-and also, define the command `quiver` as 
+and also, define the command `quiver` as
 
 ```json
 "command-runner.commands": {
@@ -644,9 +636,39 @@ and also, define the command `quiver` as
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
 
 This is how the workflow looks like.
+
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/quiver.gif"/>
 </p>
+
+To use the package `tikz-cd`, you need to include the following into your header:
+
+```latex
+% quiver style
+\usepackage{tikz-cd}
+% `calc` is necessary to draw curved arrows.
+\usetikzlibrary{calc}
+% `pathmorphing` is necessary to draw squiggly arrows.
+\usetikzlibrary{decorations.pathmorphing}
+
+% A TikZ style for curved arrows of a fixed height, due to AndréC.
+\tikzset{curve/.style={settings={#1},to path={(\tikztostart)
+					.. controls ($(\tikztostart)!\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+					and ($(\tikztostart)!1-\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+					.. (\tikztotarget)\tikztonodes}},
+	settings/.code={\tikzset{quiver/.cd,#1}
+			\def\pv##1{\pgfkeysvalueof{/tikz/quiver/##1}}},
+	quiver/.cd,pos/.initial=0.35,height/.initial=0}
+
+% TikZ arrowhead/tail styles.
+\tikzset{tail reversed/.code={\pgfsetarrowsstart{tikzcd to}}}
+\tikzset{2tail/.code={\pgfsetarrowsstart{Implies[reversed]}}}
+\tikzset{2tail reversed/.code={\pgfsetarrowsstart{Implies}}}
+% TikZ arrow styles.
+\tikzset{no body/.style={/tikz/dash pattern=on 0 off 1mm}}
+```
+
+You can certainly follow my [Template](https://github.com/sleepymalc/Academic-Template), which already includes all the requirement header for you.
 
 ### Migrate to HyperSnips (02.18.22)
 
