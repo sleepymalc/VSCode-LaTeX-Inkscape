@@ -7,6 +7,8 @@
 <p align="center"><b><i>
 	A way to integrate LaTeX, VS Code, and Inkscape in macOS
 </i></b></p>
+
+
 ## Table of Content
 
 
