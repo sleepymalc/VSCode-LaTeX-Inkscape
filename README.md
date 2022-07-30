@@ -332,6 +332,7 @@ Open this directory by VS Code, there is something for you to modify. Ok, I know
 
 <details>
 <summary><h4>Detail Explanation</h></summary>
+
 In Gilles Castel's approach, he uses the shortcut `ctrl`+`f` to trigger this script, which will copy the whole line's content depending on the cursor's position, and the script will send the snippets by the function
 
 ```python
