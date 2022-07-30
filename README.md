@@ -238,12 +238,11 @@ Now, the first part is over. Let's go to the next truly beautiful, elegant, and 
 
 ## Drawing Like a Pro - With Inkscape
 
-Before we go to any setup detail, let's first look at some figures I draw right after I have set this up:
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/inkscape_example.png"/>
 </p>
 
-This is quite eye-pleasing, right? Those are some drawings I made when taking Linear programming lectures. But this is just my naive drawing, compare to Gilles Castel's examples, this is nothing. Check it out for the original blog. Or for more figures I draw, you can check out [Note](https://github.com/sleepymalc/Notes).
+For more examples, check out the original blog. Or for more figures I draw, you can check out [Note](https://github.com/sleepymalc/Notes).
 
 One last thing is that I'll assume you have already installed [VSCode Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
