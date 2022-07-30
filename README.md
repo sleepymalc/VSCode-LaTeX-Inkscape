@@ -480,13 +480,29 @@ which is just the snippet we remove from [Inkscape figure manager](https://githu
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/demo-create-inkscape.gif"/>
 </p>
-Don't know what happen? Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vim and type my new figure's name `figure-test`. And then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
+Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vim and type my new figure's name `figure-test`. And then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
 
 > The three files will be created along the way: `figure-test.pdf`, `figure-test.pdf_tex` and `figure-test.svg`. Unfortunately, to rename a file, you'll need to manually rename three of them.
 
 #### Edit
 
-Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode.
+Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode. Here, [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
+
+> You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](), we have the following:
+>
+> ```python
+> def get_picker_cmd(picker_args=None, fuzzy=True):
+>     """
+>     Create the shell command that will be run to start the picker.
+>     """
+>     if SYSTEM_NAME == "Darwin":
+>         args = ["choose"]
+>     #   args = ["choose", "-u", "-n", "15", "-c", "BB33B7", "-b", "BF44C8"]
+> ```
+>
+> We see that we don't have any additional argument for `choose`, but if you want, you can replace this line by the next line, which modify the style of `choose`. For detail information, type `choose -h` to see all the options.
+
+
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
@@ -521,22 +537,6 @@ and also in [settings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/
 I think now it's clear enough how all these work together to trigger the corresponding command. When you press `ctrl`+`f` in `NORMAL` mode, you'll trigger the `inkscape-figures edit` command, and it'll look into your `Figures/` subfolder to see what figures you have and pop out a window for you to choose, which is the functionality provided by [choose](https://github.com/chipsenkbeil/choose).
 
 </details> 
-
-This is where [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
-
-> You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](), we have the following:
->
-> ```python
-> def get_picker_cmd(picker_args=None, fuzzy=True):
->     """
->     Create the shell command that will be run to start the picker.
->     """
->     if SYSTEM_NAME == "Darwin":
->         args = ["choose"]
->     #   args = ["choose", "-u", "-n", "15", "-c", "BB33B7", "-b", "BF44C8"]
-> ```
->
-> We see that we don't have any additional argument for `choose`, but if you want, you can replace this line by the next line, which modify the style of `choose`. For detail information, type `choose -h` to see all the options.
 
 In the following demo, I create another figure named `figure-test2`, then modify it a little, and compile it again.
 
