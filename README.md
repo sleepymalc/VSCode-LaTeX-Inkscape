@@ -8,9 +8,7 @@
 	A way to integrate LaTeX, VS Code, and Inkscape in macOS
 </i></b></p>
 
-
 ## Table of Content
-
 
 - [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
@@ -28,10 +26,11 @@
   - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
   - [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
   - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
+  - [Documenting Inkscape Shortcut Manager (07.30.22)](#documenting-inkscape-shortcut-manager-073022)
 - [Credits](#credits)
 - [Related Project](#related-project)
 
-## Abstract 
+## Abstract
 
 I use $\LaTeX$ heavily in the past two years for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in $\LaTeX$. But when I see this blog post from **Gilles Castel**-[How I'm able to take notes in mathematics lectures using $\LaTeX$ and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I decided to adapt the whole setup from Linux-Vim to macOS-VS Code.
 
@@ -43,9 +42,9 @@ If you still don't know what to expect, please check out my [Notes](https://gith
 
 Before we start anything serious, just copy the [`keybindings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) and [`settings.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json`. Don't worry, I'll explain what do they do later.
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133>
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/settings.json#L1-L14
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/settings.json#L1-L14>
 
 And also, create a snippet file for $\LaTeX$ in the following steps:
 
@@ -55,7 +54,7 @@ And also, create a snippet file for $\LaTeX$ in the following steps:
 4. Enter `latex` to create a new file.
 5. Paste the [`latex.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.json)  into that file.
 
-   https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
+   <https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14>
 
 ## Setup For Typing Blasting Fast
 
@@ -246,8 +245,8 @@ A big question is, why Inkscape? In the original blog, he had already explained 
 
 You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend you install this in a terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
 
-```bash
-$ brew install --cask inkscape
+```sh
+> brew install --cask inkscape
 ```
 
 #### Set up the Environment in LaTeX
@@ -281,7 +280,7 @@ And then you're done! Also, the compilation time for this is shorter than you ca
 
 This assumes that your $\LaTeX$ project's home directory looks like this:
 
-```bash
+```sh
 LaTeX_project
     ├── main.tex
     ├── main.pdf
@@ -301,14 +300,14 @@ This is a figure manager developed by Gilles Castel, and here is the [repo](http
 
 1. Download [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
 
-   ```bash
-   $ brew install choose-gui
+   ```sh
+   > brew install choose-gui
    ```
 
 2. Install the Inkscape figure manager:
 
-   ```bash
-   $ pip3 install inkscape-figures
+   ```sh
+   > pip3 install inkscape-figures
    ```
 
    > After installing it, type `inkscape-figure` in your terminal to make sure you have corrected install it.
@@ -324,6 +323,8 @@ Now, this is a tricky part: you need to find where the source-code of the inksca
 > Using global finding may be helpful...
 
 Open this directory by VS Code, there is something for you to modify. Ok, I know you probably don't have that much patience now, so I have a modified version available [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-figure-manager/). Just replace the whole directory with mine, and you're good to go.
+
+---
 
 <details>
 <summary><h4>Detail Explanation</h></summary>
@@ -349,6 +350,8 @@ But let me explain it to you, in case you want to modify it to meet your need la
 
 </details>
 
+---
+
 We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
 
 #### Watch
@@ -359,12 +362,14 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 
 > You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show
 >
-> ```bash
-> $ inkscape-figures watch 
+> ```sh
+> > inkscape-figures watch 
 > Unable to lock on the pidfile.
 > ```
 >
 > Otherwise it'll simply show nothing. (Remember to select the terminal corresponds to `runCommand`!)
+
+---
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
@@ -402,9 +407,13 @@ Notice that we set the `autoFocus=false` for the terminal [Command Runner](https
 
 </details>
 
+---
+
 #### Create
 
 Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` command. But in this case, we use `INSERT` for creating a new Inkscape figure. Specifically, we first type out the image's name we want our image to be called, then in this case we're already in `INSERT` mode, we just pres `ctrl`+`f` to create this image after naming.
+
+---
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
@@ -464,11 +473,13 @@ We break down what `ctrl`+`f` do in `INSERT` mode exactly step by step. We see t
 
 In the fifth instruction, the snippet we used is
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/b98c21536371a270736ec9ac841aacaa82664123/VSCode-setting/Snippets/latex.json#L1-L14>
 
 which is just the snippet we remove from [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures)'s source code! It's back again, in a different approach.
 
 </details>
+
+---
 
 <p align="center">
 	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/gifs/demo-create-inkscape.gif"/>
@@ -552,14 +563,14 @@ Please download the above two apps.
 We'll first setu p the following [complex_modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) for [Karabiner Elements](https://karabiner-elements.pqrs.org/) using a [`jsonnet`](https://jsonnet.org) file.
 The file can be found [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet),
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39>
 
-and the `jsonnet` tool can be installed via `$ brew install jsonnet`.
+and the `jsonnet` tool can be installed via `> brew install jsonnet`.
 
 Converting the `.jsonnet` file into the json file for [Karabiner Elements](https://karabiner-elements.pqrs.org/) can be done as following
 
 ```sh
-$ jsonnet karabiner-inkscape.jsonnet > ~/.config/karabiner/assets/complex_modifications/karabiner-inkscape.json
+> jsonnet karabiner-inkscape.jsonnet > ~/.config/karabiner/assets/complex_modifications/karabiner-inkscape.json
 ```
 
 Then enable in [Karabiner Elements](https://karabiner-elements.pqrs.org/) UI the complex modifications.
@@ -572,7 +583,7 @@ Then enable in [Karabiner Elements](https://karabiner-elements.pqrs.org/) UI the
 
 Firstly, open the [Hammerspoon](https://www.hammerspoon.org/) console and run `hs.ipc.cliInstall()` to install the cli command `hs`. Then, just add the following code to your [`~/.hammerspoon/init.lua`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/init.lua).
 
-https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/e136c6692aa0c32513c713dbb702b71248b8f51e/Inkscape-setting/Inkscape-shortcut-manager/init.lua#L1-L153
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/e136c6692aa0c32513c713dbb702b71248b8f51e/Inkscape-setting/Inkscape-shortcut-manager/init.lua#L1-L153>
 
 #### Reference Card for Key Chords
 
@@ -672,6 +683,10 @@ You can certainly follow my [Template](https://github.com/sleepymalc/Academic-Te
 ### Migrate to HyperSnips (02.18.22)
 
 Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special keyword called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
+
+### Documenting Inkscape Shortcut Manager (07.30.22)
+
+I finally have time to document all my configuration and making some changes to make this document more readable. I personally have used this workflow for more than half of a year, so I think this is stable and will not be changed in a near future.
 
 ## Credits
 
