@@ -1,7 +1,7 @@
 # ***VSCode-LaTeX-Inkscape***
 
 <p align="center">
-	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/demo/figures/preview.png"/>
+	<img src="https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/preview.png"/>
 </p>
 
 <p align="center"><b><i>
