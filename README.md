@@ -170,6 +170,7 @@ Additionally, if you also want to correct your grammar error, I use the shortcut
 
 <details>
 <summary><h4>Detail Explanation</h></summary>
+
 > You can skip this part if you don't want to know the working mechanism. But if you're interested, please follow! The following code snippet in `settings.json` is responsible for correcting your spelling mistakes by just clicking `cmd`+`l`.
 >
 > ```json
@@ -325,6 +326,7 @@ Open this directory by VS Code, there is something for you to modify. Ok, I know
 
 <details>
 <summary><h4>Detail Explanation</h></summary>
+
 > In Gilles Castel's approach, he uses the shortcut `ctrl`+`f` to trigger this script, which will copy the whole line's content depending on the cursor's position, and the script will send the snippets by the function
 >
 > ```python
@@ -365,6 +367,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
+
 > In [keybindings.json](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json), we have
 >
 > ```json
@@ -404,6 +407,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
+
 > We set up our ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) as
 >
 > ```json
@@ -493,6 +497,7 @@ Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but th
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
+
 > The corresponding keybinding in ['keybindings.json'](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/VSCode-setting/keybindings.json) is:
 >
 > ```json
