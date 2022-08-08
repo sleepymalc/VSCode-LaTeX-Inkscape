@@ -130,6 +130,7 @@ Let's try to set up this step by step. And maybe you can create your snippets al
 <p align="center">
 	<img src="./demo/gifs/useful.gif"/>
 </p>
+
 ### Sympy and Mathematica
 
 Unlike Gilles Castel's approach, there is an available extension out there for you to simplify your math calculation already! Please go to checkout [Latex SYMPY Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). It's works like follows:
