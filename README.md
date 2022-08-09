@@ -8,7 +8,7 @@
 	A way to integrate LaTeX, VS Code, and Inkscape in macOS
 </i></b></p>
 
-## Table of Content
+## Table of Content <!-- omit in toc -->
 
 - [Abstract](#abstract)
 - [Disclaimer](#disclaimer)
@@ -61,7 +61,7 @@ And also, create a snippet file for $\LaTeX$ in the following steps:
 First thing first, please set up your VS Code with $\LaTeX$ properly with [$\LaTeX$ Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly. Basically, it can be done in the following steps:
 
 1. Download [MacTex](https://www.tug.org/mactex/). This can be replaced by something more lightweight, but in my opinion, this doesn't really help much in terms of speed or wasting your disk. But if you want something like this, check out [TeXLive](https://www.tug.org/texlive/).
-2. Download [VSCode](https://code.visualstudio.com/).
+2. Download [VS Code](https://code.visualstudio.com/).
 3. Download [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 4. Copy-pasting the following configuration file into your `settings.json`
 
@@ -79,9 +79,9 @@ This is probably the only thing I don't like that much in Gilles Castel's setup.
 
 ### HyperSnips
 
-If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [latex.hsnips](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Now, just follow the instruction, copy [`latex.hsnips`](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
-To modify this file, you can either go to this file in your finder or use VSCode built-in command function. For command function,
+To modify this file, you can either go to this file in your finder or use VS Code built-in command function. For command function,
 
 1. Press `shift+cmd+space` to type in some command to VS Code.
 2. Type `>HyperSnips: Open Snippet File`
