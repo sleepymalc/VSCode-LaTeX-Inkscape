@@ -409,7 +409,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 <details>
 <summary><h5>Detail Explanation</h></summary>
 
-> We set up our ['keybindings.json'](./VSCode-setting/keybindings.json) as
+> We set up our [`keybindings.json`](./VSCode-setting/keybindings.json) as
 >
 > ```json
 > {
