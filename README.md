@@ -311,7 +311,7 @@ This is a figure manager developed by Gilles Castel, and here is the [repo](http
    > pip3 install inkscape-figures
    ```
 
-   > After installing it, type `inkscape-figure` in your terminal to make sure you have corrected install it.
+   > After installing it, type `inkscape-figures` in your terminal to make sure you have corrected install it.
 
 If you're using Linux and Vim, then you are done already. But since you're using macOS and VS Code, please follow me, there is some more thing for you to configure.
 
