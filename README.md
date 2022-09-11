@@ -58,7 +58,7 @@ And also, create a snippet file for $\LaTeX$ in the following steps:
 
 ## Setup For Typing Blasting Fast
 
-First thing first, please set up your [VS Code](https://code.visualstudio.com/) with $\LaTeX$ properly with [$\LaTeX$ Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly. Basically, it can be done in the following steps:
+First thing first, please set up your [VS Code](https://code.visualstudio.com/) with $\LaTeX$ properly with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), there are lots of tutorials online, just check them out and set them up properly. Basically, it can be done in the following steps:
 
 1. Download [MacTex](https://www.tug.org/mactex/). This can be replaced by something more lightweight, but in my opinion, this doesn't really help much in terms of speed or wasting your disk. But if you want something like this, check out [TeXLive](https://www.tug.org/texlive/).
 2. Download [VS Code](https://code.visualstudio.com/).
