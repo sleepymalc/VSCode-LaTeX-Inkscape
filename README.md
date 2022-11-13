@@ -325,6 +325,8 @@ Now, this is a tricky part: you need to find where the source-code of the inksca
 
 Open this directory by VS Code, there is something for you to modify. Ok, I know you probably don't have that much patience now, so I have a modified version available [here](./Inkscape-setting/Inkscape-figure-manager/). Just replace the whole directory with mine, and you're good to go.
 
+> Notice that the directory in this repo is named `Inkscape-figure-manager`, while in your system, it should be `inkscapefigures`.
+
 <details>
 <summary><h4>Detail Explanation</h></summary>
 
