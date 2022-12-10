@@ -416,32 +416,32 @@ snippet `([A-Za-z\d)}])\^([A-Za-z\d\-+][A-Za-z\d-+])` "auto supscript" iwA
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(b|B)(ar)` "Bar" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(b|B)(ar)` "Bar" iwA
 \overline{``rv = m[1]``} $0
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(T|t)(d)` "tilde" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(t|T)(d)` "tilde" iwA
 \widetilde{``rv = m[1]``} $0
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(h|H)(t)` "hat" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(h|H)(t)` "hat" iwA
 \hat{``rv = m[1]``} $0
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(b|B)(f)` "mathbf" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(b|B)(f)` "mathbf" iwA
 \mathbf{``rv = m[1]``} $0
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(b|B)(m)` "bm" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(b|B)(m)` "bm" iwA
 \bm{``rv = m[1]``} $0
 endsnippet
 
 context math(context)
-snippet `(\\?[a-zA-Z]\w*|\\[^\s]+\})(,\.|\.,)` "Vector postfix" iwA
+snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(,\.|\.,)` "Vector postfix" iwA
 \vec{``rv = m[1]``} $0
 endsnippet
 
