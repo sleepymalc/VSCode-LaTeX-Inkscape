@@ -546,6 +546,7 @@ snippet Abs "abs value" iA
 \left\vert ${1} \right\vert $0
 endsnippet
 
+priority 200
 context math(context)
 snippet norm "norm" iA
 \lVert $1 \rVert $0
@@ -693,8 +694,8 @@ snippet AA "forall" iA
 endsnippet
 
 context math(context)
-snippet `\b([a-zA-Z])n(\d)` "?[n+?]" iA
-``rv = m[1]``_{${1:n}+``rv = m[2]``}$0
+snippet `\b([a-zA-Z])([a-zA-Z])(\d)` "?[?+?]" iA
+``rv = m[1]``_{``rv = m[2]``+``rv = m[3]``$1}$0
 endsnippet
 
 context math(context)
@@ -702,6 +703,7 @@ snippet `o\+` "oplus" iA
 \oplus $0
 endsnippet
 
+priority 200
 context math(context)
 snippet `o(x\.|\.x)` "otimes" iA
 \otimes $0
@@ -872,6 +874,11 @@ endsnippet
 context math(context)
 snippet `rm` "mathrm" iAw
 \mathrm{$1} $0
+endsnippet
+
+context math(context)
+snippet `scr` "mathscr" iAw
+\mathscr{$1} $0
 endsnippet
 
 context math(context)
@@ -1060,11 +1067,6 @@ endsnippet
 context math(context)
 snippet mor "morphism" iAw
 \Morphism $0
-endsnippet
-
-context math(context)
-snippet cr "mathscr" iAw
-\mathscr{$1} $0
 endsnippet
 
 context math(context)
