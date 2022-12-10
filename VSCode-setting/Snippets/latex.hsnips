@@ -767,7 +767,7 @@ endsnippet
 
 context math(context)
 snippet `(\\\\)([a-zA-Z])` iA
-\mathbb{\\MakeUppercase{``rv = m[2]``}} $0
+\mathbb{``rv = m[2].toUpperCase()``} $0
 endsnippet
 
 context math(context)
@@ -836,7 +836,7 @@ endsnippet
 priority 100
 context math(context)
 snippet `(?<![\\a-zA-Z])(lcm)` "matrix function" wA
-\\mathop{\mathrm{``rv=m[1]``}}($0)
+\\mathop{\mathrm{``rv = m[1]``}}($0)
 endsnippet
 
 priority 300
@@ -863,11 +863,11 @@ endsnippet
 
 priority 200
 context math(context)
-snippet `([A-Z])cal` "mathcal" iAw
-\mathcal{``rv = m[1] ``} $0
+snippet `([a-zA-Z])(c|C)al` "mathcal" iAw
+\mathcal{``rv = m[1].toUpperCase()``} $0
 endsnippet
 
-snippet `(\\?\w+)bf` "textbf" iwA
+snippet `(\\?\w+)(b|B)f` "textbf" iwA
 \textbf{``rv = m[1]``} $0
 endsnippet
 
