@@ -103,12 +103,12 @@ $0
 endsnippet
 
 context math(context)
-snippet opn "operator" iA
+snippet `(?<![\\a-zA-Z])opn` "operator" A
 \mathop{\mathrm{$1}}($2) $0
 endsnippet
 
 context math(context)
-snippet opl "operator" iA
+snippet `(?<![\\a-zA-Z])opl` "operator" A
 \mathop{\mathrm{$1}}\nolimits_{$2}($3) $0
 endsnippet
 
@@ -117,187 +117,187 @@ w.p.\ $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);m` "\mu" A
+snippet `(?<![\\a-zA-Z])(;m|mu)` "\mu" A
 \mu $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);a` "\alpha" A
+snippet `(?<![\\a-zA-Z])(;a|alpha)` "\alpha" A
 \alpha $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);s` "\sigma" A
+snippet `(?<![\\a-zA-Z])(;s|sigma)` "\sigma" A
 \sigma $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);S` "\Sigma" A
+snippet `(?<![\\a-zA-Z])(;S|Sigma)` "\Sigma" A
 \Sigma $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);r` "\rho" A
+snippet `(?<![\\a-zA-Z])(;r|rho)` "\rho" A
 \rho $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);b` "\beta" A
+snippet `(?<![\\a-zA-Z])(;b|beta)` "\beta" A
 \beta $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);g` "\gamma" A
+snippet `(?<![\\a-zA-Z])(;g|gamma)` "\gamma" A
 \gamma $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);G` "\Gamma" A
+snippet `(?<![\\a-zA-Z])(;G|Gamma)` "\Gamma" A
 \Gamma $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);d` "\delta" A
+snippet `(?<![\\a-zA-Z])(;d|delta)` "\delta" A
 \delta $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);D` "\Delta" A
+snippet `(?<![\\a-zA-Z])(;D|Delta)` "\Delta" A
 \Delta $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);z` "\zeta" A
+snippet `(?<![\\a-zA-Z])(;z|zeta)` "\zeta" A
 \zeta $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);e` "\eta" A
+snippet `(?<![\\a-zA-Z])(;e|eta)` "\eta" A
 \eta $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);t` "\theta" A
+snippet `(?<![\\a-zA-Z])(;t|theta)` "\theta" A
 \theta $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);vt` "\vartheta" A
+snippet `(?<![\\a-zA-Z])(;vt|vartheta)` "\vartheta" A
 \vartheta $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);T` "\Theta" A
+snippet `(?<![\\a-zA-Z])(;T|Theta)` "\Theta" A
 \Theta $0
 endsnippet
 
 priority 200
 context math(context)
-snippet `(?<![\\a-zA-Z]);;t` "\tau" A
+snippet `(?<![\\a-zA-Z])(;;t|tau)` "\tau" A
 \tau $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);i` "\iota" A
+snippet `(?<![\\a-zA-Z])(;i|iota)` "\iota" A
 \iota $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);k` "\kappa" A
+snippet `(?<![\\a-zA-Z])(;k|kappa)` "\kappa" A
 \kappa $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);l` "\lambda" A
+snippet `(?<![\\a-zA-Z])(;l|lambda)` "\lambda" A
 \lambda $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);L` "\Lambda" A
+snippet `(?<![\\a-zA-Z])(;L|Lambda)` "\Lambda" A
 \Lambda $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);n` "\nu" A
+snippet `(?<![\\a-zA-Z])(;n|nu)` "\nu" A
 \nu $0
 endsnippet
 
 priority 200
 context math(context)
-snippet `(?<![\\a-zA-Z]);;n` "\nabla" iA
+snippet `(?<![\\a-zA-Z])(;;n|nable)` "\nabla" iA
 \nabla $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);p` "\pi" A
+snippet `(?<![\\a-zA-Z])(;p|pi)` "\pi" A
 \pi $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);P` "\Pi" A
+snippet `(?<![\\a-zA-Z])(;P|Pi)` "\Pi" A
 \Pi $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);r` "\rho" A
+snippet `(?<![\\a-zA-Z])(;r|rho)` "\rho" A
 \rho $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);t` "\tau" A
+snippet `(?<![\\a-zA-Z])(;t|tau)` "\tau" A
 \tau $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);u` "\upsilon" A
+snippet `(?<![\\a-zA-Z])(;u|upsilon)` "\upsilon" A
 \upsilon $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);U` "\Upsilon" A
+snippet `(?<![\\a-zA-Z])(;U|Upsilon)` "\Upsilon" A
 \Upsilon $0
 endsnippet
 
 priority 200
 context math(context)
-snippet `(?<![\\a-zA-Z]);;p` "\phi" A
+snippet `(?<![\\a-zA-Z])(;;p|phi)` "\phi" A
 \phi $0
 endsnippet
 priority 200
 context math(context)
-snippet `(?<![\\a-zA-Z]);;P` "\Phi" A
+snippet `(?<![\\a-zA-Z])(;;P|Phi)` "\Phi" A
 \Phi $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);vp` "\varphi" A
+snippet `(?<![\\a-zA-Z])(;vp|varphi)` "\varphi" A
 \varphi $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);c` "\chi" A
+snippet `(?<![\\a-zA-Z])(;c|chi)` "\chi" A
 \chi $0
 endsnippet
 
 priority 300
 context math(context)
-snippet `(?<![\\a-zA-Z]);;;p` "\psi" A
+snippet `(?<![\\a-zA-Z])(;;;p|psi)` "\psi" A
 \psi $0
 endsnippet
 priority 300
 context math(context)
-snippet `(?<![\\a-zA-Z]);;;P` "\Psi" A
+snippet `(?<![\\a-zA-Z])(;;;P|Psi)` "\Psi" A
 \Psi $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);o` "\omega" A
+snippet `(?<![\\a-zA-Z])(;o|omega)` "\omega" A
 \omega $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);O` "\Omega" A
+snippet `(?<![\\a-zA-Z])(;O|Omega)` "\Omega" A
 \Omega $0
 endsnippet
 
 context math(context)
-snippet `(?<![\\a-zA-Z]);x` "\xi" A
+snippet `(?<![\\a-zA-Z])(;x|xi)` "\xi" A
 \xi $0
 endsnippet
 context math(context)
-snippet `(?<![\\a-zA-Z]);X` "\Xi" A
+snippet `(?<![\\a-zA-Z])(;X|Xi)` "\Xi" A
 \Xi $0
 endsnippet
 
@@ -363,6 +363,11 @@ endsnippet
 context math(context)
 snippet `!=|(?<!\\)neq` "not equal" A
 \neq $0
+endsnippet
+
+context math(context)
+snippet `\|=|(?<!\\)mdl` "models" A
+\models $0
 endsnippet
 
 priority 200
@@ -511,7 +516,6 @@ endsnippet
 
 snippet fm "inline Math" wA
 \(${1}\)``
-let str = t[0];
 let test = t[1][0];
 if (test != ',' &&  test != '.' &&  test != '-' && test !='?' && test !=' '){
 	rv = ' ';
@@ -824,6 +828,13 @@ snippet `->|(?<!\\)to` "to" A
 \to $0
 endsnippet
 
+priority 100
+context math(context)
+snippet `<->` "to" A
+\leftrightarrow $0
+endsnippet
+
+
 context math(context)
 snippet !> "mapsto" iA
 \mapsto $0
@@ -840,9 +851,14 @@ snippet `(?<!\\)int` "integral without anything" iA
 \int $0
 endsnippet
 
+context math(context)
+snippet not "lnot" iA
+\lnot $0
+endsnippet
+
 priority 200
 context math(context)
-snippet `(?<!\\)(sin|cos|cot|csc|ln|log|exp|perp|inf|sup|Tr|diag|rank|det|dim|ker|Im|Re|dom|arg|min|max|sgn|OPT)` "general" wA
+snippet `(?<!\\)(sin|cos|cot|csc|ln|log|exp|perp|inf|sup|Tr|diag|rank|det|dim|ker|Im|Re|dom|arg|min|max|sgn|OPT|land|lor)` "general" wA
 \\``rv = m[1]`` $0
 endsnippet
 
@@ -874,9 +890,9 @@ snippet `([a-zA-Z])(c|C)al` "mathcal" A
 \mathcal{``rv = m[1].toUpperCase()``} $0
 endsnippet
 
-snippet `(\\?\w+)(b|B)f` "textbf" A
-\textbf{``rv = m[1]``} $0
-endsnippet
+# snippet `(\\?\w+)(b|B)f` "textbf" A
+# \textbf{``rv = m[1]``} $0
+# endsnippet
 
 context math(context)
 snippet rm "mathrm" iA
@@ -1011,6 +1027,18 @@ endsnippet
 
 snippet lbl "\label{}" iA
 \label{$1}
+endsnippet
+
+snippet rmk "remark" bA
+\begin{remark}
+	$0
+\end{remark}
+endsnippet
+
+snippet dfn "definition" bA
+\begin{definition}
+	$0
+\end{definition}
 endsnippet
 
 context math(context)
