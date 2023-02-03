@@ -370,6 +370,11 @@ snippet `\|=|(?<!\\)mdl` "models" A
 \models $0
 endsnippet
 
+context math(context)
+snippet `\|-|(?<!\\)vdh` "models" A
+\vdash $0
+endsnippet
+
 priority 200
 context math(context)
 snippet suc "succeeds" iA
@@ -417,7 +422,7 @@ snippet `(?<!\\)cir` "composition" A
 endsnippet
 
 context math(context)
-snippet @> "inclusion" A
+snippet @> "inclusion" iA
 \hookrightarrow $0
 endsnippet
 
@@ -626,6 +631,16 @@ endsnippet
 context math(context)
 snippet Cap "Intersection" wA
 \bigcap_{${1:i}=${2:1}}^{${3:\infty}} $0
+endsnippet
+
+context math(context)
+snippet Conj "conjunction" wA
+\bigwedge_{${1:i}=${2:1}}^{${3:\infty}} $0
+endsnippet
+
+context math(context)
+snippet Disj "disjunction" wA
+\bigvee_{${1:i}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
 context math(context)
@@ -847,12 +862,12 @@ snippet dint "integral" iA
 endsnippet
 
 context math(context)
-snippet `(?<!\\)int` "integral without anything" iA
+snippet `(?<!\\)int` "integral without anything" A
 \int $0
 endsnippet
 
 context math(context)
-snippet not "lnot" iA
+snippet `(?<!\\)not` "lnot" A
 \lnot $0
 endsnippet
 
@@ -907,6 +922,12 @@ endsnippet
 context math(context)
 snippet st "star" iA
 ^{\star} $0
+endsnippet
+
+priority 200
+context math(context)
+snippet `(?<!\\)ast` "ast" A
+\ast $0
 endsnippet
 
 context math(context)
@@ -1072,8 +1093,8 @@ snippet ^^ "\overset{}{}" iA
 endsnippet
 
 context math(context)
-snippet fk "\footnotemark" iA
-\footnotemark $0
+snippet fk "\mathfrak{}" iA
+\mathfrak{$1} $0
 endsnippet
 
 context math(context)
