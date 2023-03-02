@@ -786,6 +786,13 @@ snippet `(x\.|\.x)` "times" A
 endsnippet
 
 context math(context)
+snippet split "split" iA
+\begin{split}
+	$1
+\end{split}$0
+endsnippet
+
+context math(context)
 snippet case "cases" iA
 \begin{dcases}
 	$1, &\text{ if } $3 ;\\\\
@@ -924,15 +931,30 @@ snippet st "star" iA
 ^{\star} $0
 endsnippet
 
-priority 200
-context math(context)
-snippet `(?<!\\)ast` "ast" A
-\ast $0
-endsnippet
-
 context math(context)
 snippet ** "asterisk" iA
 ^{\ast} $0
+endsnippet
+
+context math(context)
+snippet `\\ast\}\ \*` "asterisk" iA
+\ast\ast} $0
+endsnippet
+
+priority 200
+context math(context)
+snippet _** "asterisk" iA
+_{\ast} $0
+endsnippet
+
+context math(context)
+snippet ^. "\dot" iA
+\dot{$1} $0
+endsnippet
+
+context math(context)
+snippet dot{. "\ddot" iA
+ddot{$1
 endsnippet
 
 context math(context)
