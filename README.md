@@ -15,12 +15,24 @@
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
   - [Tex Conceal](#tex-conceal)
   - [HyperSnips](#hypersnips)
+    - [Snippets](#snippets)
+    - [Math Environment](#math-environment)
   - [Sympy and Mathematica](#sympy-and-mathematica)
   - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
 - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
   - [Inkscape](#inkscape)
+    - [Download Inkscape](#download-inkscape)
+    - [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
   - [Inkscape Figure Manager](#inkscape-figure-manager)
+    - [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
+    - [Watch](#watch)
+    - [Create](#create)
+    - [Edit](#edit)
   - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
+    - [Karabiner Elements](#karabiner-elements)
+    - [Hammerspoon](#hammerspoon)
+    - [Reference Card for Key Chords](#reference-card-for-key-chords)
+    - [Missing Key Chords](#missing-key-chords)
   - [Summary](#summary)
 - [Updates](#updates)
   - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
@@ -84,9 +96,9 @@ This is probably the only thing I don't like that much in Gilles Castel's setup.
 
 If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) and just follow the instruction, copy [`latex.hsnips`](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
-To modify this file, you can either go to this file in your finder or use VS Code built-in command function. For command function,
+To modify this file, you can either go to this file in your finder or use VS Code built-in command function. For commands function,
 
-1. Press `shift+cmd+space` to type in some command to VS Code.
+1. Press `shift+cmd+space` to type in some commands to VS Code.
 2. Type `>HyperSnips: Open Snippet File`
 3. Choose `latex.hsnips`
 
@@ -100,13 +112,13 @@ A snippet is a short reusable piece of text that can be triggered by some other 
 	<img src="./demo/gifs/dm.gif"/>
 </p>
 
-If you are a math guy, you may need to type some inline math like `\(\)`, which is kind of painful. But with snippet, you can have
+If you are a math guy, you may need to type some inline math like `\(\)`, which is kind of painful. But with snippets, you can have
 
 <p align="center">
 	<img src="./demo/gifs/fm.gif"/>
 </p>
 
-See? You just type `fm` (not the best choice here, but since `im` is a common prefix, so can't really use that as our snippet 🥲), and then your snippet not only automatically types `\(\)` for you but it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
+See? You just type `fm` (not the best choice here, but since `im` is a common prefix, so can't really use that as our snippet 🥲), and then your snippet not only automatically types `\(\)` for you, and it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
 
 <p align="center">
 	<img src="./demo/gifs/fast.gif"/>
@@ -128,7 +140,7 @@ or this:
 
 For the first snippet, I type `table2 5`, and then it generates a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 5` to indicate that I want a 2 by 5 matrix, then boom! My snippets do that for me in an instant!
 
-My snippet file includes common used snippets as suggested in the original posts, you can look into it to better understand how does it work. And maybe you can create your snippets also! Here is some useful snippets for you.
+My snippet file includes commonly used snippets as suggested in the original posts, you can look into it to better understand how does it work. And maybe you can create your snippets also! Here is some useful snippets for you.
 
 <p align="center">
 	<img src="./demo/gifs/useful.gif"/>
