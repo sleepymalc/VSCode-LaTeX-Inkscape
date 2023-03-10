@@ -48,7 +48,7 @@ I use $\LaTeX$ heavily for both academic work and professional work, and I think
 
 > This setup is universal for VS Code users indeed. The only part that'll be macOS-specific is the Inkscape part ([Inkscape-figures](#inkscape-figure-manager) and [Inkscape-shortcut-manager](#inkscape-shortcut-manager)). While the first part can be replaced by [super-figure](https://github.com/Joao-Peterson/super-figure) (while I still prefer my setup, you can still try it out even if you're in macOS), and you can certainly achieve a similar result in Windows as in my [Notes](./Notes), the drawing speed will be slower without the shortcut manager. Just keep that in mind.
 
-If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup.
+If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Also, due to the VS Code recent update (1.76.1), we have the [profile](https://code.visualstudio.com/docs/editor/profiles) functionality available. You can try [my current minimal profile](https://vscode.dev/profile/github/70b175ba903a4f1cc5dcd271ce8fcb51) for $\LaTeX$ I currently used along the reading, but since some configurations are not included in the [profile](https://code.visualstudio.com/docs/editor/profiles), I recommend you to still read through and set things up accordingly.
 
 > Available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
