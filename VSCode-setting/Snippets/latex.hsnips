@@ -898,7 +898,13 @@ endsnippet
 
 context math(context)
 snippet ' "prime" iA
-^\prime $0
+^{\prime} $0
+endsnippet
+
+priority 200
+context math(context)
+snippet `\\prime\}\ \'` "prime" iA
+\prime\prime} $0
 endsnippet
 
 context math(context)
