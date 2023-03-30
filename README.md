@@ -41,6 +41,7 @@
   - [Documenting Inkscape Shortcut Manager (07.30.22)](#documenting-inkscape-shortcut-manager-073022)
 - [Credits](#credits)
 - [Related Project](#related-project)
+- [Star History](#star-history)
 
 ## Abstract
 
@@ -371,13 +372,13 @@ LaTeX_project
     .
 ```
 
-Now, let's get into the fun part, i.e., to set up the shortcut for this.
+Now, let's get into the fun part, i.e., setting up the shortcut for this.
 
 ### Inkscape Figure Manager
 
 This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you follow the installation instruction there. Here is just some guideline for you.
 
-1. Download [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
+1. Install [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
 
    ```sh
    > brew install choose-gui
@@ -403,7 +404,7 @@ If you're using Linux and Vim, then you are done already. But since you're using
 
 #### Set up Inkscape Figure Manager
 
-Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`settings.json`](./VSCode-setting/settings.json) and we'll see how it works later. Now, this is a tricky part: you need to find where the source-code of the inkscape-figures manager is. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
+Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`settings.json`](./VSCode-setting/settings.json), and we'll see how it works later. Now, this is a tricky part: you need to find where the source code of the inkscape-figures manager. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
 
 > Using global finding may be helpful...
 
@@ -441,7 +442,7 @@ We're now prepared to see a detailed explanation about commands provided in [Ink
 
 Since Inkscape in default does not save the file in `pdf+latex`, hence we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the file watcher to *watch* the file for any changes. If there is any, then the file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
-To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just install? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybindings for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
+To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just install? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybinding for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
 
 > You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show
 >
