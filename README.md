@@ -383,7 +383,13 @@ This is a figure manager developed by Gilles Castel, and here is the [repo](http
    > brew install choose-gui
    ```
 
-2. Install the Inkscape figure manager:
+2. Install [fswatch](https://github.com/emcrisostomo/fswatch):
+
+   ```sh
+   > brew install fswatch
+   ```
+
+3. Install the Inkscape figure manager:
 
    ```sh
    > pip3 install inkscape-figures
