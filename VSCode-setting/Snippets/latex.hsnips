@@ -489,6 +489,11 @@ snippet `(\\?[a-zA-Z]\w*|\\[^(^\s]+\})(,\.|\.,)` "Vector postfix" A
 \vec{``rv = m[1]``} $0
 endsnippet
 
+context math(context)
+snippet 1..n "sequence" iA
+$1_1, \dots, $1_n $0
+endsnippet
+
 snippet fig "Figure environment" b
 \begin{figure}[${1:H}]
 	\centering
@@ -500,7 +505,7 @@ endsnippet
 
 context math(context)
 snippet ... "dots" iA
-\ldots $0
+\dots $0
 endsnippet
 
 context math(context)
@@ -534,6 +539,11 @@ snippet dm "display Math" bA
 \[
 	${1}
 \]$0
+endsnippet
+
+context math(context)
+snippet <> "<>" iA
+\langle $1 \rangle $0
 endsnippet
 
 context math(context)
@@ -826,7 +836,7 @@ snippet inv "inverse" iA
 endsnippet
 
 context math(context)
-snippet tp "transpose" iA
+snippet `(?<!\\)tp` "transpose" A
 ^{\top} $0
 endsnippet
 
@@ -943,14 +953,13 @@ snippet ** "asterisk" iA
 endsnippet
 
 context math(context)
-snippet `\\ast\}\ \*` "asterisk" iA
-\ast\ast} $0
+snippet _* "asterisk" iA
+_{\ast} $0
 endsnippet
 
-priority 200
 context math(context)
-snippet _** "asterisk" iA
-_{\ast} $0
+snippet `\\ast\}\ \*` "asterisk" iA
+\ast\ast} $0
 endsnippet
 
 context math(context)
@@ -1066,11 +1075,11 @@ snippet `\|\_` "\at" A
 \at{$1}{$2}{$3} $0
 endsnippet
 
-snippet atf "\autoref{}" iA
+snippet atf "\autoref{}" wA
 \autoref{$1} $0
 endsnippet
 
-snippet hpr "\hyperref[]{}" iA
+snippet hpr "\hyperref[]{}" wA
 \hyperref[$1]{$2} $0
 endsnippet
 
