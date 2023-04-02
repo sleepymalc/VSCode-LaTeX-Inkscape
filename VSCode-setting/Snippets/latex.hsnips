@@ -557,6 +557,11 @@ snippet lrd "()" iA
 endsnippet
 
 context math(context)
+snippet {} "{}" iA
+\\{ $1 \\} $0
+endsnippet
+
+context math(context)
 snippet lra "{}" iA
 \\left\\{ $1 \\right\\} $0
 endsnippet
