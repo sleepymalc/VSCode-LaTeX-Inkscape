@@ -725,6 +725,11 @@ endsnippet
 
 context math(context)
 snippet prd "product" iA
+\prod $0
+endsnippet
+
+context math(context)
+snippet Prd "product" iA
 \prod_{${1:n}=${2:1}}^{${3:\infty}} $0
 endsnippet
 

@@ -15,24 +15,12 @@
 - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
   - [Tex Conceal](#tex-conceal)
   - [HyperSnips](#hypersnips)
-    - [Snippets](#snippets)
-    - [Math Environment](#math-environment)
   - [Sympy and Mathematica](#sympy-and-mathematica)
   - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
 - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
   - [Inkscape](#inkscape)
-    - [Download Inkscape](#download-inkscape)
-    - [Set up the Environment in LaTeX](#set-up-the-environment-in-latex)
   - [Inkscape Figure Manager](#inkscape-figure-manager)
-    - [Set up Inkscape Figure Manager](#set-up-inkscape-figure-manager)
-    - [Watch](#watch)
-    - [Create](#create)
-    - [Edit](#edit)
   - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
-    - [Karabiner Elements](#karabiner-elements)
-    - [Hammerspoon](#hammerspoon)
-    - [Reference Card for Key Chords](#reference-card-for-key-chords)
-    - [Missing Key Chords](#missing-key-chords)
   - [Summary](#summary)
 - [Updates](#updates)
   - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
@@ -636,24 +624,44 @@ Please download the above two apps.
 
 #### Karabiner Elements
 
-We'll first setu p the following [complex_modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) for [Karabiner Elements](https://karabiner-elements.pqrs.org/) using a [`jsonnet`](https://jsonnet.org) file.
-The file can be found [here](./Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet),
+We'll need [Karabiner Elements](https://karabiner-elements.pqrs.org)' [Complex Modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) to help us. The steps are the following.
+
+1. Open [Karabiner-Elements](https://karabiner-elements.pqrs.org/), go to *Misc* and click on *Export & Import*.
+    <div align="center">
+		<img width="80%" src="demo/figures/sourcecode-1.png"/>
+	</div>
+2. Copy [`inkscape.json`](./How2TypeFast/inkscape.json) into `.config/karabiner/assets/complex_modifications`.
+    <div align="center">
+		<img width="80%" src="demo/figures/sourcecode-2.png"/>
+	</div>
+3. Again open [Karabiner-Elements](https://karabiner-elements.pqrs.org/), go to *Complex Modifications* and click on *Add rule*.
+	<div align="center">
+		<img width="80%" src="demo/figures/sourcecode-3.png"/>
+	</div>
+4. Enable it.
+	<div align="center">
+		<img width="80%" src="demo/figures/sourcecode-4.png"/>
+	</div>
+
+If you're interested in how [`inkscape.json`](./How2TypeFast/inkscape.json) is created, see the following.
+
+<details>
+
+<summary><b>Detail Explanation</b></summary>
+
+The [`inkscape.json`](./How2TypeFast/inkscape.json) is created by using a [`jsonnet`](https://jsonnet.org) file. The file can be found [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet),
 
 <https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39>
 
 and the `jsonnet` tool can be installed via `> brew install jsonnet`.
 
-Converting the `.jsonnet` file into the json file for [Karabiner Elements](https://karabiner-elements.pqrs.org/) can be done as following
+Converting the `jsonnet` file into the `json` file for [Karabiner Elements](https://karabiner-elements.pqrs.org/) can be done as follows
 
 ```sh
 > jsonnet karabiner-inkscape.jsonnet > ~/.config/karabiner/assets/complex_modifications/karabiner-inkscape.json
 ```
 
-Then enable in [Karabiner Elements](https://karabiner-elements.pqrs.org/) UI the complex modifications.
-
-<p align="center">
-	<img src="./demo/figures/Karabiner.png"/>
-</p>
+</details>
 
 #### Hammerspoon
 
