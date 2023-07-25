@@ -628,19 +628,19 @@ We'll need [Karabiner Elements](https://karabiner-elements.pqrs.org)' [Complex M
 
 1. Open [Karabiner-Elements](https://karabiner-elements.pqrs.org/), go to *Misc* and click on *Export & Import*.
     <div align="center">
-		<img width="80%" src="demo/figures/sourcecode-1.png"/>
+		<img src="demo/figures/sourcecode-1.png"/>
 	</div>
 2. Copy [`Inkscape.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/Inkscape.json) into `.config/karabiner/assets/complex_modifications`.
     <div align="center">
-		<img width="80%" src="demo/figures/sourcecode-2.png"/>
+		<img src="demo/figures/sourcecode-2.png"/>
 	</div>
 3. Again open [Karabiner-Elements](https://karabiner-elements.pqrs.org/), go to *Complex Modifications* and click on *Add rule*.
 	<div align="center">
-		<img width="80%" src="demo/figures/sourcecode-3.png"/>
+		<img src="demo/figures/sourcecode-3.png"/>
 	</div>
 4. Enable it.
 	<div align="center">
-		<img width="80%" src="demo/figures/sourcecode-4.png"/>
+		<img src="demo/figures/sourcecode-4.png"/>
 	</div>
 
 If you're interested in how [`Inkscape.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/Inkscape.json) is created, see the following.
