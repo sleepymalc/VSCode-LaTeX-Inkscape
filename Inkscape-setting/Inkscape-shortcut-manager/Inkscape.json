@@ -1,0 +1,1474 @@
+{
+   "title": "Inkscape Shortcut Manager via hammerspoon (Gilles Castel, 2019)",
+   "rules": [
+      {
+         "description": "Inkscape Shortcut Manager via hammerspoon (Gilles Castel, 2019)",
+         "manipulators": [
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+f+g\");create_svg_and_paste({\"s\",\"f\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+f+v\");create_svg_and_paste({\"s\",\"f\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+w+g\");create_svg_and_paste({\"s\",\"w\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+w+v\");create_svg_and_paste({\"s\",\"w\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+a+g\");create_svg_and_paste({\"s\",\"a\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+a+v\");create_svg_and_paste({\"s\",\"a\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+x+g\");create_svg_and_paste({\"s\",\"x\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+x+v\");create_svg_and_paste({\"s\",\"x\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+f+g\");create_svg_and_paste({\"d\",\"f\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+f+v\");create_svg_and_paste({\"d\",\"f\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+w+g\");create_svg_and_paste({\"d\",\"w\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+w+v\");create_svg_and_paste({\"d\",\"w\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+a+g\");create_svg_and_paste({\"d\",\"a\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+a+v\");create_svg_and_paste({\"d\",\"a\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+x+g\");create_svg_and_paste({\"d\",\"x\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+x+v\");create_svg_and_paste({\"d\",\"x\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+f+g\");create_svg_and_paste({\"e\",\"f\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "f"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+f+v\");create_svg_and_paste({\"e\",\"f\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+w+g\");create_svg_and_paste({\"e\",\"w\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "w"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+w+v\");create_svg_and_paste({\"e\",\"w\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+a+g\");create_svg_and_paste({\"e\",\"a\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "a"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+a+v\");create_svg_and_paste({\"e\",\"a\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+x+g\");create_svg_and_paste({\"e\",\"x\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "x"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+x+v\");create_svg_and_paste({\"e\",\"x\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "f"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+f\");create_svg_and_paste({\"s\",\"f\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "w"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+w\");create_svg_and_paste({\"s\",\"w\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+g\");create_svg_and_paste({\"s\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+v\");create_svg_and_paste({\"s\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "a"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+a\");create_svg_and_paste({\"s\",\"a\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "s"
+                     },
+                     {
+                        "key_code": "x"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"s+x\");create_svg_and_paste({\"s\",\"x\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "f"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+f\");create_svg_and_paste({\"d\",\"f\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "w"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+w\");create_svg_and_paste({\"d\",\"w\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+g\");create_svg_and_paste({\"d\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+v\");create_svg_and_paste({\"d\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "a"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+a\");create_svg_and_paste({\"d\",\"a\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "d"
+                     },
+                     {
+                        "key_code": "x"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"d+x\");create_svg_and_paste({\"d\",\"x\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "f"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+f\");create_svg_and_paste({\"e\",\"f\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "w"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+w\");create_svg_and_paste({\"e\",\"w\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "g"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+g\");create_svg_and_paste({\"e\",\"g\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "v"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+v\");create_svg_and_paste({\"e\",\"v\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "a"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+a\");create_svg_and_paste({\"e\",\"a\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "e"
+                     },
+                     {
+                        "key_code": "x"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"e+x\");create_svg_and_paste({\"e\",\"x\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "s"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+s\");create_svg_and_paste({\"spacebar\",\"s\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "d"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+d\");create_svg_and_paste({\"spacebar\",\"d\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "e"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+e\");create_svg_and_paste({\"spacebar\",\"e\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "f"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+f\");create_svg_and_paste({\"spacebar\",\"f\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "b"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+b\");create_svg_and_paste({\"spacebar\",\"b\"});'"
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "bundle_identifiers": [
+                        "org.inkscape.Inkscape"
+                     ],
+                     "type": "frontmost_application_if"
+                  }
+               ],
+               "from": {
+                  "simultaneous": [
+                     {
+                        "key_code": "spacebar"
+                     },
+                     {
+                        "key_code": "w"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_up_when": "all"
+                  }
+               },
+               "to": [
+                  {
+                     "shell_command": "/usr/local/bin/hs -c 'hs.alert(\"spacebar+w\");create_svg_and_paste({\"spacebar\",\"w\"});'"
+                  }
+               ],
+               "type": "basic"
+            }
+         ]
+      }
+   ]
+}
