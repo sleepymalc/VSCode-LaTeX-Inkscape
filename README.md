@@ -651,7 +651,7 @@ If you're interested in how [`Inkscape.json`](https://github.com/sleepymalc/VSCo
 
 The [`Inkscape.json`](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/Inkscape.json) is created by using a [`jsonnet`](https://jsonnet.org) file. The file can be found [here](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/main/Inkscape-setting/Inkscape-shortcut-manager/karabiner-Inkscape.jsonnet),
 
-<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/a17854a83bb1c42d6ecfac6299bdccd02cedb388/Inkscape-setting/Inkscape-shortcut-manager/karabiner-Inkscape.jsonnet#L1-L39>
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3b92e170a20f0dd3b745510c0aaf2da0e81b3d57/Inkscape-setting/Inkscape-shortcut-manager/karabiner-inkscape.jsonnet#L1-L39>
 
 and the `jsonnet` tool can be installed via `> brew install jsonnet`.
 
