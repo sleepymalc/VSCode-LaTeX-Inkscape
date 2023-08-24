@@ -900,13 +900,13 @@ endsnippet
 
 priority 200
 context math(context)
-snippet `(?<!\\)(sin|cos|cot|csc|ln|log|exp|perp|inf|sup|Tr|diag|rank|det|dim|ker|Im|Re|dom|arg|min|max|sgn|OPT|land|lor)` "general" wA
+snippet `(?<!\\)(sin|cos|tan|cot|csc|sec|ln|log|exp|perp|inf|sup|Tr|diag|rank|det|dim|ker|Im|Re|dom|arg|min|max|sgn|OPT|land|lor)` "general" wA
 \\``rv = m[1]`` $0
 endsnippet
 
 priority 300
 context math(context)
-snippet `(?<!\\)a(sin|cos|tan|cot|csc|sec)` "arc-triangle" wA
+snippet `(?<!\\)a(sin|cos|tan|cot|csc|sec)` "arc-trigonometry" wA
 \\arc``rv = m[1]`` $0
 endsnippet
 
