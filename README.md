@@ -33,7 +33,7 @@
 
 ## Abstract
 
-I use $\LaTeX$ heavily for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in $\LaTeX$. But when I see the mind-blowing blog posts from **Gilles Castel (RIP)**-[How I'm able to take notes in mathematics lectures using $\LaTeX$ and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still far from *fast*, so I decided to adapt the whole setup from Linux-Vim to macOS-VS Code.
+I use $\LaTeX$ heavily for both academic work and professional work, and I think I'm quite proficient in terms of typing things out in $\LaTeX$. But when I see the mind-blowing blog posts from **Gilles Castel (RIP)**-[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/) and also [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/), I realize that I'm still far from *fast*, so I decided to adapt the whole setup from Linux-Vim to macOS-VS Code.
 
 > This setup is universal for VS Code users indeed. The only part that'll be macOS-specific is the Inkscape part ([Inkscape-figures](#inkscape-figure-manager) and [Inkscape-shortcut-manager](#inkscape-shortcut-manager)). While the first part can be replaced by [super-figure](https://github.com/Joao-Peterson/super-figure) (while I still prefer my setup, you can still try it out even if you're in macOS), and you can certainly achieve a similar result in Windows as in my [Notes](./Notes), the drawing speed will be slower without the shortcut manager. Just keep that in mind.
 
