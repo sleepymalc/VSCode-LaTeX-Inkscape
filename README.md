@@ -18,9 +18,9 @@
   - [Sympy and Mathematica](#sympy-and-mathematica)
   - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
 - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
-  - [Inkscape](#inkscape)
   - [Inkscape Figure Manager](#inkscape-figure-manager)
   - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
+    - [Reference Card for Key Chords](#reference-card-for-key-chords)
   - [Summary](#summary)
 - [Updates](#updates)
   - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
@@ -47,9 +47,9 @@ Please look through the two blog posts above by Gilles Castel! They are incredib
 
 Before we start anything serious, just copy the [`keybindings.json`](./VSCode-setting/keybindings.json) and [`settings.json`](./VSCode-setting/settings.json) into your own `keybindings.json` and `settings.json`. Don't worry, I'll explain what they do later.
 
-<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/keybindings.json#L1-L133>
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/6c8773992ebd0af338bf49c76d062e8dead61ba1/VSCode-setting/keybindings.json#L1-L133>
 
-<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/3cb7d9f4af1227d8ed956129696a547d7889052e/VSCode-setting/settings.json#L1-L14>
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/6c8773992ebd0af338bf49c76d062e8dead61ba1/VSCode-setting/settings.json#L1-L14>
 
 And also, create a snippet file for $\LaTeX$ in the following steps:
 
@@ -93,7 +93,7 @@ To modify this file, you can either go to this file in your finder or use VS Cod
 
 After doing this, you're all set. But a big question is, what exactly is a snippet?
 
-#### Snippets
+#### Snippets <!-- omit in toc -->
 
 A snippet is a short reusable piece of text that can be triggered by some other text. For example, when I type `dm` (stands for display math), the word `dm` will be expanded to a display math environment:
 
@@ -135,7 +135,7 @@ My snippet file includes commonly used snippets as suggested in the original pos
 	<img src="./demo/gifs/useful.gif"/>
 </p>
 
-#### Math Environment
+#### Math Environment <!-- omit in toc -->
 
 In the recent update of [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), the *context* functionality is implemented, which is very useful, and you should understand how it works. If you look at the top of the snippet file, you will see
 
@@ -305,11 +305,11 @@ For more examples, check out the original blog. Or for more figures I draw, you 
 
 One last thing is that I'll assume you have already installed [VS Code Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim). While this is not required, if you don't want to use it, then you'll need to assign different keybinding. Anyway, you'll see what I mean until then!
 
-### Inkscape
+### Inkscape <!-- omit in toc -->
 
 A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in $\LaTeX$ with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. Also, $\texttt{TikZ}$ code tends to be **long**. A large file will take [*latexindent*](https://ctan.org/pkg/latexindent) and *pdfLaTeX* **a minute** to compile them for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
 
-#### Download Inkscape
+#### Download Inkscape <!-- omit in toc -->
 
 You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend you install this in a terminal. I assume that you have your [`homebrew`](https://brew.sh/) installed. Then, just type the following into your terminal:
 
@@ -317,7 +317,7 @@ You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend
 > brew install --cask inkscape
 ```
 
-#### Set up the Environment in LaTeX
+#### Set up the Environment in LaTeX <!-- omit in toc -->
 
 First thing first, include the following in your preamable
 
@@ -390,7 +390,7 @@ If you're using Linux and Vim, then you are done already. But since you're using
 
 >If you're using Windows, then check out [super-figure](https://github.com/Joao-Peterson/super-figure). It implements similar functionalities but in a more chunky way. Even if you're using macOS, you can try it too, although I prefer my setup.
 
-#### Set up Inkscape Figure Manager
+#### Set up Inkscape Figure Manager <!-- omit in toc -->
 
 Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`settings.json`](./VSCode-setting/settings.json), and we'll see how it works later. Now, this is a tricky part: you need to find where the source code of the inkscape-figures manager. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
 
@@ -426,7 +426,7 @@ Open this directory by VS Code, there is something for you to modify. Ok, I know
 
 We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
 
-#### Watch
+#### Watch <!-- omit in toc -->
 
 Since Inkscape in default does not save the file in `pdf+latex`, hence we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the file watcher to *watch* the file for any changes. If there is any, then the file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
@@ -477,7 +477,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 
 </details>
 
-#### Create
+#### Create <!-- omit in toc -->
 
 Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` command. But in this case, we use `INSERT` for creating a new Inkscape figure. Specifically, we first type out the image's name we want our image to be called, then in this case we're already in `INSERT` mode, we just pres `ctrl`+`f` to create this image after naming.
 
@@ -553,7 +553,7 @@ Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vi
 
 > The three files will be created along the way: `figure-test.pdf`, `figure-test.pdf_tex` and `figure-test.svg`. Unfortunately, to rename a file, you'll need to manually rename three of them.
 
-#### Edit
+#### Edit <!-- omit in toc -->
 
 Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode. Here, [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
 
@@ -622,7 +622,7 @@ Please download the above two apps.
 
 > This section is contributed **purely** by [@kiryph](https://github.com/kiryph) in [#1](https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/issues/1).
 
-#### Karabiner Elements
+#### Karabiner Elements <!-- omit in toc -->
 
 We'll need [Karabiner Elements](https://karabiner-elements.pqrs.org)' [Complex Modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) to help us. The steps are the following (adapted from [️⌨ How to type?](https://www.pbb.wtf/posts/How2TypeFast#import-settings)).
 
@@ -663,7 +663,7 @@ Converting the `jsonnet` file into the `json` file for [Karabiner Elements](http
 
 </details>
 
-#### Hammerspoon
+#### Hammerspoon <!-- omit in toc -->
 
 Firstly, open the [Hammerspoon](https://www.hammerspoon.org/) console and run `hs.ipc.cliInstall()` to install the cli command `hs`. Then, just add the following code to your [`~/.hammerspoon/init.lua`](./Inkscape-setting/Inkscape-shortcut-manager/init.lua).
 
@@ -677,7 +677,7 @@ As reference for the key chords I add the original picture from [the original bl
 	<img src="./demo/figures/inkscape_shortcut.png"/>
 </p>
 
-#### Missing Key Chords
+#### Missing Key Chords <!-- omit in toc -->
 
 I did not add the *ergonomic* rebinding `x`, `w`, `f`, and `shift`+`z`. This should be possible in Inkscape itself. This setup also misses the bindings `t`, `shift`+`t`, `a`, `shift`+`a`, `s`, and `shift`+`s`. Since I encountered issues I did not pursue these.
 
