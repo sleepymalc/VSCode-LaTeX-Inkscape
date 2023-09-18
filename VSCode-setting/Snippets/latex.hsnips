@@ -102,6 +102,14 @@ snippet %-- "------" wA
 $0
 endsnippet
 
+snippet wrt "with respect to" wA
+w.r.t.\ $0
+endsnippet
+
+snippet iid "identical and independently distributed" wA
+i.i.d.\ $0
+endsnippet
+
 context math(context)
 snippet `(?<![\\a-zA-Z])opn` "operator" A
 \mathop{\mathrm{$1}}($2) $0
