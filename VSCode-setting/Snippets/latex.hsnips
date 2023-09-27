@@ -2,8 +2,12 @@ global
 function math(context) {
     return  context.scopes.findLastIndex(s => s.startsWith("meta.math")) > context.scopes.findLastIndex(s => s.startsWith("comment") || s.startsWith("meta.text.normal.tex"));
 }
+function notmath(context) {
+    return  context.scopes.findLastIndex(s => s.startsWith("meta.math")) <= context.scopes.findLastIndex(s => s.startsWith("comment") || s.startsWith("meta.text.normal.tex"));
+}
 endglobal
 
+context notmath(context)
 snippet `table([1-9]{1})\ ([1-9]{1})` "Table environment" bA
 \begin{table}[H]
 	\centering
@@ -102,10 +106,12 @@ snippet %-- "------" wA
 $0
 endsnippet
 
+context notmath(context)
 snippet wrt "with respect to" wA
 w.r.t.\ $0
 endsnippet
 
+context notmath(context)
 snippet iid "identical and independently distributed" wA
 i.i.d.\ $0
 endsnippet
@@ -502,6 +508,7 @@ snippet 1..n "sequence" iA
 $1_1, \dots, $1_n $0
 endsnippet
 
+context notmath(context)
 snippet fig "Figure environment" b
 \begin{figure}[${1:H}]
 	\centering
@@ -721,18 +728,18 @@ endsnippet
 
 priority 300
 context math(context)
-snippet lsup "limsup" iA
+snippet `(?<!\\)lsup` "limsup" iA
 \limsup_{${1:n} \to ${2:\infty}} 
 endsnippet
 
 priority 300
 context math(context)
-snippet linf "liminf" iA
+snippet `(?<!\\)linf` "liminf" iA
 \liminf_{${1:n} \to ${2:\infty}} 
 endsnippet
 
 context math(context)
-snippet prd "product" iA
+snippet `(?<!\\)prd` "product" iA
 \prod $0
 endsnippet
 
@@ -743,7 +750,7 @@ endsnippet
 
 priority 100
 context math(context)
-snippet coprd "coproduct" iA
+snippet `(?<!\\)coprd` "coproduct" iA
 \coprod_{${1:n}=${2:1}}^{${3:\infty}} $0
 endsnippet
 
@@ -834,10 +841,6 @@ snippet tet "text" iA
 \text{$1} $0
 endsnippet
 
-snippet tit "text it" wA
-\textit{$1} $0
-endsnippet
-
 context math(context)
 snippet `(\\\\)([a-zA-Z])` A
 \mathbb{``rv = m[2].toUpperCase()``} $0
@@ -883,7 +886,6 @@ context math(context)
 snippet `<->` "to" A
 \leftrightarrow $0
 endsnippet
-
 
 context math(context)
 snippet !> "mapsto" iA
@@ -946,9 +948,10 @@ snippet `([a-zA-Z])(c|C)al` "mathcal" A
 \mathcal{``rv = m[1].toUpperCase()``} $0
 endsnippet
 
-# snippet `(\\?\w+)(b|B)f` "textbf" A
-# \textbf{``rv = m[1]``} $0
-# endsnippet
+context notmath(context)
+snippet `(\\?\w+)(b|B)f` "textbf" A
+\textbf{``rv = m[1]``} $0
+endsnippet
 
 context math(context)
 snippet rm "mathrm" iA
@@ -961,7 +964,7 @@ snippet scr "mathscr" iA
 endsnippet
 
 context math(context)
-snippet st "star" iA
+snippet `(?<!\\)st` "star" iA
 ^{\star} $0
 endsnippet
 
@@ -1052,7 +1055,7 @@ snippet ems "empty set" iA
 \varnothing $0
 endsnippet
 
-snippet emph "emph" iA
+snippet `(?<!\\)emph` "emph" iA
 \emph{$1}$0
 endsnippet
 
@@ -1084,7 +1087,7 @@ snippet idd "identity" iA
 endsnippet
 
 context math(context)
-snippet quo "\quotient" iA
+snippet `(?<!\\)quo` "\quotient" iA
 \quotient{$1}{$2} $0
 endsnippet
 
@@ -1093,10 +1096,12 @@ snippet `\|\_` "\at" A
 \at{$1}{$2}{$3} $0
 endsnippet
 
+context notmath(context)
 snippet atf "\autoref{}" wA
 \autoref{$1} $0
 endsnippet
 
+context notmath(context)
 snippet hpr "\hyperref[]{}" wA
 \hyperref[$1]{$2} $0
 endsnippet
@@ -1105,12 +1110,14 @@ snippet lbl "\label{}" iA
 \label{$1}
 endsnippet
 
+context notmath(context)
 snippet rmk "remark" bA
 \begin{remark}
 	$0
 \end{remark}
 endsnippet
 
+context notmath(context)
 snippet dfn "definition" bA
 \begin{definition}
 	$0
@@ -1157,10 +1164,12 @@ snippet tg "\triangle" iA
 \triangle $0
 endsnippet
 
+context notmath(context)
 snippet `(?<!\\)qed` "\qed" iA
 \qed
 endsnippet
 
+context notmath(context)
 snippet opmin "Optimization problem" bA
 \[
 	\begin{aligned}
@@ -1172,6 +1181,7 @@ snippet opmin "Optimization problem" bA
 $0
 endsnippet
 
+context notmath(context)
 snippet opmax "Optimization problem" bA
 \[
 	\begin{aligned}
@@ -1183,6 +1193,7 @@ snippet opmax "Optimization problem" bA
 $0
 endsnippet
 
+context notmath(context)
 snippet opPD "Optimization problem with primal & dual" bA
 \[
 	\begin{alignedat}{5}
