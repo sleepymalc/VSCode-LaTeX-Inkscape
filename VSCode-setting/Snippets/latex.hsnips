@@ -370,6 +370,16 @@ snippet `>=|(?<!\\)geq` "greater or equal to" A
 endsnippet
 
 context math(context)
+snippet `<~` "less or equal to (up to constant)" A
+\lesssim $0
+endsnippet
+
+context math(context)
+snippet `>~` "less or equal to (up to constant)" A
+\gtrsim $0
+endsnippet
+
+context math(context)
 snippet `<=|(?<!\\)leq` "less or equal to" A
 \leq $0
 endsnippet
