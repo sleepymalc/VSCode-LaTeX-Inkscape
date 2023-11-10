@@ -49,7 +49,7 @@ Before we start anything serious, just copy the [`keybindings.json`](./VSCode-se
 
 <https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/6c8773992ebd0af338bf49c76d062e8dead61ba1/VSCode-setting/keybindings.json#L1-L133>
 
-<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/6c8773992ebd0af338bf49c76d062e8dead61ba1/VSCode-setting/settings.json#L1-L14>
+<https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/4e4d36481cb5d61562a8ad2d6188321384fc0c16/VSCode-setting/settings.json#L1-L915>
 
 Also, create a snippet file for $\LaTeX$ in the following steps:
 
