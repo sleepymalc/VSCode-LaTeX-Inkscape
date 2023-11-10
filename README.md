@@ -51,7 +51,7 @@ Before we start anything serious, just copy the [`keybindings.json`](./VSCode-se
 
 <https://github.com/sleepymalc/VSCode-LaTeX-Inkscape/blob/6c8773992ebd0af338bf49c76d062e8dead61ba1/VSCode-setting/settings.json#L1-L14>
 
-And also, create a snippet file for $\LaTeX$ in the following steps:
+Also, create a snippet file for $\LaTeX$ in the following steps:
 
 1. Press `shift`+`cmd`+`p` to open the VS Code command.
 2. Type `snippets`, and choose `Preferences: Configure User Snippets`.
@@ -79,13 +79,19 @@ Now, we go through things one by one following Gilles Castel's blog post.
 
 ### Tex Conceal
 
-This is probably the only thing I don't like that much in Gilles Castel's setup. I'm quite comfortable looking at $\LaTeX$ source code for formula, and I don't think concealed source code looks that nice. But if you want to set them up in VS Code, there is an extension [here](https://github.com/Pancaek/vsc-conceal). I have no experience with this particular setup, though, so feel free to try them out.
+To achieve a similar result as in Gilles Castel's setup, there is an extension called [vsc-conceal](https://github.com/Pancaek/vsc-conceal) for VS Code. All the setup is in the `setting.json`, and since this setup is quite straightforward, I'll just give a snapshot to show how it looks in practice.
+
+<p align="center">
+	<img src="./demo/figures/conceal.png"/>
+</p>
+
+Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you will see the source code in line 58. There are other options you can choose, see the original repo for detail. 
 
 ### HyperSnips
 
-If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) and just follow the instruction, copy [`latex.hsnips`](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) and just follow the instructions, copy [`latex.hsnips`](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
 
-To modify this file, you can either go to this file in your finder or use VS Code built-in command function. For commands function,
+To modify this file, you can either go to this file in your finder or use the VS Code built-in command function. For commands function,
 
 1. Press `shift+cmd+space` to type in some commands to VS Code.
 2. Type `>HyperSnips: Open Snippet File`
@@ -228,7 +234,7 @@ Although my typing speed is quite high, I have typos all the time. So this is a 
 
    > There is an unofficial API for Grammarly, and the plugin can be found [here](https://marketplace.visualstudio.com/items?itemName=znck.grammarly). Though it's quite slow...
 
-Here is a quick demo for how it works when typing:
+Here is a quick demo of how it works when typing:
 
 <p align="center">
 	<img src="./demo/gifs/spell.gif"/>
@@ -307,7 +313,7 @@ One last thing is that I'll assume you have already installed [VS Code Vim](http
 
 ### Inkscape <!-- omit in toc -->
 
-A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in $\LaTeX$ with original support, it's too slow to set all diagrams right. This is so true, since my experience with $\texttt{TikZ}$ is *nice looking, intuitive* but also *slow, bulky*. Also, $\texttt{TikZ}$ code tends to be **long**. A large file will take [*latexindent*](https://ctan.org/pkg/latexindent) and *pdfLaTeX* **a minute** to compile them for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
+A big question is, why Inkscape? In the original blog, he had already explained it. One reason is that although $\texttt{TikZ}$ can do the job of drawing vector figures in $\LaTeX$ with original support, it's too slow to set all diagrams right. This is so true since my experience with $\texttt{TikZ}$ is *nice looking* and *intuitive* but also *slow* and *bulky*. Also, the $\texttt{TikZ}$ code tends to be **long**. A large file will take [*latexindent*](https://ctan.org/pkg/latexindent) and *pdfLaTeX* **a minute** to compile for one save. That's not efficient at all, especially when you want some instant feedback for some small changes.
 
 #### Download Inkscape <!-- omit in toc -->
 
@@ -319,7 +325,7 @@ You need to install [Inkscape](https://inkscape.org/zh-hant/) first. I recommend
 
 #### Set up the Environment in LaTeX <!-- omit in toc -->
 
-First thing first, include the following in your preamable
+First thing first, include the following in your preamble
 
 ```latex
 \usepackage{import}
@@ -364,7 +370,7 @@ Now, let's get into the fun part, i.e., setting up the shortcut for this.
 
 ### Inkscape Figure Manager
 
-This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you follow the installation instruction there. Here is just some guideline for you.
+This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you follow the installation instructions there. Here is just some guideline for you.
 
 1. Install [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
 
@@ -392,7 +398,7 @@ If you're using Linux and Vim, then you are done already. But since you're using
 
 #### Set up Inkscape Figure Manager <!-- omit in toc -->
 
-Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`settings.json`](./VSCode-setting/settings.json), and we'll see how it works later. Now, this is a tricky part: you need to find where the source code of the inkscape-figures manager. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
+Firstly, install the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner). This will allow you to send commands into a terminal with the shortcut. The configuration is in [`settings.json`](./VSCode-setting/settings.json), and we'll see how it works later. Now, this is a tricky part: you need to find the source code of the inkscape-figures manager. In my case, it's in `/Users/pbb/opt/anaconda3/lib/python3.8/site-packages/inkscapefigures`.
 
 > Using global finding may be helpful...
 
@@ -424,13 +430,13 @@ Open this directory by VS Code, there is something for you to modify. Ok, I know
 
 </details>
 
-We're now prepared to see a detailed explanation about commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
+We're now prepared to see a detailed explanation of commands provided in [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). There are three different commands in the [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures). We break it down one by one.
 
 #### Watch <!-- omit in toc -->
 
-Since Inkscape in default does not save the file in `pdf+latex`, hence we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the file watcher to *watch* the file for any changes. If there is any, then the file watcher will tell Inkscape to save the file in `pdf+latex` format.
+Since Inkscape by default does not save the file in `pdf+latex`, we need [Inkscape figure manager](https://github.com/gillescastel/inkscape-figures) to help us. We need to first open the file watcher to *watch* the file for any changes. If there is any, then the file watcher will tell Inkscape to save the file in `pdf+latex` format.
 
-To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just install? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybinding for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
+To open the file watcher, you can type `inkscape-figures watch` in the terminal. But remember the [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner) we just installed? We can assign this command with a keybinding! In my case, since I don't want to introduce more than one keybinding for Inkscape-figures manager, I use `mode` provided by `vim` to help us. In `VISUAL` mode (enter by `v` in `NORMAL` mode), press `ctrl`+`f`.
 
 > You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show
 >
@@ -479,7 +485,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 
 #### Create <!-- omit in toc -->
 
-Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` command. But in this case, we use `INSERT` for creating a new Inkscape figure. Specifically, we first type out the image's name we want our image to be called, then in this case we're already in `INSERT` mode, we just pres `ctrl`+`f` to create this image after naming.
+Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` command. But in this case, we use `INSERT` for creating a new Inkscape figure. Specifically, we first type out the image's name we want our image to be called, then, in this case, we're already in `INSERT` mode, we just press `ctrl`+`f` to create this image after naming.
 
 <details>
 <summary><h5>Detail Explanation</h></summary>
@@ -549,7 +555,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 	<img src="./demo/gifs/demo-create-inkscape.gif"/>
 </p>
 
-Let me break it down for you. Firstly, I change into `INSERT` mode in VS Code Vim and type my new figure's name `figure-test`. And then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
+Let me break it down for you. Firstly, I changed into `INSERT` mode in VS Code Vim and typed my new figure's name `figure-test`. Then, I press `ctrl`+`f` to trigger the keybinding, which will automatically create an Inkscape figure named `figure-test` for me and open it.
 
 > The three files will be created along the way: `figure-test.pdf`, `figure-test.pdf_tex` and `figure-test.svg`. Unfortunately, to rename a file, you'll need to manually rename three of them.
 
@@ -700,7 +706,7 @@ This is the whole setup I have, and let's wrap this up since I know this may be 
 
 ### Quiver - For commutative diagram (01.24.22)
 
-I have been working on Category Theory for a while, and I find out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment and configure the VS Code Task and combined it with a hotkey to use it **locally**. Specifically, I add the following code into my [`keybindings.json`](./VSCode-setting/keybindings.json):
+I have been working on Category Theory for a while, and I found out that [quiver](https://q.uiver.app/) is quite appealing, hence I integrate it into my workflow. You can also pull it to your local environment, configure the VS Code Task, and combine it with a hotkey to use it **locally**. Specifically, I added the following code to my [`keybindings.json`](./VSCode-setting/keybindings.json):
 
 ```json
 {
@@ -735,7 +741,7 @@ This is how the workflow looks like.
 	<img src="./demo/gifs/quiver.gif"/>
 </p>
 
-To use the package `tikz-cd`, you need to include the following into your header:
+To use the package `tikz-cd`, you need to include the following in your header:
 
 ```latex
 % quiver style
@@ -762,19 +768,19 @@ To use the package `tikz-cd`, you need to include the following into your header
 \tikzset{no body/.style={/tikz/dash pattern=on 0 off 1mm}}
 ```
 
-You can certainly follow my [Template](https://github.com/sleepymalc/Academic-Template), which already includes all the requirement header for you.
+You can certainly follow my [Template](https://github.com/sleepymalc/Academic-Template), which already includes all the requirement headers for you.
 
 ### Migrate to HyperSnips (02.18.22)
 
-Now, instead using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're now using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just find out that we can trigger the snippets **only in math mode** by using the special keyword called `context`, hence I just migrate to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](./VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
+Now, instead of using [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), we're using [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips), namely the **original one**! Since I just found out that we can trigger the snippets **only in math mode** by using the special keyword called `context`, I migrated to the original one. To migrate, you just need to uninstall [HyperSnips for Math](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips), install [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) with the updated [latex.hsnips](./VSCode-setting/Snippets/latex.hsnips) I prepared for you, and then enjoy!
 
 ### Documenting Inkscape Shortcut Manager (07.30.22)
 
-I finally have time to document all my configuration and making some changes to make this document more readable. I personally have used this workflow for more than half of a year, so I think this is stable and will not be changed in a near future.
+I finally have time to document the configuration of the [Inkscape shortcut manager](#inkscape-shortcut-manager) and make some changes to make this document more readable. Personally, I have used this workflow for more than half of a year, so I think this is stable and will not be changed shortly.
 
 ## Credits
 
-Again, thanks to Gilles Castel, this workflow fits my style. Although it originally works in Linux+Vim only, the idea is the most important thing. Without his wonderful post, I can't even imagine this is possible. But now it is! Go to his original post to show him some love.
+Again, thanks to Gilles Castel, this workflow fits my style. Although it originally worked in Linux+Vim only, the idea is the most important thing. Without his wonderful post, I can't even imagine this is possible. But now it is! Go to his original post to show him some love.
 
 ## Related Project
 

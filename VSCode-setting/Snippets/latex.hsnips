@@ -969,8 +969,8 @@ snippet rm "mathrm" iA
 endsnippet
 
 context math(context)
-snippet scr "mathscr" iA
-\mathscr{$1} $0
+snippet `([a-zA-Z])(s|S)cr` "mathscr" A
+\mathscr{``rv = m[1].toUpperCase()``} $0
 endsnippet
 
 context math(context)
@@ -1111,7 +1111,6 @@ snippet atf "\autoref{}" wA
 \autoref{$1} $0
 endsnippet
 
-context notmath(context)
 snippet hpr "\hyperref[]{}" wA
 \hyperref[$1]{$2} $0
 endsnippet
