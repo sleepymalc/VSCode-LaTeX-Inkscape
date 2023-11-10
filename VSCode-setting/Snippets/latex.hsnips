@@ -118,12 +118,7 @@ endsnippet
 
 context math(context)
 snippet `(?<![\\a-zA-Z])opn` "operator" A
-\mathop{\mathrm{$1}}($2) $0
-endsnippet
-
-context math(context)
-snippet `(?<![\\a-zA-Z])opl` "operator" A
-\mathop{\mathrm{$1}}\nolimits_{$2}($3) $0
+\operatorname{$1}($2) $0
 endsnippet
 
 snippet wp "with probability" wA
