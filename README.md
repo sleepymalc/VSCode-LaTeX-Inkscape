@@ -85,7 +85,7 @@ To achieve a similar result as in Gilles Castel's setup, there is an extension c
 	<img src="./demo/figures/conceal.png"/>
 </p>
 
-Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you will see the source code in line 58. There are other options you can choose, see the original repo for detail. 
+Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you will see the source code in line 51. There are other options you can choose, see the original repo for details. 
 
 ### HyperSnips
 
