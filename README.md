@@ -39,7 +39,7 @@ I use $\LaTeX$ heavily for both academic work and professional work, and I think
 
 If you still don't know what to expect, please check out my [Notes](https://github.com/sleepymalc/Notes) taken in this setup. Also, due to the VS Code recent update (1.76.1), we have the [profile](https://code.visualstudio.com/docs/editor/profiles) functionality available. Specifically, this is [my current minimal profile](https://vscode.dev/profile/github/70b175ba903a4f1cc5dcd271ce8fcb51) for $\LaTeX$ I'm currently using, but since some configurations are not included in the [profile](https://code.visualstudio.com/docs/editor/profiles), you should still read through everything.
 
-> Available: [My website](https://www.pbb.wtf/posts/VSCode-LaTeX-Inkscape)
+> Available: [My website](https://pbb.wtf/posts/VSCode-LaTeX-Inkscape)
 
 ## Disclaimer
 
@@ -85,7 +85,7 @@ To achieve a similar result as in Gilles Castel's setup, there is an extension c
 	<img src="./demo/figures/conceal.png"/>
 </p>
 
-Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you will see the source code in line 51. There are other options you can choose, see the original repo for details. 
+Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you will see the source code in line 51. There are other options you can choose, see the original repo for details.
 
 ### HyperSnips
 
@@ -441,7 +441,7 @@ To open the file watcher, you can type `inkscape-figures watch` in the terminal.
 > You should trigger this at the beginning. i.e., use this after you open your project folder. To check whether `watch` is triggered correctly, you can simply open the terminal and see what's the output when you press `ctrl`+`f`: If it's already triggered, then it'll show
 >
 > ```sh
-> > inkscape-figures watch 
+> > inkscape-figures watch
 > Unable to lock on the pidfile.
 > ```
 >
@@ -630,7 +630,7 @@ Please download the above two apps.
 
 #### Karabiner Elements <!-- omit in toc -->
 
-We'll need [Karabiner Elements](https://karabiner-elements.pqrs.org)' [Complex Modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) to help us. The steps are the following (adapted from [️⌨ How to type?](https://www.pbb.wtf/posts/How2TypeFast#import-settings)).
+We'll need [Karabiner Elements](https://karabiner-elements.pqrs.org)' [Complex Modifications](https://karabiner-elements.pqrs.org/docs/json/root-data-structure/#custom-json-file-in-configkarabinerassetscomplex_modifications) to help us. The steps are the following (adapted from [️⌨ How to type?](https://pbb.wtf/posts/How2TypeFast#import-settings)).
 
 1. Open [Karabiner-Elements](https://karabiner-elements.pqrs.org/), go to *Misc* and click on *Export & Import*.
     <div align="center">
