@@ -6,8 +6,8 @@
     "command-runner.terminal.autoClear": true,
     "command-runner.terminal.autoFocus": false,
     "command-runner.commands": {
-        "inkscapeCreate": "inkscape-figures create ${selectedText} ${fileDirname}/Figures/",
-        "inkscapeEdit": "inkscape-figures edit ${fileDirname}/Figures/",
+        "inkscapeCreate": "inkscape-figures create ${selectedText} \"${fileDirname}\"/Figures/",
+        "inkscapeEdit": "inkscape-figures edit \"${fileDirname}\"/Figures/",
         "inkscapeStart": "inkscape-figures watch",
         "quiver": "open -na 'Google Chrome' --args --new-window <path-to-quiver>/quiver/src/index.html"
     },
