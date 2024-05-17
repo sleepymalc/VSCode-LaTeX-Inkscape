@@ -113,7 +113,7 @@ If you are a math guy, you may need to type some inline math like `\(\)`, which 
 	<img src="./demo/gifs/fm.gif"/>
 </p>
 
-See? You just type `fm` (not the best choice here, but since `im` is a common prefix, so can't really use that as our snippet 🥲), and then your snippet not only automatically types `\(\)` for you, and it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
+See? You just type `fm` (not the best choice here, but since `im` is a common prefix, so can't really use that as our snippet 🥲), and then your snippet not only automatically types `\(\)` for you, but it also sends your cursor between `\(\)`! With this, you can type something **really** fast:
 
 <p align="center">
 	<img src="./demo/gifs/fast.gif"/>
@@ -135,7 +135,7 @@ or this:
 
 For the first snippet, I type `table2 5`, and then it generates a table with 2 rows and 5 columns. For the second one, I type `pmat` for matrix, and then type `2 5` to indicate that I want a 2 by 5 matrix, then boom! My snippets do that for me in an instant!
 
-My snippet file includes commonly used snippets as suggested in the original posts, you can look into it to better understand how does it work. And maybe you can create your snippets also! Here is some useful snippets for you.
+My snippet file includes commonly used snippets as suggested in the original posts, you can look into it to better understand how it works. And maybe you can create your snippets also! Here are some useful snippets for you.
 
 <p align="center">
 	<img src="./demo/gifs/useful.gif"/>
@@ -212,7 +212,7 @@ Unlike Gilles Castel's approach, there is an available extension out there for y
 	<img src="./demo/gifs/integral.gif"/>
 </p>
 
-Magic right? Let's set it up! First, please look at the installation document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation, you can set up the keybinding for calculating the math expression. I use `shift`+`e`, where `e` stands for evaluating, to calculate so that it will append an equal sign and the answer right after your formula, just like above. And if you want to avoid showing the intermediate steps of your calculation, you can use `shift`+`r`, where `r` stands for replacing, to directly replace the whole formula and give me the answer only. See the demo below:
+Magic right? Let's set it up! First, please look at the installation document provided by [Latex Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.latex-sympy-calculator). After your installation, you can set up the keybinding for calculating the math expression. I use `shift`+`e`, where `e` stands for evaluating, to calculate so that it will append an equal sign and the answer right after your formula, just like above. If you want to avoid showing the intermediate steps of your calculation, you can use `shift`+`r`, where `r` stands for replacing, to directly replace the whole formula and give me the answer only. See the demo below:
 
 <p align="center">
 	<img src="./demo/gifs/integral2.gif"/>
@@ -228,9 +228,9 @@ Although my typing speed is quite high, I have typos all the time. So this is a 
 
 1. [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command): This is a very powerful extension, which allows you to do a sequence of actions in one shortcut. We will use this later on also, and that's the place it shines.
 
-2. [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): This is a popular spelling checker out there which meets our needs.
+2. [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): This is a popular spelling checker out there that meets our needs.
 
-3. [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex): If you are bad at grammar like me, you definitely want to install to check some simple grammar mistakes for you. Although it's not powerful like [Grammarly](https://www.grammarly.com/), not even comparable, it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
+3. [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.VSCode-ltex): If you are bad at grammar like me, you definitely want to install to check some simple grammar mistakes for you. Although it's not as powerful as [Grammarly](https://www.grammarly.com/), not even comparable, it's still a good reference for you to keep your eyes on some simple mistakes you may overlook.
 
    > There is an unofficial API for Grammarly, and the plugin can be found [here](https://marketplace.visualstudio.com/items?itemName=znck.grammarly). Though it's quite slow...
 
@@ -370,7 +370,7 @@ Now, let's get into the fun part, i.e., setting up the shortcut for this.
 
 ### Inkscape Figure Manager
 
-This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you follow the installation instructions there. Here is just some guideline for you.
+This is a figure manager developed by Gilles Castel, and here is the [repo](https://github.com/gillescastel/inkscape-figures). I recommend you follow the installation instructions there. Here are just some guidelines for you.
 
 1. Install [choose](https://github.com/chipsenkbeil/choose) (specifically for macOS, [rofi](https://github.com/davatorium/rofi) for Linux instead):
 
@@ -392,9 +392,9 @@ This is a figure manager developed by Gilles Castel, and here is the [repo](http
 
    > After installing it, type `inkscape-figures` in your terminal to make sure you have corrected install it.
 
-If you're using Linux and Vim, then you are done already. But since you're using macOS and VS Code, please follow me, there is some more thing for you to configure.
+If you're using Linux and Vim, then you are done already. But since you're using macOS and VS Code, please follow me, there are some more things for you to configure.
 
->If you're using Windows, then check out [super-figure](https://github.com/Joao-Peterson/super-figure). It implements similar functionalities but in a more chunky way. Even if you're using macOS, you can try it too, although I prefer my setup.
+> If you're using Windows, then check out [super-figure](https://github.com/Joao-Peterson/super-figure). It implements similar functionalities but in a more chunky way. Even if you're using macOS, you can try it too, although I prefer my setup.
 
 #### Set up Inkscape Figure Manager <!-- omit in toc -->
 
@@ -537,7 +537,7 @@ Same as above, we also use `ctrl`+`f` to trigger `inkscape-figures create` comma
 > We break down what `ctrl`+`f` do in `INSERT` mode exactly step by step. We see that when we press `ctrl`+`f` in `INSERT` mode, we trigger `multiCommand.execute` to execute a sequence of instructions, which are
 >
 > 1. Copy the content into your clipboard of the line your cursor at
-> 2. Insert a blank line after since we need to insert a snippet, and that's will delete an additional line. You can try to delete this and the next instruction, and see what happens.
+> 2. Insert a blank line after since we need to insert a snippet, and that will delete an additional line. You can try to delete this and the next instruction, and see what happens.
 > 3. Move back our cursor after inserting that new line.
 > 4. Delete that copied content by removing this line.
 > 5. Insert a snippet defined in [`latex.json`](./VSCode-setting/Snippets/latex.json). **Notice that this is the default snippet functionality built-in VS Code, not [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) we have used before**. I'll explain where to copy this file in a minute.
@@ -677,7 +677,7 @@ Firstly, open the [Hammerspoon](https://www.hammerspoon.org/) console and run `h
 
 #### Reference Card for Key Chords
 
-As reference for the key chords I add the original picture from [the original blog](https://castel.dev/post/lecture-notes-2/) but with the key chords included in the picture.
+As a reference for the key chords, I added the original picture from [the original blog](https://castel.dev/post/lecture-notes-2/) but with the key chords included in the picture.
 
 <p align="center">
 	<img src="./demo/figures/inkscape_shortcut.png"/>
@@ -735,7 +735,7 @@ and also, define the command `quiver` as
 
 Notice that you'll need to build it first if you want to use it offline! Please follow the tutorial [here](https://github.com/varkor/quiver). Otherwise, it's totally fine to use `"quiver": "open -na 'Google Chrome' --args --new-window https://q.uiver.app/"` as your command.
 
-This is how the workflow looks like.
+This is what the workflow looks like.
 
 <p align="center">
 	<img src="./demo/gifs/quiver.gif"/>
