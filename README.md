@@ -10,26 +10,27 @@
 
 ## Table of Content <!-- omit in toc -->
 
-- [Abstract](#abstract)
-- [Disclaimer](#disclaimer)
-- [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
-  - [Tex Conceal](#tex-conceal)
-  - [HyperSnips](#hypersnips)
-  - [Sympy and Mathematica](#sympy-and-mathematica)
-  - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
-- [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
-  - [Inkscape Figure Manager](#inkscape-figure-manager)
-  - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
-    - [Reference Card for Key Chords](#reference-card-for-key-chords)
-  - [Summary](#summary)
-- [Updates](#updates)
-  - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
-  - [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
-  - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
-  - [Documenting Inkscape Shortcut Manager (07.30.22)](#documenting-inkscape-shortcut-manager-073022)
-- [Credits](#credits)
-- [Related Project](#related-project)
-- [Star History](#star-history)
+- [***VSCode-LaTeX-Inkscape***](#vscode-latex-inkscape)
+  - [Abstract](#abstract)
+  - [Disclaimer](#disclaimer)
+  - [Setup For Typing Blasting Fast](#setup-for-typing-blasting-fast)
+    - [Tex Conceal](#tex-conceal)
+    - [HyperSnips](#hypersnips)
+    - [Sympy and Mathematica](#sympy-and-mathematica)
+    - [Correcting Spelling Mistakes on the Fly](#correcting-spelling-mistakes-on-the-fly)
+  - [Drawing Like a Pro - With Inkscape](#drawing-like-a-pro---with-inkscape)
+    - [Inkscape Figure Manager](#inkscape-figure-manager)
+    - [Inkscape Shortcut Manager](#inkscape-shortcut-manager)
+      - [Reference Card for Key Chords](#reference-card-for-key-chords)
+    - [Summary](#summary)
+  - [Updates](#updates)
+    - [~~About Inkscape Shortcut Manager (09.27.21)~~](#about-inkscape-shortcut-manager-092721)
+    - [Quiver - For commutative diagram (01.24.22)](#quiver---for-commutative-diagram-012422)
+    - [Migrate to HyperSnips (02.18.22)](#migrate-to-hypersnips-021822)
+    - [Documenting Inkscape Shortcut Manager (07.30.22)](#documenting-inkscape-shortcut-manager-073022)
+  - [Credits](#credits)
+  - [Related Project](#related-project)
+  - [Star History](#star-history)
 
 ## Abstract
 
@@ -54,7 +55,7 @@ Before we start anything serious, just copy the [`keybindings.json`](./VSCode-se
 Also, create a snippet file for $\LaTeX$ in the following steps:
 
 1. Press `shift`+`cmd`+`p` to open the VS Code command.
-2. Type `snippets`, and choose `Preferences: Configure User Snippets`.
+2. Type `snippets`, and choose `Snippets: Configure Snippets`.
 3. Choose `New Global Snippets file...`.
 4. Enter `latex` to create a new file.
 5. Paste the [`latex.json`](./VSCode-setting/Snippets/latex.json) into that file.
@@ -89,7 +90,7 @@ Note that I set the `"conceal.revealOn"` to `"active-line"`, which is why you wi
 
 ### HyperSnips
 
-If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) and just follow the instructions, copy [`latex.hsnips`](./main/VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/hsnips/`, and you're good to go!
+If you look around in the VS Code extension marketplace to find UltiSnips' equivalence, you probably will find [Vsnips](https://marketplace.visualstudio.com/items?itemName=corvofeng.Vsnips). But I'm not sure why this is the case, I can't figure out how to set it up properly. Hence, I find another alternative, which is [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips). Please first download [HyperSnips](https://marketplace.visualstudio.com/items?itemName=draivin.hsnips) and just follow the instructions, copy [`latex.hsnips`](./VSCode-setting/Snippets/latex.hsnips) into `$HOME/Library/Application Support/Code/User/globalStorage/draivin.hsnips/hsnips/`, and you're good to go!
 
 To modify this file, you can either go to this file in your finder or use the VS Code built-in command function. For commands function,
 
