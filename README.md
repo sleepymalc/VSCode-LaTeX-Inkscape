@@ -561,7 +561,7 @@ Let me break it down for you. Firstly, I changed into `INSERT` mode in VS Code V
 
 #### Edit <!-- omit in toc -->
 
-Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NOMAL` mode. Here, [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
+Again, we also use `ctrl`+`f` to trigger `inkscape-figures edit` command, but this time in `NORMAL` mode. Here, [choose](https://github.com/chipsenkbeil/choose) comes into play. After you select the image you want to edit in Inkscape, you simply press `enter` and it'll open that image for you to edit.
 
 > You can modify the styling of [choose](https://github.com/chipsenkbeil/choose). For example, in [`picker.py`](./Inkscape-setting/Inkscape-figure-manager/picker.py), we have the following:
 >
